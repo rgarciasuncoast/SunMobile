@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{AE0D687C-A8FE-4CFF-B78C-86218058B3BF}|Default">
+  <MonoDevelop.Ide.ItemProperties.SunMobile.Droid PreferredExecutionTarget="Android.nexus7" AndroidDesignerPreferredTheme="Theme.DeviceDefault.NoActionBar.Fullscreen" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="SunMobile.Droid/Authentication/AdaptiveAuthenticationFragment.cs">
+    <Files>
+      <File FileName="SunMobile.Forms/Views/ContactUspage.xaml" Line="39" Column="14" />
+      <File FileName="SunMobile.Droid/Main/MainActivity.cs" Line="57" Column="28" />
+      <File FileName="SunMobile.Droid/Authentication/AdaptiveAuthenticationFragment.cs" Line="597" Column="10" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:id="@+id/mainLayout"
+    android:background="#ffffffff">
+    <TableLayout
+        android:stretchColumns="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TableRow
+            android:id="@+id/rowSecurityNotificationsToggle"
+            android:layout_width="fill_parent"
+            android:minHeight="@dimen/cell_Height">
+            <TextView
+                android:text="Security Alerts"
+                android:textSize="@dimen/TextSizeMedium"
+                android:textColor="@color/TextViewTextColor"
+                android:textStyle="bold"
+                android:paddingLeft="20dip"
+                android:layout_gravity="center_vertical"
+                android:layout_weight=".9"
+                android:id="@+id/lblSecurityAlerts" />
+            <Switch
+                android:id="@+id/switchSecurityAlerts"
+                android:layout_gravity="center_vertical"
+                android:paddingRight="20dip"
+                android:checked="true" />
+        </TableRow>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_weight="1"
+            android:background="@drawable/default_separatorcolor"
+            android:padding="2dip" />
+    </TableLayout>
+    <TableLayout
+        android:id="@+id/alertNotificationTable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_gravity="center_vertical"
+        android:shrinkColumns="0">
+        <TableRow
+            android:id="@+id/rowAlertNotificationAvailable"
+            android:layout_width="fill_parent"
+            android:minHeight="@dimen/cell_Height"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/lblNotificationAvailable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/TextSizeMedium"
+                android:textColor="@color/TextViewTextColor"
+                android:textStyle="bold"
+                android:paddingLeft="20dp"
+                android:text="Electronic Document Alert Preferences"
+                android:layout_weight="5" />
+            <TextView
+                android:id="@+id/lblAccountAlertsEnabled"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/TextSizeMedium"
+                android:layout_height="wrap_content"
+                android:textColor="@color/TextViewTextColor"
+                android:paddingRight="20dp"
+                android:text="" />
+            <ImageView
+                android:id="@+id/imgMore"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/listitemselect"
+                android:paddingRight="2dip" />
+        </TableRow>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_weight="1"
+            android:background="@drawable/default_separatorcolor"
+            android:padding="2dip" />
+    </TableLayout>
+    <TableLayout
+        android:stretchColumns="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TableRow
+            android:id="@+id/rowNotificationsToggle"
+            android:layout_width="fill_parent"
+            android:minHeight="@dimen/cell_Height">
+            <TextView
+                android:text="Account Specific Alerts"
+                android:textSize="@dimen/TextSizeMedium"
+                android:textColor="@color/TextViewTextColor"
+                android:textStyle="bold"
+                android:paddingLeft="20dip"
+                android:layout_gravity="center_vertical"
+                android:layout_weight=".9"
+                android:id="@+id/lblAccountSpecificAlerts" />
+            <Switch
+                android:id="@+id/switchAlerts"
+                android:layout_gravity="center_vertical"
+                android:paddingRight="20dip"
+                android:checked="true" />
+        </TableRow>
+    </TableLayout>
+    <TableLayout
+        android:id="@+id/accountSpecificAlertsTable"
+        android:stretchColumns="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_weight="1"
+            android:background="@drawable/default_separatorcolor"
+            android:padding="2dip" />
+        <TableRow
+            android:id="@+id/rowAccountSpecificAlerts"
+            android:background="@color/TableSectionBackgroundColor"
+            android:layout_width="match_parent"
+            android:minHeight="@dimen/cell_Height">
+            <TextView
+                android:id="@+id/rowAccountSpecificAlertsHeader"
+                android:text="ACCOUNT SPECIFIC ALERTS"
+                android:textSize="@dimen/TextSizeMedium"
+                android:textColor="@color/TextViewTextColorGray"
+                android:layout_gravity="bottom"
+                android:paddingLeft="20dip"
+                android:paddingBottom="6dp"
+                android:layout_span="2" />
+        </TableRow>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_weight="1"
+            android:background="@drawable/default_separatorcolor"
+            android:padding="2dip" />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".90"
+            android:orientation="vertical"
+            android:background="@color/TableSectionBackgroundColor">
+            <ListView
+                android:id="@android:id/list"
+                style="@style/ListViewStyle"
+                android:dividerHeight="1dip"
+                android:divider="@drawable/default_separatorcolor" />
+        </LinearLayout>
+    </TableLayout>
+</LinearLayout>

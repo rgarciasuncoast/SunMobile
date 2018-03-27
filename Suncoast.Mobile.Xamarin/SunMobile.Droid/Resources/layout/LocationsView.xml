@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainLayout">
+    <LinearLayout
+        android:layout_height="50dip"
+        android:layout_width="fill_parent"
+        android:layout_alignParentTop="true"
+        android:id="@+id/searchLayout">
+        <TableLayout
+            android:stretchColumns="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TableRow
+                android:id="@+id/buttonRow"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp">
+                <SearchView
+                    android:minWidth="25px"
+                    android:minHeight="25px"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/searchBar"
+                    android:queryHint="Enter Zip Code or City, State"
+                    android:iconifiedByDefault="false" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_height="50dip"
+        android:layout_width="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/buttonLayout">
+        <TableLayout
+            android:stretchColumns="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TableRow
+                android:id="@+id/buttonRow"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp">
+                <SunMobile.Droid.Common.SegmentedGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    segmentedgroup:sc_border_width="2dp"
+                    segmentedgroup:sc_corner_radius="5dp"
+                    segmentedgroup:sc_tint_color="#20a6f8"
+                    segmentedgroup:sc_checked_text_color="#f0f2f3">
+                    <RadioButton
+                        android:id="@+id/btnAll"
+                        android:layout_height="wrap_content"
+                        android:text="All"
+                        style="@style/RadioButton"
+                        android:checked="true"
+                        android:layout_width="100dp" />
+                    <RadioButton
+                        android:id="@+id/btnATMs"
+                        android:layout_height="wrap_content"
+                        android:text="ATMs"
+                        style="@style/RadioButton"
+                        android:layout_width="100dp" />
+                    <RadioButton
+                        android:id="@+id/btnBranches"
+                        android:layout_height="wrap_content"
+                        android:text="Branches"
+                        style="@style/RadioButton"
+                        android:layout_width="100dp" />
+                </SunMobile.Droid.Common.SegmentedGroup>
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/mapLayout"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_above="@+id/buttonLayout"
+        android:layout_below="@+id/searchLayout" />
+</RelativeLayout>

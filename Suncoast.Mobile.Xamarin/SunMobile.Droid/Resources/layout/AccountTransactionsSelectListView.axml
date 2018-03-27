@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutMain"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/TitleBar"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:minHeight="@dimen/appdim_MinimumTitleHeight"
+        android:layout_height="wrap_content"
+        android:background="@color/ActionBarBackgroundColor">
+        <ImageButton
+            android:id="@+id/btnCloseWindow"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_back"
+            android:background="@drawable/transparent"
+            android:maxWidth="30px"
+            android:layout_centerVertical="true" />
+        <TextView
+            android:id="@+id/txtTitle"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:textColor="@color/TextViewTextColorWhite"
+            android:text="Transactions"
+            android:minHeight="30dp"
+            android:textSize="@dimen/TextSizeLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/txtDone"
+            android:gravity="right|center_vertical"
+            android:textColor="@color/TextViewTextColorWhite"
+            android:text="Done"
+            android:minHeight="30dp"
+            android:textSize="@dimen/TextSizeLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_gravity="center_vertical"
+        android:background="#20a6f8"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:id="@+id/TransactionTitleBar">
+        <TextView
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="REGULAR CHECKING"
+            android:layout_width="fill_parent"
+            android:textColor="@color/TextViewTextColorWhite"
+            android:id="@+id/transactionTitleText"
+            android:textSize="@dimen/TextSizeExtraLarge" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_height="45dp"
+        android:layout_width="fill_parent"
+        android:id="@+id/relativeLayout1"
+        android:background="#aaaaaa">
+        <ImageButton
+            android:id="@+id/btnNextTransactions"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/transactionrightselector"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_alignParentBottom="false" />
+        <TextView
+            android:layout_height="wrap_content"
+            android:textColor="@color/LabelTextColor"
+            android:id="@+id/txtTransactionRangeDisplay"
+            android:text="April 2015"
+            android:layout_width="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/TextSizeExtraLarge" />
+        <ImageButton
+            android:id="@+id/btnPreviousTransactions"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/transactionleftselector"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_height="50dp"
+        android:layout_width="fill_parent"
+        android:id="@+id/relativeLayout2">
+        <SearchView
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/searchBar"
+            android:queryHint=""
+            android:iconifiedByDefault="false" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:background="@drawable/background_nobar">
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/transactionsRefresher"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ListView
+                android:id="@android:id/list"
+                style="@style/ListViewStyle"
+                android:divider="@drawable/default_separatorcolor"
+                android:dividerHeight="1dip" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </LinearLayout>
+</LinearLayout>

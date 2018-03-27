@@ -1,0 +1,45 @@
+﻿namespace SunBlock.DataTransferObjects.CreditUnion.Memberships.OnlineAccess
+{
+
+    public enum ActionLogTypes
+    {
+        Login,
+        Enroll,
+        Logout,
+        Timeout,
+        Error,
+        PinChangeNormal,
+        BlockAtmDebitCard,
+        CheckWithdrawal,
+        StopPayment,
+        TransferRegular,
+        TransferQuick,
+        TransferJoint,
+        TransferCrossAccount,
+        BillPayEnroll,
+        BillPayUnEnroll,
+        BillPayPayeeStatusChange,
+        BillPayPayeeEdit,
+        BillPayeePayeeAdd,
+        BillPayPaymentCancel,
+        BillPayPaymentEdit,
+        BillPayPaymentAdd,
+        EstatementRegularEnroll,
+        EstatementRegularUnEnroll,
+        EstatementRegularViewed,
+        EstatementCreditCardEnroll,
+        EstatementCreditCardUnEnroll,
+        EstatementCreditCardViewed,
+        EnoticesEnroll,
+        EnoticesUnEnroll,
+        CheckImageViewed,
+        AchEnroll,
+        AchUnEnroll,
+        AchLogin,        
+        ProfileChangeInformation,
+        ProfileViewed,
+        FlagSet,
+        FlagClear,
+        FlagInvalid
+    }
+}

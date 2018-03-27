@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <SunMobile.Droid.Deposits.CameraPreviewView
+        android:id="@+id/previewView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <SunMobile.Droid.Deposits.CameraOverlayView
+        android:id="@+id/overlayView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <ImageView
+        android:id="@+id/imagePreview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true" />
+    <ImageView
+        android:id="@+id/imageFlash"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_action_flash_off"
+        android:layout_width="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:paddingRight="10dp" />
+    <ImageView
+        android:id="@+id/imageFocus"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_action_autofocus_on"
+        android:layout_width="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@id/imageFlash"
+        android:paddingRight="10dp" />
+    <ImageView
+        android:id="@+id/imageShutter"
+        android:src="@drawable/shutterblue"
+        android:maxWidth="20dip"
+        android:layout_gravity="right"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:paddingRight="0dp" />
+    <TableLayout
+        android:id="@+id/ButtonTable"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="0"
+        android:layout_alignParentBottom="true">
+        <TableRow
+            android:id="@+id/RetakeRow"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <Button
+                android:id="@+id/btnRetake"
+                style="@style/BlueGradientButtonStyle"
+                android:text="Retake"
+                android:width="80dp"
+                android:layout_width="150dp" />
+            <TextView
+                android:id="@+id/txtSpacer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:minWidth="10000dp"
+                android:layout_weight="1" />
+            <Button
+                android:id="@+id/btnUse"
+                style="@style/BlueGradientButtonStyle"
+                android:layout_width="150dp"
+                android:text="Use"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:width="80dp" />
+        </TableRow>
+    </TableLayout>
+</RelativeLayout>

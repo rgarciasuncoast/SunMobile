@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:id="@+id/mainLayout">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:background="@color/TableSectionBackgroundColor"
+        android:scrollbars="none">
+        <TableLayout
+            android:id="@+id/mainTable"
+            android:stretchColumns="0"
+            android:background="@color/TableSectionBackgroundColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TableRow
+                android:id="@+id/rowInbox"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@color/white"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/cell_Height"
+                    android:gravity="center_vertical">
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="20dip">
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/messages_inbox" />
+                        <TextView
+                            android:id="@+id/lblMessageCenterInbox"
+                            android:text="Inbox"
+                            android:textSize="@dimen/TextSizeMedium"
+                            android:textColor="@color/TextViewTextColor"
+                            android:paddingLeft="20dip"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight=".9" />
+                        <TextView
+                            android:id="@+id/lblInboxCount"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/TextSizeMedium"
+                            android:textColor="@color/TextViewTextColor"
+                            android:text="1"
+                            android:layout_gravity="right"
+                            android:paddingRight="20dip" />
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/listitemselect"
+                            android:paddingRight="2dip" />
+                    </TableRow>
+                </TableLayout>
+            </TableRow>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_weight="1"
+                android:background="@drawable/default_separatorcolor_light"
+                android:padding="2dip" />
+            <TableRow
+                android:id="@+id/rowNotifications"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@color/white"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/cell_Height"
+                    android:gravity="center_vertical">
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="20dip">
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/messages_notification" />
+                        <TextView
+                            android:id="@+id/lblMessageCenterNotifications"
+                            android:text="Notifications"
+                            android:textSize="@dimen/TextSizeMedium"
+                            android:textColor="@color/TextViewTextColor"
+                            android:paddingLeft="20dip"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight=".9" />
+                        <TextView
+                            android:id="@+id/lblNotificationsCount"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/TextSizeMedium"
+                            android:textColor="@color/TextViewTextColor"
+                            android:text="1"
+                            android:layout_gravity="right"
+                            android:paddingRight="20dip" />
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/listitemselect"
+                            android:paddingRight="2dip" />
+                    </TableRow>
+                </TableLayout>
+            </TableRow>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_weight="1"
+                android:background="@drawable/default_separatorcolor_light"
+                android:padding="2dip" />
+            <TableRow
+                android:id="@+id/rowSent"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@color/white"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/cell_Height"
+                    android:gravity="center_vertical">
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="20dip">
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/messages_sent" />
+                        <TextView
+                            android:id="@+id/lblMessageCenterSent"
+                            android:text="Sent"
+                            android:textSize="@dimen/TextSizeMedium"
+                            android:textColor="@color/TextViewTextColor"
+                            android:paddingLeft="20dip"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight=".9" />
+                        <TextView
+                            android:id="@+id/lblSentCount"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/TextSizeMedium"
+                            android:textColor="@color/TextViewTextColor"
+                            android:text=""
+                            android:layout_gravity="center_vertical"
+                            android:paddingLeft="20dip" />
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/listitemselect"
+                            android:paddingRight="2dip" />
+                    </TableRow>
+                </TableLayout>
+            </TableRow>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_weight="1"
+                android:background="@drawable/default_separatorcolor_light"
+                android:padding="2dip" />
+            <TableRow
+                android:id="@+id/rowComposeMessage"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="@color/white"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/cell_Height"
+                    android:gravity="center_vertical">
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="20dip">
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/messages_composemessages" />
+                        <TextView
+                            android:id="@+id/lblMessageCenterComposeMessage"
+                            android:text="Compose Message"
+                            android:textSize="@dimen/TextSizeMedium"
+                            android:textColor="@color/TextViewTextColor"
+                            android:paddingLeft="20dip"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight=".9" />
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/listitemselect"
+                            android:paddingRight="2dip" />
+                    </TableRow>
+                </TableLayout>
+            </TableRow>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_weight="1"
+                android:background="@drawable/default_separatorcolor_light"
+                android:padding="2dip" />
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>

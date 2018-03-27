@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:id="@+id/subAccountsConfirmationViewLayout"
+    android:background="#ffffffff">
+    <RelativeLayout
+        android:id="@+id/actionBar"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="42dp"
+        android:background="@color/ActionBarBackgroundColor">
+        <TextView
+            android:id="@+id/lblHeaderText"
+            android:layout_width="250dp"
+            android:textSize="@dimen/TextSizeLarge"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Contact Information"
+            android:layout_marginLeft="8dp"
+            android:layout_gravity="center_vertical"
+            android:layout_centerVertical="true" />
+        <ImageView
+            android:id="@+id/btnPrevious"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/leftarrowwhite"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/btnFinish" />
+        <ImageView
+            android:id="@+id/btnFinish"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/rightarrowwhite"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="10dp" />
+    </RelativeLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageProgress"
+        android:src="@drawable/subaccountstep1"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginBottom="6dp" />
+    <ScrollView
+        android:id="@+id/scrollViewSubAccountsConfirmation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_nobar">
+        <LinearLayout
+            android:id="@+id/linearLayoutSubAccountsConfirmation"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
+            <TableLayout
+                android:id="@+id/subAccountsConfirmationTable"
+                android:stretchColumns="0"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip" />
+                <TableRow
+                    android:id="@+id/rowSubAccountConfirmationText"
+                    android:layout_width="wrap_content"
+                    android:minHeight="@dimen/cell_Height">
+                    <TextView
+                        android:id="@+id/labelConfirmationDescription"
+                        android:text="By proceeding, after electronically signing below, you will be openin a Smart Checking account.\n\n Your requested debit card will be mailed to your address of record and received within 7-10 business days. Your PIN will be received 3-5 business days following receipt of the card.\n\nIf immediate card access is required, you may request an Instant Issue Debit Card by visiting your local Suncoast Credit Union branch. Please note: If a debit card has already been ordered, we will not be able to fulfill your Instant Issue Debit Card request."
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:textColor="@color/TextViewTextColor"
+                        android:textStyle="normal"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight=".2"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp" />
+                </TableRow>
+            </TableLayout>
+            <TableLayout
+                android:id="@+id/linearLayoutSubAccountsConfirmationElectronicSignature"
+                android:stretchColumns="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip" />
+                <TableRow
+                    android:id="@+id/rowElectronicSignatureHeading"
+                    android:layout_width="wrap_content"
+                    android:background="@color/primary"
+                    android:minHeight="30dp">
+                    <TextView
+                        android:id="@+id/txtElectronicSignatureHeading"
+                        android:text="Electronic Signature"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:textColor="@color/TextViewTextColorWhite"
+                        android:layout_gravity="center" />
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip" />
+            </TableLayout>
+            <TableLayout
+                android:id="@+id/subAccountsConfirmationTable"
+                android:stretchColumns="0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TableRow
+                    android:id="@+id/rowSubAccountConfirmationElectronicSignatureText"
+                    android:layout_width="match_parent"
+                    android:layout_weight=".2"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/txtSubAccountConfirmationElectronicSignatureText"
+                        android:text="By typing your name as it appears below, you hereby request the account and services indicated above. You also agree that your typed signature shall have the same force and effect as your written signature."
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:textColor="@color/TextViewTextColor"
+                        android:textStyle="normal"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight=".2"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp" />
+                </TableRow>
+                <TableRow
+                    android:id="@+id/rowSubAccountConfirmationElectronicSignatureName"
+                    android:layout_width="match_parent"
+                    android:minHeight="@dimen/cell_Height">
+                    <TextView
+                        android:id="@+id/txtSubAccountConfirmationElectronicSignatureName"
+                        android:text="LAURA L WHITE"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:textColor="@color/TextViewTextColor"
+                        android:textStyle="normal"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_marginLeft="20dp" />
+                </TableRow>
+                <TableRow
+                    android:id="@+id/rowSubAccountConfirmationElectronicSignature"
+                    android:layout_width="match_parent"
+                    android:minHeight="@dimen/cell_Height"
+                    android:layout_marginRight="20dp">
+                    <EditText
+                        android:id="@+id/txtSubAccountConfirmationElectronicSignature"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:inputType="textPersonName"
+                        android:scrollbars="none"
+                        android:textColor="@color/LabelTextColor"
+                        android:hint="Full Name"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

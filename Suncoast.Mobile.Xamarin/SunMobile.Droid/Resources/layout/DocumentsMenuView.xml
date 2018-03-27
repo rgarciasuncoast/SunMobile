@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/frameborder"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:id="@+id/RootView">
+    <LinearLayout
+        android:id="@+id/ListLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        android:layout_above="@+id/llPopupViewer">
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:background="@android:color/transparent"
+            android:scrollbars="none">
+            <TableLayout
+                android:id="@+id/tableMainMenu"
+                android:clipChildren="false"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector">
+                <TableRow
+                    android:id="@+id/rowDocumentCenter"
+                    android:clipChildren="false"
+                    android:gravity="center_vertical"
+                    android:minHeight="64dp"
+                    android:paddingLeft="20dip">
+                    <ImageView
+                        android:paddingTop="5dp"
+                        android:layout_width="20dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_action_documentcenter_blue" />
+                    <TextView
+                        android:text="Document Center"
+                        android:paddingRight="8dip"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/TextViewTextColor"
+                        android:lineSpacingMultiplier="0.90"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="5.0"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:gravity="left"
+                        android:layout_marginLeft="20dp"
+                        android:id="@+id/lblDocumentMenuDocumentCenter" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:paddingTop="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:cropToPadding="false"
+                        android:src="@drawable/listitemselect"
+                        android:paddingRight="2dip" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <View
+                        android:layout_span="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/default_separatorcolor"
+                        android:padding="2dip" />
+                </TableRow>
+                <TableRow
+                    android:id="@+id/rowAccounteStatements"
+                    android:clipChildren="false"
+                    android:gravity="center_vertical"
+                    android:minHeight="64dp"
+                    android:paddingLeft="20dip">
+                    <ImageView
+                        android:paddingTop="5dp"
+                        android:layout_width="20dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_action_documentcenter_blue" />
+                    <TextView
+                        android:text="Account eStatements"
+                        android:paddingRight="8dip"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/TextViewTextColor"
+                        android:lineSpacingMultiplier="0.90"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="5.0"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:gravity="left"
+                        android:layout_marginLeft="20dp"
+                        android:id="@+id/lblDocumentMenuAccountEStatements" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:paddingTop="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:cropToPadding="false"
+                        android:src="@drawable/listitemselect"
+                        android:paddingRight="2dip" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <View
+                        android:layout_span="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/default_separatorcolor"
+                        android:padding="2dip" />
+                </TableRow>
+                <TableRow
+                    android:id="@+id/rowCCStatements"
+                    android:clipChildren="false"
+                    android:gravity="center_vertical"
+                    android:minHeight="64dp"
+                    android:paddingLeft="20dip">
+                    <ImageView
+                        android:paddingTop="5dp"
+                        android:layout_width="20dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_action_documentcenter_blue" />
+                    <TextView
+                        android:text="Credit Card eStatements"
+                        android:paddingRight="8dip"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/TextViewTextColor"
+                        android:lineSpacingMultiplier="0.90"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="5.0"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:gravity="left"
+                        android:layout_marginLeft="20dp"
+                        android:id="@+id/lblCreditCardStatements" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:paddingTop="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:cropToPadding="false"
+                        android:src="@drawable/listitemselect"
+                        android:paddingRight="2dip" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <View
+                        android:layout_span="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/default_separatorcolor"
+                        android:padding="2dip" />
+                </TableRow>
+                <TableRow
+                    android:id="@+id/rowENotices"
+                    android:clipChildren="false"
+                    android:gravity="center_vertical"
+                    android:minHeight="64dp"
+                    android:paddingLeft="20dip">
+                    <ImageView
+                        android:paddingTop="5dp"
+                        android:layout_width="20dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_action_documentcenter_blue" />
+                    <TextView
+                        android:text="eNotices"
+                        android:paddingRight="8dip"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/TextViewTextColor"
+                        android:lineSpacingMultiplier="0.90"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="5.0"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:gravity="left"
+                        android:layout_marginLeft="20dp"
+                        android:id="@+id/lblDocumentMenuENotices" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:paddingTop="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:cropToPadding="false"
+                        android:src="@drawable/listitemselect"
+                        android:paddingRight="2dip" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <View
+                        android:layout_span="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/default_separatorcolor"
+                        android:padding="2dip" />
+                </TableRow>
+                <TableRow
+                    android:id="@+id/rowTaxDocuments"
+                    android:clipChildren="false"
+                    android:gravity="center_vertical"
+                    android:minHeight="64dp"
+                    android:paddingLeft="20dip">
+                    <ImageView
+                        android:paddingTop="5dp"
+                        android:layout_width="20dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_action_documentcenter_blue" />
+                    <TextView
+                        android:text="Tax Documents"
+                        android:paddingRight="8dip"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/TextViewTextColor"
+                        android:lineSpacingMultiplier="0.90"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="5.0"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:gravity="left"
+                        android:layout_marginLeft="20dp"
+                        android:id="@+id/lblDocumentMenuTaxDocuments" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:paddingTop="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:cropToPadding="false"
+                        android:src="@drawable/listitemselect"
+                        android:paddingRight="2dip" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <View
+                        android:layout_span="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/default_separatorcolor"
+                        android:padding="2dip" />
+                </TableRow>
+            </TableLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

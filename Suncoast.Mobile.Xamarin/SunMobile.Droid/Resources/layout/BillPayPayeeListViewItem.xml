@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TableLayout
+        android:id="@+id/RowTable"
+        android:clipChildren="false"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/listselector_medium">
+        <TableRow
+            android:id="@+id/rowHeader"
+            android:clipChildren="false"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/lblHeaderText"
+                android:paddingLeft="8dip"
+                android:paddingRight="4dip"
+                android:textColor="@color/TextViewTextColor"
+                android:text="Payee Name"
+                android:layout_width="wrap_content"
+                android:layout_weight="5.0"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/TextSizeLarge"
+                android:gravity="left"
+                android:layout_span="2" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/trowItemBody"
+            android:clipChildren="false"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/lblItem1Text"
+                android:paddingLeft="24dip"
+                android:paddingRight="4dip"
+                android:textColor="@color/TextViewTextColor"
+                android:text="Payee Nickname"
+                android:lineSpacingMultiplier="0.90"
+                android:layout_width="wrap_content"
+                android:layout_weight="5.0"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/TextSizeMedium"
+                android:gravity="left"
+                android:textStyle="italic" />
+            <ImageView
+                android:id="@+id/imgMore"
+                android:layout_width="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:cropToPadding="false"
+                android:src="@drawable/listitemselect"
+                android:paddingRight="2dip"
+                android:minWidth="20dp" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/trowItemBody"
+            android:clipChildren="false"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/lblItem2Text"
+                android:paddingLeft="24dip"
+                android:paddingRight="4dip"
+                android:textColor="@color/TextViewTextColor"
+                android:text="Account"
+                android:lineSpacingMultiplier="0.90"
+                android:layout_width="wrap_content"
+                android:layout_weight="5.0"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/TextSizeMedium"
+                android:gravity="left"
+                android:layout_span="2" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

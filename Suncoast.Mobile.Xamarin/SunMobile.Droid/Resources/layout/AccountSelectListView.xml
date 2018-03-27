@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutMain"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/TitleBar"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:minHeight="@dimen/appdim_MinimumTitleHeight"
+        android:layout_height="wrap_content"
+        android:background="@color/ActionBarBackgroundColor">
+        <ImageButton
+            android:id="@+id/btnCloseWindow"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_back"
+            android:background="@drawable/transparent"
+            android:maxWidth="30px"
+            android:layout_centerVertical="true" />
+        <TextView
+            android:id="@+id/txtTitle"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:textColor="@color/TextViewTextColorWhite"
+            android:text="Select an Account"
+            android:minHeight="30dp"
+            android:textSize="@dimen/TextSizeLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".90"
+        android:orientation="vertical"
+        android:background="@drawable/background_nobar">
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/selectListViewRefresher"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ListView
+                android:id="@android:id/list"
+                style="@style/ListViewStyle"
+                android:divider="@drawable/default_separatorcolor"
+                android:dividerHeight="1dip" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </LinearLayout>
+    <TableLayout
+        android:id="@+id/mainTable"
+        android:stretchColumns="0"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="@drawable/background_nobar">
+        <TableRow
+            android:id="@+id/buttonRow"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <SunMobile.Droid.Common.SegmentedGroup
+                android:id="@+id/AccountGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                segmentedgroup:sc_border_width="2dp"
+                segmentedgroup:sc_corner_radius="5dp"
+                segmentedgroup:sc_tint_color="#20a6f8"
+                segmentedgroup:sc_checked_text_color="#f0f2f3">
+                <RadioButton
+                    android:id="@+id/btnPrimary"
+                    android:layout_height="wrap_content"
+                    android:text="Primary"
+                    style="@style/RadioButton"
+                    android:checked="true"
+                    android:layout_width="100dp" />
+                <RadioButton
+                    android:id="@+id/btnJoints"
+                    android:layout_height="wrap_content"
+                    android:text="Joints"
+                    style="@style/RadioButton"
+                    android:layout_width="100dp" />
+                <RadioButton
+                    android:id="@+id/btnAnyMember"
+                    android:layout_width="110dp"
+                    android:text="Other Member"
+                    style="@style/RadioButton"
+                    android:lines="1" />
+            </SunMobile.Droid.Common.SegmentedGroup>
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

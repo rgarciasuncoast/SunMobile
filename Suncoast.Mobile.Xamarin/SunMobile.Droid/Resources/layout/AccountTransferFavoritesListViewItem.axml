@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="68dp">
+    <ImageView
+        android:id="@+id/imgDelete"
+        android:src="@drawable/listdelete"
+        android:gravity="center_vertical"
+        android:layout_width="26dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="7dp" />
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/TextSizeMedium"
+        android:textColor="@color/TextViewTextColor"
+        android:text="Transfer $10.00 from REGULAR SAVINGS to AUTO LOAN (4056097-50 to 4056097-30)(4056097-50 to 4056097-30)(4056097-50 to 4056097-30)"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp" />
+    <ImageView
+        android:id="@+id/imgDrag"
+        android:layout_width="24dp"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:cropToPadding="false"
+        android:src="@drawable/listdrag"
+        android:layout_marginRight="8dp" />
+</LinearLayout>

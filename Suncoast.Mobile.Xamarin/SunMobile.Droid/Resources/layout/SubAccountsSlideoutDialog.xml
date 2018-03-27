@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/transparent"
+    android:padding="0dp"
+    android:gravity="bottom">
+    <RelativeLayout
+        android:id="@+id/layoutSmartChecking"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:minHeight="@dimen/appdim_MinimumTitleHeight"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/subaccountslideout"
+            android:layout_width="324dp"
+            android:layout_height="434dp"
+            android:id="@+id/imgSmartChecking"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="false"
+            android:paddingBottom="50dp" />
+        <Button
+            android:id="@+id/btnOpenRocketChecking"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:background="@color/transparent"
+            android:layout_alignBottom="@+id/imgSmartChecking"
+            android:layout_alignLeft="@+id/imgSmartChecking"
+            android:layout_marginBottom="65dp" />
+        <Button
+            android:id="@+id/btnClose"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:background="@color/transparent"
+            android:layout_alignBottom="@+id/imgSmartChecking"
+            android:layout_alignRight="@+id/imgSmartChecking"
+            android:layout_marginBottom="65dp" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutMain"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_gravity="center_vertical"
+        android:background="#20a6f8"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:id="@+id/TransactionTitleBar">
+        <TextView
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:text="REGULAR CHECKING"
+            android:layout_width="wrap_content"
+            android:textColor="@color/TextViewTextColorWhite"
+            android:id="@+id/transactionTitleText"
+            android:textSize="@dimen/TextSizeExtraLarge" />
+        <ImageView
+            android:id="@+id/btnExpand"
+            android:src="@drawable/expand_down"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="8dp"
+            android:layout_gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="4dp" />
+    </RelativeLayout>
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+        <TableRow
+            android:layout_marginTop="4dp">
+            <TextView
+                android:textColor="@color/TextViewTextColor"
+                android:lineSpacingMultiplier="0.90"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/TextSizeMedium"
+                android:text="Account Number:"
+                android:layout_marginRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1" />
+            <TextView
+                android:id="@+id/lblAccountNumber"
+                android:paddingRight="8dip"
+                android:textColor="@color/TextViewTextColor"
+                android:lineSpacingMultiplier="0.90"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/TextSizeMedium"
+                android:gravity="right"
+                android:text="0004056097-0000"
+                android:layout_height="wrap_content"
+                android:layout_weight="0" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:textColor="@color/TextViewTextColor"
+                android:lineSpacingMultiplier="0.90"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/TextSizeMedium"
+                android:text="Account Number for ACH:"
+                android:layout_marginRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1" />
+            <TextView
+                android:id="@+id/lblAccountNumberACH"
+                android:paddingRight="8dip"
+                android:textColor="@color/TextViewTextColor"
+                android:lineSpacingMultiplier="0.90"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/TextSizeMedium"
+                android:gravity="right"
+                android:text="10000004729285"
+                android:layout_height="wrap_content"
+                android:layout_weight="0" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/lblItem1Text"
+                android:textColor="@color/TextViewTextColor"
+                android:lineSpacingMultiplier="0.90"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/TextSizeMedium"
+                android:text="Balance:"
+                android:layout_marginRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1" />
+            <TextView
+                android:id="@+id/lblBalance"
+                android:paddingRight="8dip"
+                android:textColor="@color/TextViewTextColor"
+                android:lineSpacingMultiplier="0.90"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/TextSizeMedium"
+                android:gravity="right"
+                android:text="$99,999,999.99"
+                android:layout_height="wrap_content"
+                android:layout_weight="0" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/lblItem2Text"
+                android:textColor="@color/TextViewTextColor"
+                android:lineSpacingMultiplier="0.90"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/TextSizeMedium"
+                android:text="Available Balance:"
+                android:layout_marginRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1" />
+            <TextView
+                android:id="@+id/lblAvailableBalance"
+                android:paddingRight="8dip"
+                android:textColor="@color/TextViewTextColor"
+                android:lineSpacingMultiplier="0.90"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/TextSizeMedium"
+                android:gravity="right"
+                android:text="$99,999,999.99"
+                android:layout_height="wrap_content"
+                android:layout_weight="0" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/rowMinimumPayment">
+            <TextView
+                android:id="@+id/lblItem3Text"
+                android:textColor="@color/TextViewTextColor"
+                android:lineSpacingMultiplier="0.90"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/TextSizeMedium"
+                android:text="Minimum Payment:"
+                android:layout_marginRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1" />
+            <TextView
+                android:id="@+id/lblMinimumPayment"
+                android:paddingRight="8dip"
+                android:textColor="@color/TextViewTextColor"
+                android:lineSpacingMultiplier="0.90"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/TextSizeMedium"
+                android:gravity="right"
+                android:text="$99.99"
+                android:layout_height="wrap_content"
+                android:layout_weight="0" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/rowNextDueDate">
+            <TextView
+                android:id="@+id/lblItem4Text"
+                android:textColor="@color/TextViewTextColor"
+                android:lineSpacingMultiplier="0.90"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/TextSizeMedium"
+                android:text="Next Due Date:"
+                android:layout_marginRight="10dp"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1" />
+            <TextView
+                android:id="@+id/lblNextDueDate"
+                android:paddingRight="8dip"
+                android:textColor="@color/TextViewTextColor"
+                android:lineSpacingMultiplier="0.90"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/TextSizeMedium"
+                android:gravity="right"
+                android:text="10/10/2011"
+                android:layout_height="wrap_content"
+                android:layout_weight="0" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/rowRate">
+            <TextView
+                android:id="@+id/lblItem5Text"
+                android:textColor="@color/TextViewTextColor"
+                android:lineSpacingMultiplier="0.90"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/TextSizeMedium"
+                android:text="Rate:"
+                android:layout_marginRight="10dp"
+                android:layout_width="160dp"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1" />
+            <TextView
+                android:id="@+id/lblRate"
+                android:paddingRight="8dip"
+                android:textColor="@color/TextViewTextColor"
+                android:lineSpacingMultiplier="0.90"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/TextSizeMedium"
+                android:gravity="right"
+                android:text="24.99%"
+                android:layout_height="wrap_content"
+                android:layout_weight="0" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/rowButtons"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center">
+            <Button
+                android:id="@+id/btnPayoff"
+                style="@style/BlueGradientButtonStyle"
+                android:layout_width="150dp"
+                android:layout_height="38dp"
+                android:text="Request Payoff Quote"
+                android:layout_gravity="center"
+                android:minWidth="150dip"
+                android:layout_span="2"
+                android:minHeight="38dp" />
+        </TableRow>
+        <View
+            android:layout_span="2"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_weight="1"
+            android:background="@drawable/bluegradientbutton"
+            android:padding="2dip"
+            android:layout_marginTop="4dp" />
+    </TableLayout>
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_height="50dp"
+        android:layout_width="fill_parent"
+        android:id="@+id/relativeLayout2">
+        <SearchView
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/searchBar"
+            android:queryHint=""
+            android:iconifiedByDefault="false" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:background="@drawable/background_nobar">
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/transactionsRefresher"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ListView
+                android:id="@android:id/list"
+                style="@style/ListViewStyle"
+                android:divider="@drawable/default_separatorcolor"
+                android:dividerHeight="1dip" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </LinearLayout>
+</LinearLayout>

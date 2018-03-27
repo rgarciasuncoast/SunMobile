@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:CalendarSample="clr-namespace:Syncfusion.SfCalendar.XForms;assembly=Syncfusion.SfCalendar.XForms" 
+    x:Class="SunMobile.Forms.Views.CalendarPage">
+	<ContentPage.Content>
+        <StackLayout>
+            <Label>This is a Xamarin Forms Page</Label>
+            <Label>This is a Xamarin Forms Page</Label>
+            <Label>This is a Xamarin Forms Page</Label>
+            <Label>This is a Xamarin Forms Page</Label>
+            <Label>This is a Xamarin Forms Page</Label>
+            <Label>This is a Xamarin Forms Page</Label>
+            <CalendarSample:SfCalendar VerticalOptions="FillAndExpand"  x:Name="calendar" ViewMode="MonthView" />
+            <Label>This is a Xamarin Forms Page</Label>
+            <Label>This is a Xamarin Forms Page</Label>
+            <Label>This is a Xamarin Forms Page</Label>
+            <Label>This is a Xamarin Forms Page</Label>
+            <Label>This is a Xamarin Forms Page</Label>
+            <Label>This is a Xamarin Forms Page</Label>
+        </StackLayout>
+	</ContentPage.Content>
+</ContentPage>

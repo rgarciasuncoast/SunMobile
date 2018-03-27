@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+    <RelativeLayout
+        android:id="@+id/TitleBar"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:minHeight="@dimen/appdim_MinimumTitleHeight"
+        android:layout_height="wrap_content"
+        android:background="@color/ActionBarBackgroundColor">
+        <ImageButton
+            android:id="@+id/btnCloseWindow"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_back"
+            android:background="@drawable/transparent"
+            android:visibility="invisible"
+            android:maxWidth="31px"
+            android:layout_centerVertical="true" />
+        <TextView
+            android:id="@+id/txtTitle"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:textColor="@color/TextViewTextColorWhite"
+            android:text="Account Verification"
+            android:minHeight="30dp"
+            android:textSize="@dimen/TextSizeLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <TextView
+        android:text="To help protect your account, we want to make sure this is you. How should we verify your account?"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/TextSizeLarge"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="8dp"
+        android:paddingTop="10dp"
+        android:id="@+id/txtQuestion" />
+    <Spinner
+        android:id="@+id/spinnerValidationMethod"
+        android:gravity="center_horizontal"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" />
+    <EditText
+        android:id="@+id/txtAnswer"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:layout_marginTop="10dp" />
+    <Button
+        android:text="Send Code"
+        android:id="@+id/btnSendCode"
+        style="@style/BlueGradientButtonStyle"
+        android:layout_marginTop="10dp" />
+    <Button
+        android:text="Continue"
+        android:id="@+id/btnContinue"
+        style="@style/BlueGradientButtonStyle"
+        android:layout_marginTop="10dp" />
+</LinearLayout>

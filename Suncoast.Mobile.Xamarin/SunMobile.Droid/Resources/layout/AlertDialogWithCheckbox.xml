@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <CheckBox
+        android:id="@+id/checkBoxConfirm"
+        android:text="Are you sure?"
+        android:textSize="@dimen/TextSizeMedium"
+        android:textColor="@color/TextViewTextColor"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:fillViewport="false"
+        android:layout_above="@id/checkBoxConfirm"
+        android:background="@color/white">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="20dp">
+            <TextView
+                android:id="@+id/txtTitle"
+                android:text="SunMobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/TextSizeLarge"
+                android:textColor="@color/TextViewTextColor"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/txtMessage"
+                android:text="This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  This is the message.  "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/TextSizeMedium"
+                android:textColor="@color/TextViewTextColor"
+                android:paddingTop="10dp" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

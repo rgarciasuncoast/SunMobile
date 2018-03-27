@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<dimen name="appdim_BillPayScheduleItemHeight">70dip</dimen>
+
+	<string name="ui_BillPayPayeeListProgressDescription">Getting Payees...</string>
+	<string name="ui_BillPayAddPaymentProgressDescription">Adding Payment...</string>	
+	<string name="ui_BillPayAccountLabel">Account:</string>
+    <string name="ui_BillPayPayeeLabel">Payee:</string>
+    <string name="ui_BillPayAmountLabel">Payment Amount: $</string>
+    <string name="ui_BillPayMemoLabel">Memo:</string>
+    <string name="ui_BillPayWithdrawDateLabel">Withdraw Date:</string>
+    <string name="ui_BillPayRecurLabel">Recurring Payment:</string>
+    <string name="ui_BillPayRecurOffLabel">No</string>
+    <string name="ui_BillPayRecurOnLabel">Yes</string>
+    <string name="ui_BillPayRecurTitle">Recurring</string>
+    <string name="ui_BillPayFrequencyLabel">Payment Frequency:</string>
+    <string name="ui_BillPayIndefiniteLabel">Indefinite Payment:</string>
+    <string name="ui_BillPayIndefiniteOffLabel">No</string>
+    <string name="ui_BillPayIndefiniteOnLabel">Yes</string>
+    <string name="ui_BillPayNOPLabel"># of Payments:</string>
+    <string name="ui_BillPayAddPaymentButtonTitle">Send Payment</string>
+    <string name="ui_BillPayEditPaymentButtonTitle">Save Changes</string>
+    <string name="ui_BillPayAccountListTitle">Account List</string>
+    <string name="ui_BillPayFrequencyListTitle">Bill Pay Frequency</string>
+    <string name="ui_BillPayConfirmationTitle">Confirm Payment</string>
+    <string name="ui_BillPayConfirmCancelTitle">Cancel Payment?</string>
+    <string name="ui_BillPayPayeeListTitle">Payees</string>
+    <string name="ui_BillPayFreqListRowHeight">40</string>
+    <string name="ui_BillPayPayeeListRowHeight">40</string>
+    <string name="ui_BillPayNoSourceAccountSelectedMessage">Please choose an account for your payment</string>
+    <string name="ui_BillPayNoPayeeSelectedMessage">Please choose a payee for your payment</string>
+    <string name="ui_BillPayNoAmountEnteredMessage">Please enter an amount for your payment</string>
+    <string name="ui_BillPayNoWithdrawDateEnteredMessage">Please choose a withdraw date for your payment</string>
+    <string name="ui_BillPayInvalidWithdrawDate">Invalid withdraw date selected.</string>
+    <string name="ui_BillPayNoTimesEnteredMessage">Please choose a number of times to repeat the payment</string>
+    <string name="ui_BillPayNoFrequencyEnteredMessage">Please choose a frequency for your payment</string>
+    <string name="ui_BillPayInvalidAmount">Please enter a smaller amount.</string>
+    <string name="ui_BillPayInvalidAmountLow">Amount too low, Minimum Payment Amount is $1.00.</string>
+    <string name="ui_BillPayInvalidAmountHigh">Amount too high, Maximum Payment Amount is $9,999.99.</string>
+    <string name="ui_BillPayAddPaymentFailedMessage">New payment failed to be added.</string>
+    <string name="ui_BillPayAddPaymentSuccessMessage">New payment added.</string>
+    <string name="ui_BillPayScheduleWarningMessage">The Withdraw Date shown above is the date the funds will be withdrawn from your account. It can take three to seven business days for payments to be received and processed by your payee. Please be certain that you\'ve allowed adequate time for your payment to arrive by your due date. Funds are withdrawn at about 6:00 AM EST, Monday through Friday.</string>
+    
+    <string name="ui_BillPayUpdatePaymentTitle">Update Bill Payment</string>
+</resources>

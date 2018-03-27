@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:id="@+id/mainLayout">
+    <RelativeLayout
+        android:id="@+id/messageActionBar"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="36dp"
+        android:background="@color/ActionBarBackgroundColor">
+        <Button
+            android:id="@+id/btnDocumentCenter"
+            android:background="@drawable/bluegradientbuttonsmall"
+            android:textColor="@color/white"
+            android:typeface="sans"
+            android:textAllCaps="false"
+            android:layout_gravity="center_vertical"
+            android:textSize="14dp"
+            android:textStyle="normal"
+            android:layout_width="150dp"
+            android:layout_height="26dp"
+            android:layout_marginTop="5dp"
+            android:text="Document Center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+        <ImageView
+            android:id="@+id/btnCompose"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/messages_compose"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="10dp" />
+        <ImageView
+            android:id="@+id/btnReply"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/messages_reply"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_toLeftOf="@+id/btnCompose"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="20dp" />
+        <ImageView
+            android:id="@+id/btnTrash"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/messages_trash"
+            android:layout_width="28.0dp"
+            android:layout_height="28dp"
+            android:layout_toLeftOf="@+id/btnReply"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="20dp" />
+    </RelativeLayout>
+    <TableLayout
+        android:id="@+id/mainTable"
+        android:stretchColumns="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ffffffff">
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/lblFrom"
+                android:text="Suncoast Credit Union"
+                android:textSize="@dimen/TextSizeMedium"
+                android:textColor="@color/TextViewTextColor"
+                android:textStyle="bold"
+                android:paddingTop="4dip"
+                android:paddingLeft="20dip"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_gravity="center_vertical|" />
+        </TableRow>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/lblReceivedTime"
+                android:text="Yesterday at 3:09 PM"
+                android:textSize="@dimen/TextSizeMedium"
+                android:textColor="@color/TextViewTextColorGray"
+                android:paddingTop="2dip"
+                android:paddingBottom="8dip"
+                android:paddingLeft="20dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_width="match_parent" />
+        </TableRow>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_weight="1"
+            android:background="@drawable/default_separatorcolor_light"
+            android:padding="2dip" />
+    </TableLayout>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:background="@drawable/background_nobar"
+        android:scrollbars="none">
+        <TableLayout
+            android:id="@+id/mainTable"
+            android:stretchColumns="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TableRow
+                android:layout_width="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_weight=".9">
+                <WebView
+                    android:id="@+id/webViewMessageBody"
+                    android:layout_weight=".9" />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>

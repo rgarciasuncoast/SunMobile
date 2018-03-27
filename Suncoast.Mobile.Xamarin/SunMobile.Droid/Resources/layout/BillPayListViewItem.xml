@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TableLayout
+        android:id="@+id/RowTable"
+        android:clipChildren="false"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/listselector_medium">
+        <TableRow
+            android:id="@+id/trowItemTitle"
+            android:clipToPadding="true"
+            android:clipChildren="false"
+            android:layout_gravity="left|center_vertical"
+            android:gravity="left|center_vertical">
+            <TextView
+                android:id="@+id/lblHeaderText"
+                android:textSize="@dimen/TextSizeLarge"
+                android:layout_height="wrap_content"
+                android:textColor="@color/TextViewTextColor"
+                android:paddingLeft="1dp"
+                android:text="December 25, 2017"
+                android:layout_marginLeft="6dp"
+                android:layout_span="4"
+                android:layout_width="wrap_content"
+                android:layout_weight=".9" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/trowItemBody"
+            android:clipChildren="false"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/lblItem1Text"
+                android:textColor="@color/TextViewTextColor"
+                android:text="Payee Name (Payee Nickname)"
+                android:layout_width="wrap_content"
+                android:layout_weight="7.0"
+                android:layout_span="2"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/TextSizeMedium"
+                android:singleLine="true"
+                android:layout_marginLeft="20dp" />
+            <TextView
+                android:id="@+id/lblValue2Text"
+                android:paddingRight="8dip"
+                android:textColor="@color/TextViewTextColor"
+                android:text="$6,543.21"
+                android:lineSpacingMultiplier="0.90"
+                android:layout_width="80dip"
+                android:layout_weight="0"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/TextSizeMedium"
+                android:gravity="right" />
+            <ImageView
+                android:id="@+id/imgMore"
+                android:layout_width="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:cropToPadding="false"
+                android:src="@drawable/listitemselect"
+                android:paddingRight="2dip"
+                android:minWidth="20dp" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/trowItemBody"
+            android:clipChildren="false"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/lblItem2Text"
+                android:textColor="@color/TextViewTextColor"
+                android:text="Payment Status"
+                android:lineSpacingMultiplier="0.90"
+                android:layout_width="wrap_content"
+                android:layout_weight="5.0"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/TextSizeSmall"
+                android:gravity="left"
+                android:textStyle="italic"
+                android:layout_marginLeft="20dp" />
+            <ImageView
+                android:id="@+id/imgDummy"
+                android:layout_width="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:cropToPadding="false"
+                android:paddingRight="2dip"
+                android:minWidth="20dp" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

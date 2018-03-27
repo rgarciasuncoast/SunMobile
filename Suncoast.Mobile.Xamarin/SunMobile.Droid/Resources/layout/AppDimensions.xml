@@ -1,0 +1,13 @@
+﻿<resources>
+	<dimen name="appdim_MinimumTitleHeight">39dp</dimen>
+	<dimen name="appdim_TitleTextSize">20dp</dimen>
+	<dimen name="content_textsize">16dip</dimen>
+	<dimen name="header_textsize">16dip</dimen>
+	<dimen name="body_textsize">14dip</dimen>
+	<dimen name="label_textsize">16dp</dimen>
+	<dimen name="small_textsize">12dp</dimen>
+	<dimen name="selectview_textSize">20dip</dimen>
+	<dimen name="appdim_MinListItemHeight">85px</dimen>
+	<dimen name="appdim_TitleBarPadding">5dp</dimen>
+	<dimen name="cell_Height">64dp</dimen>
+</resources>

@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/scrollView1"
+        android:background="@drawable/background_nobar">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout1"
+            android:gravity="center_horizontal">
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tableLayout1">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip" />
+                <TableRow
+                    android:id="@+id/rowContactInfoMemberName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp">
+                    <TextView
+                        android:id="@+id/lblContactInfoMemberName"
+                        android:text="Member Name"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:textColor="@color/TextViewTextColor"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"
+                        android:width="150dp" />
+                    <TextView
+                        android:id="@+id/txtContactInfoMemberName"
+                        android:text=""
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:textColor="@color/TextViewTextColor"
+                        android:textStyle="bold"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight=".9" />
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip" />
+                <TableRow
+                    android:id="@+id/rowContactInfoAddress1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp">
+                    <TextView
+                        android:id="@+id/lblContactInfoAddress1"
+                        android:text="Address 1"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:textColor="@color/TextViewTextColor"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"
+                        android:width="150dp" />
+                    <EditText
+                        android:id="@+id/txtContactInfoAddress1"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight=".9"
+                        android:maxLength="40" />
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip" />
+                <TableRow
+                    android:id="@+id/rowContactInfoAddress2"
+                    android:gravity="center"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp">
+                    <TextView
+                        android:id="@+id/lblContactInfoAddress2"
+                        android:text="Address 2"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:textColor="@color/TextViewTextColor"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"
+                        android:width="150dp" />
+                    <EditText
+                        android:id="@+id/txtContactInfoAddress2"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:hint="(Optional)"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight=".9"
+                        android:maxLength="40" />
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip" />
+                <TableRow
+                    android:id="@+id/rowContactInfoCity"
+                    android:gravity="center"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp">
+                    <TextView
+                        android:id="@+id/lblContactInfoCity"
+                        android:text="City"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:textColor="@color/TextViewTextColor"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"
+                        android:width="150dp" />
+                    <EditText
+                        android:id="@+id/txtContactInfoCity"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight=".9"
+                        android:maxLength="40" />
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip" />
+                <TableRow
+                    android:id="@+id/rowContactInfoState"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:id="@+id/lblContactInfoState"
+                        android:text="State"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:textColor="@color/TextViewTextColor"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"
+                        android:width="150dp" />
+                    <Spinner
+                        android:id="@+id/spinnerContactInfoState"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight=".9" />
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip" />
+                <TableRow
+                    android:id="@+id/rowContactInfoZip"
+                    android:gravity="center"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp">
+                    <TextView
+                        android:id="@+id/lblContactInfoZip"
+                        android:text="Zip"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:textColor="@color/TextViewTextColor"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"
+                        android:width="150dp" />
+                    <EditText
+                        android:id="@+id/txtContactInfoZip"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:inputType="number"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight=".9"
+                        android:maxLength="10" />
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip" />
+                <TableRow
+                    android:id="@+id/rowContactInfoHomePhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp">
+                    <TextView
+                        android:id="@+id/lblContactInfoHomePhone"
+                        android:text="Home Phone"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:textColor="@color/TextViewTextColor"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"
+                        android:width="150dp" />
+                    <EditText
+                        android:id="@+id/txtContactInfoHomePhone"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:inputType="phone"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight=".9"
+                        android:maxLength="14" />
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip" />
+                <TableRow
+                    android:id="@+id/rowContactInfoWorkPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp">
+                    <TextView
+                        android:id="@+id/lblContactInfoWorkPhone"
+                        android:text="Work Phone"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:textColor="@color/TextViewTextColor"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"
+                        android:width="150dp" />
+                    <EditText
+                        android:id="@+id/txtContactInfoWorkPhone"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:inputType="phone"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight=".9"
+                        android:maxLength="14" />
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip" />
+                <TableRow
+                    android:id="@+id/rowContactInfoCellPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp">
+                    <TextView
+                        android:id="@+id/lblContactInfoCellPhone"
+                        android:text="Cell Phone"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:textColor="@color/TextViewTextColor"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"
+                        android:width="150dp" />
+                    <EditText
+                        android:id="@+id/txtContactInfoCellPhone"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:inputType="phone"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight=".9"
+                        android:maxLength="14" />
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip" />
+                <TableRow
+                    android:id="@+id/rowContactInfoEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp">
+                    <TextView
+                        android:id="@+id/lblContactInfoEmail"
+                        android:text="Email Address"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:textColor="@color/TextViewTextColor"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"
+                        android:width="150dp" />
+                    <EditText
+                        android:id="@+id/txtContactInfoEmail"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight=".9"
+                        android:maxLength="255" />
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip" />
+                <TableRow
+                    android:id="@+id/rowContactInfoButton"
+                    android:layout_width="match_parent"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:id="@+id/btnEdit"
+                        style="@style/BlueGradientButtonStyle"
+                        android:text="Edit"
+                        android:layout_span="1"
+                        android:scrollHorizontally="false"
+                        android:layout_width="40dp"
+                        android:layout_marginRight="10dp" />
+                    <Button
+                        android:id="@+id/btnUpdate"
+                        style="@style/BlueGradientButtonStyle"
+                        android:text="Continue"
+                        android:layout_span="1"
+                        android:layout_marginLeft="10dp" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

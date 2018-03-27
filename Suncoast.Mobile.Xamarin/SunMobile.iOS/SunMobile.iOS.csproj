@@ -1,0 +1,880 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Xamarin.Forms.2.5.0.280555\build\netstandard1.0\Xamarin.Forms.props" Condition="Exists('..\packages\Xamarin.Forms.2.5.0.280555\build\netstandard1.0\Xamarin.Forms.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{AE0D687C-A8FE-4CFF-B78C-86218058B3BF}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>SunMobile.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources;Resources\old;;Resources\messagecenter;Resources\onboarding</IPhoneResourcePrefix>
+    <ReleaseVersion>3.0</ReleaseVersion>
+    <SynchReleaseVersion>false</SynchReleaseVersion>
+    <TargetFrameworkIdentifier>Xamarin.iOS</TargetFrameworkIdentifier>
+    <AssemblyName>SunMobileiOS</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>__UNIFIED__;DEBUG;__MOBILE__;__IOS__;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchArch>x86_64</MtouchArch>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignProvision>DevSunMobile</CodesignProvision>
+    <MtouchProfiling>true</MtouchProfiling>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>__UNIFIED__;DEBUG;__MOBILE__;__IOS__;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <IpaPackageName>
+    </IpaPackageName>
+    <MtouchI18n>
+    </MtouchI18n>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignProvision></CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <DefineConstants>__UNIFIED__;__MOBILE__;__IOS__;__APPSTORE__</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignProvision></CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <IpaPackageName>
+    </IpaPackageName>
+    <MtouchI18n>
+    </MtouchI18n>
+    <CustomCommands>
+      <CustomCommands>
+        <Command>
+          <type>AfterBuild</type>
+          <command>sh MetaforicFixup/client_fixup.sh --platform ${ProjectConfigPlat} --config ${ProjectConfigName}client_fixup.sh --platform ${ProjectConfigPlat} --config ${ProjectConfigName}</command>
+          <workingdir>${ProjectDir}</workingdir>
+        </Command>
+      </CustomCommands>
+    </CustomCommands>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer: Brian McCarty (58ZL82Y37Y)</CodesignKey>
+    <CodesignProvision>f3e5b422-7e93-4f46-affb-ae5140a9352e</CodesignProvision>
+    <MtouchArch>ARMv7</MtouchArch>
+    <IntermediateOutputPath></IntermediateOutputPath>
+    <RunWithWarnings>true</RunWithWarnings>
+    <MtouchUseThumb></MtouchUseThumb>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants>__UNIFIED__;__MOBILE__;__IOS__;__APPSTORE__</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchArch>ARMv7</MtouchArch>
+    <MtouchNoSymbolStrip></MtouchNoSymbolStrip>
+    <MtouchEnableBitcode></MtouchEnableBitcode>
+    <CodesignResourceRules></CodesignResourceRules>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <DefineConstants>__UNIFIED__;__MOBILE__;__IOS__;__ADHOC__</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Distribution: Suncoast Credit Union (VYZZDN9VW9)</CodesignKey>
+    <MtouchFloat32>false</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignProvision>AdhocSunMobile</CodesignProvision>
+    <CustomCommands>
+      <CustomCommands>
+        <Command>
+          <type>AfterBuild</type>
+          <command>sh MetaforicFixup/client_fixup.sh --platform ${ProjectConfigPlat} --config ${ProjectConfigName}client_fixup.sh --platform ${ProjectConfigPlat} --config ${ProjectConfigName}</command>
+          <workingdir>${ProjectDir}</workingdir>
+        </Command>
+      </CustomCommands>
+    </CustomCommands>
+    <MtouchLink>None</MtouchLink>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="MonoTouch.Dialog-1" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="ModernHttpClient">
+      <HintPath>..\packages\modernhttpclient.2.4.2\lib\Xamarin.iOS10\ModernHttpClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="Xamarin.iOS.iCarousel.Binding">
+      <HintPath>..\packages\Xamarin.iOS.iCarousel.1.8.4\lib\Xamarin.iOS10\Xamarin.iOS.iCarousel.Binding.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.DeviceInfo.Abstractions">
+      <HintPath>..\packages\Xam.Plugin.DeviceInfo.3.0.2\lib\Xamarin.iOS10\Plugin.DeviceInfo.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.DeviceInfo">
+      <HintPath>..\packages\Xam.Plugin.DeviceInfo.3.0.2\lib\Xamarin.iOS10\Plugin.DeviceInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Settings.Abstractions">
+      <HintPath>..\packages\Xam.Plugins.Settings.3.1.1\lib\Xamarin.iOS10\Plugin.Settings.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Settings">
+      <HintPath>..\packages\Xam.Plugins.Settings.3.1.1\lib\Xamarin.iOS10\Plugin.Settings.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Media.Abstractions">
+      <HintPath>..\packages\Xam.Plugin.Media.3.0.1\lib\Xamarin.iOS10\Plugin.Media.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Media">
+      <HintPath>..\packages\Xam.Plugin.Media.3.0.1\lib\Xamarin.iOS10\Plugin.Media.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Permissions.Abstractions">
+      <HintPath>..\packages\Plugin.Permissions.2.1.0\lib\Xamarin.iOS10\Plugin.Permissions.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Permissions">
+      <HintPath>..\packages\Plugin.Permissions.2.1.0\lib\Xamarin.iOS10\Plugin.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="Calabash">
+      <HintPath>..\packages\Xamarin.TestCloud.Agent.0.21.4\lib\Xamarin.iOS\Calabash.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfCalendar.iOS">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfCalendar.IOS.16.1.0.24\lib\Xamarin.iOS10\Syncfusion.SfCalendar.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter">
+      <HintPath>..\packages\Microsoft.AppCenter.1.5.0\lib\Xamarin.iOS10\Microsoft.AppCenter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.iOS.Bindings">
+      <HintPath>..\packages\Microsoft.AppCenter.1.5.0\lib\Xamarin.iOS10\Microsoft.AppCenter.iOS.Bindings.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Analytics">
+      <HintPath>..\packages\Microsoft.AppCenter.Analytics.1.5.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Analytics.iOS.Bindings">
+      <HintPath>..\packages\Microsoft.AppCenter.Analytics.1.5.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Analytics.iOS.Bindings.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Crashes">
+      <HintPath>..\packages\Microsoft.AppCenter.Crashes.1.5.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Crashes.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Crashes.iOS.Bindings">
+      <HintPath>..\packages\Microsoft.AppCenter.Crashes.1.5.0\lib\Xamarin.iOS10\Microsoft.AppCenter.Crashes.iOS.Bindings.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Mobile">
+      <HintPath>..\Components\xamarin.mobile-0.7.5\lib\ios-unified\Xamarin.Mobile.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\packages\Xamarin.Forms.2.5.0.280555\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform">
+      <HintPath>..\packages\Xamarin.Forms.2.5.0.280555\lib\Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform.iOS">
+      <HintPath>..\packages\Xamarin.Forms.2.5.0.280555\lib\Xamarin.iOS10\Xamarin.Forms.Platform.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml">
+      <HintPath>..\packages\Xamarin.Forms.2.5.0.280555\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="Resources\libcryptopp.a" />
+    <None Include="Resources\libjansson.a" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\BaseNavigationController.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="Common\BaseTableViewController.cs" />
+    <Compile Include="Common\BaseViewController.cs" />
+    <Compile Include="Accounts\AccountsTableViewSource.cs" />
+    <Compile Include="Deposits\CameraOverlayView.cs" />
+    <Compile Include="Deposits\DepositsEnrollmentViewController.cs" />
+    <Compile Include="Deposits\DepositsEnrollmentViewController.designer.cs">
+      <DependentUpon>DepositsEnrollmentViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs" />
+    <Compile Include="Accounts\TransactionsTableViewSource.cs" />
+    <Compile Include="Accounts\TransactionsViewController.cs" />
+    <Compile Include="Accounts\TransactionsViewController.designer.cs">
+      <DependentUpon>TransactionsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts\CheckImageViewController.cs" />
+    <Compile Include="Accounts\CheckImageViewController.designer.cs">
+      <DependentUpon>CheckImageViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transfers\TransferAnyMemberTableViewController.cs" />
+    <Compile Include="Transfers\TransferAnyMemberTableViewController.designer.cs">
+      <DependentUpon>TransferAnyMemberTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Authentication\AdaptiveAuthenticationViewController.cs" />
+    <Compile Include="Authentication\AdaptiveAuthenticationViewController.designer.cs">
+      <DependentUpon>AdaptiveAuthenticationViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\BaseAuthenticationViewController.cs" />
+    <Compile Include="Common\CustomPickerViewModel.cs" />
+    <Compile Include="Common\CustomPickerViewController.cs" />
+    <Compile Include="Common\CustomPickerViewController.designer.cs">
+      <DependentUpon>CustomPickerViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\BaseAuthenticationTableViewController.cs" />
+    <Compile Include="Transfers\TransfersTableViewController.cs" />
+    <Compile Include="Transfers\TransfersTableViewController.designer.cs">
+      <DependentUpon>TransfersTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Deposits\DepositsTableViewController.cs" />
+    <Compile Include="Deposits\DepositsTableViewController.designer.cs">
+      <DependentUpon>DepositsTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\WebViewController.cs" />
+    <Compile Include="Common\WebViewController.designer.cs">
+      <DependentUpon>WebViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BillPay\BillPayViewController.cs" />
+    <Compile Include="BillPay\BillPayViewController.designer.cs">
+      <DependentUpon>BillPayViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BillPay\PaymentsTableViewSource.cs" />
+    <Compile Include="BillPay\BillPayDetailsViewController.cs" />
+    <Compile Include="BillPay\BillPayDetailsViewController.designer.cs">
+      <DependentUpon>BillPayDetailsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BillPay\BillPaySchedulePaymentViewController.cs" />
+    <Compile Include="BillPay\BillPaySchedulePaymentViewController.designer.cs">
+      <DependentUpon>BillPaySchedulePaymentViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BillPay\SelectPayeeTableViewController.cs" />
+    <Compile Include="BillPay\SelectPayeeTableViewController.designer.cs">
+      <DependentUpon>SelectPayeeTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BillPay\PayeesTableViewSource.cs" />
+    <Compile Include="Common\DatePickerViewController.cs" />
+    <Compile Include="Common\DatePickerViewController.designer.cs">
+      <DependentUpon>DatePickerViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Locations\LocationsViewController.cs" />
+    <Compile Include="Locations\LocationsViewController.designer.cs">
+      <DependentUpon>LocationsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Locations\LocationsDetailViewController.cs" />
+    <Compile Include="Locations\LocationsDetailViewController.designer.cs">
+      <DependentUpon>LocationsDetailViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Deposits\CameraViewController.cs" />
+    <Compile Include="Deposits\CameraViewController.designer.cs">
+      <DependentUpon>CameraViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Deposits\CaptureSessionManager.cs" />
+    <Compile Include="Accounts\AccountsViewController.cs" />
+    <Compile Include="Accounts\AccountsViewController.designer.cs">
+      <DependentUpon>AccountsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts\SelectAccountViewController.cs" />
+    <Compile Include="Accounts\SelectAccountViewController.designer.cs">
+      <DependentUpon>SelectAccountViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AppStyles.cs" />
+    <Compile Include="Main\StartupSettings.cs" />
+    <Compile Include="BillPay\BillPayMenuTableViewController.cs" />
+    <Compile Include="BillPay\BillPayMenuTableViewController.designer.cs">
+      <DependentUpon>BillPayMenuTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\CommonMethods.cs" />
+    <Compile Include="Common\ListPickerViewModel.cs" />
+    <Compile Include="ExternalServices\SunMoneyViewController.cs" />
+    <Compile Include="ExternalServices\SunMoneyViewController.designer.cs">
+      <DependentUpon>SunMoneyViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BillPay\ManagePayeesViewController.cs" />
+    <Compile Include="BillPay\ManagePayeesViewController.designer.cs">
+      <DependentUpon>ManagePayeesViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BillPay\UpdatePayeeViewController.cs" />
+    <Compile Include="BillPay\UpdatePayeeViewController.designer.cs">
+      <DependentUpon>UpdatePayeeViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cards\CardsMenuTableViewController.cs" />
+    <Compile Include="Cards\CardsMenuTableViewController.designer.cs">
+      <DependentUpon>CardsMenuTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cards\TravelNotificationsTableViewController.cs" />
+    <Compile Include="Cards\TravelNotificationsTableViewController.designer.cs">
+      <DependentUpon>TravelNotificationsTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cards\SelectCardsViewController.cs" />
+    <Compile Include="Cards\SelectCardsViewController.designer.cs">
+      <DependentUpon>SelectCardsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cards\CardsTableViewSource.cs" />
+    <Compile Include="Common\SelectCountryTableViewController.cs" />
+    <Compile Include="Common\SelectCountryTableViewController.designer.cs">
+      <DependentUpon>SelectCountryTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\SelectStateTableViewController.cs" />
+    <Compile Include="Common\SelectStateTableViewController.designer.cs">
+      <DependentUpon>SelectStateTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\StringListTableViewSource.cs" />
+    <Compile Include="Cards\SelectTravelDestinationsViewController.cs" />
+    <Compile Include="Cards\SelectTravelDestinationsViewController.designer.cs">
+      <DependentUpon>SelectTravelDestinationsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Messaging\MessagesTableViewSource.cs" />
+    <Compile Include="Messaging\MessagesViewController.cs" />
+    <Compile Include="Messaging\MessagesViewController.designer.cs">
+      <DependentUpon>MessagesViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Messaging\MessageViewController.cs" />
+    <Compile Include="Messaging\MessageViewController.designer.cs">
+      <DependentUpon>MessageViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\SlideOutNavigation\MainNavigationController.cs" />
+    <Compile Include="Main\SlideOutNavigation\MenuNavigationController.cs" />
+    <Compile Include="Main\SlideOutNavigation\SlideHandle.cs" />
+    <Compile Include="Main\SlideOutNavigation\SlideoutNavigationController.cs" />
+    <Compile Include="Main\SlideOutNavigation\MenuTableViewController.cs" />
+    <Compile Include="Main\SlideOutNavigation\MenuTableViewController.designer.cs">
+      <DependentUpon>MenuTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profile\ProfileTableViewController.cs" />
+    <Compile Include="Profile\ProfileTableViewController.designer.cs">
+      <DependentUpon>ProfileTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profile\UpdatePasswordViewController.cs" />
+    <Compile Include="Profile\UpdatePasswordViewController.designer.cs">
+      <DependentUpon>UpdatePasswordViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Authentication\AccountVerificationViewController.cs" />
+    <Compile Include="Authentication\AccountVerificationViewController.designer.cs">
+      <DependentUpon>AccountVerificationViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profile\PasswordReminderTableViewController.cs" />
+    <Compile Include="Profile\PasswordReminderTableViewController.designer.cs">
+      <DependentUpon>PasswordReminderTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="About\ContactUsTableViewController.cs" />
+    <Compile Include="About\ContactUsTableViewController.designer.cs">
+      <DependentUpon>ContactUsTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Authentication\IVerificationViewController.cs" />
+		<Compile Include="Accounts\TransactionDisputesTableViewController.cs" />
+
+    <Compile Include="Accounts\TransactionDisputesTableViewController.designer.cs">
+      <DependentUpon>TransactionDisputesTableViewController.cs</DependentUpon>
+    </Compile>
+		
+    <Compile Include="Accounts\UploadDisputeDocumentsTableViewSource.cs" />
+    <Compile Include="Accounts\UploadDisputeDocumentsTableViewController.cs" />
+    <Compile Include="Accounts\UploadDisputeDocumentsTableViewController.designer.cs">
+      <DependentUpon>UploadDisputeDocumentsTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts\TransactionDetailsTableViewController.cs" />
+    <Compile Include="Accounts\TransactionDetailsTableViewController.designer.cs">
+      <DependentUpon>TransactionDetailsTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts\TransactionSelectionTableViewSource.cs" />
+    <Compile Include="Accounts\TransactionSelectionViewController.cs" />
+
+
+    <Compile Include="Accounts\TransactionSelectionViewController.designer.cs">
+      <DependentUpon>TransactionSelectionViewController.cs</DependentUpon>
+    </Compile>
+		
+    
+    <Compile Include="Documents\DocumentCenterViewController.cs" />
+    <Compile Include="Documents\DocumentCenterViewController.designer.cs">
+      <DependentUpon>DocumentCenterViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\DocumentCenterTableViewSource.cs" />
+    <Compile Include="Documents\DocumentViewerViewController.cs" />
+    <Compile Include="Documents\DocumentViewerViewController.designer.cs">
+      <DependentUpon>DocumentViewerViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\DocumentUploadViewController.cs" />
+    <Compile Include="Documents\DocumentUploadViewController.designer.cs">
+      <DependentUpon>DocumentUploadViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\DocumentViewerPageViewController.cs" />
+    <Compile Include="Documents\DocumentViewerPageViewController.designer.cs">
+      <DependentUpon>DocumentViewerPageViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\DocumentViewerPageViewControllerDataSource.cs" />
+    <Compile Include="Documents\DocumentViewerContentViewController.cs" />
+    <Compile Include="Documents\DocumentViewerContentViewController.designer.cs">
+      <DependentUpon>DocumentViewerContentViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\DocumentUploadTableViewSource.cs" />
+    <Compile Include="Onboarding\OnboardingPageViewControllerDataSource.cs" />
+    <Compile Include="Onboarding\OnboardingViewController.cs" />
+    <Compile Include="Onboarding\OnboardingViewController.designer.cs">
+      <DependentUpon>OnboardingViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Onboarding\OnboardingPageViewController.cs" />
+    <Compile Include="Onboarding\OnboardingPageViewController.designer.cs">
+      <DependentUpon>OnboardingPageViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Onboarding\OnboardingContentViewController.cs" />
+    <Compile Include="Onboarding\OnboardingContentViewController.designer.cs">
+      <DependentUpon>OnboardingContentViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\DocumentsMenuTableViewController.cs" />
+    <Compile Include="Documents\DocumentsMenuTableViewController.designer.cs">
+      <DependentUpon>DocumentsMenuTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\EStatementsTableViewController.cs" />
+    <Compile Include="Documents\EStatementsTableViewController.designer.cs">
+      <DependentUpon>EStatementsTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\EStatementsTableViewSource.cs" />
+    <Compile Include="Main\FeedbackViewController.cs" />
+    <Compile Include="Main\FeedbackViewController.designer.cs">
+      <DependentUpon>FeedbackViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Documents\TaxDocumentsTableViewSource.cs" />
+    <Compile Include="Common\CustomAlertViewController.cs" />
+    <Compile Include="Common\CustomAlertViewController.designer.cs" />
+    <Compile Include="Profile\AlertSettingDetailTableViewController.cs" />
+    <Compile Include="Profile\AlertSettingDetailTableViewController.designer.cs">
+      <DependentUpon>AlertSettingDetailTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profile\AlertSettingTableViewController.cs" />
+    <Compile Include="Profile\AlertSettingTableViewController.designer.cs">
+      <DependentUpon>AlertSettingTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profile\AlertSettingTableViewSource.cs" />
+    <Compile Include="Profile\AlertsTableViewCell.cs" />
+    <Compile Include="Profile\AlertsTableViewCell.designer.cs">
+      <DependentUpon>AlertsTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profile\ManageAlertsTableViewController.cs" />
+    <Compile Include="Profile\ManageAlertsTableViewController.designer.cs">
+      <DependentUpon>ManageAlertsTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profile\ManageAlertsTableViewSource.cs" />
+    <Compile Include="Profile\EStatementAlertOptionsTableViewController.cs" />
+    <Compile Include="Profile\EStatementAlertOptionsTableViewController.designer.cs">
+      <DependentUpon>EStatementAlertOptionsTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profile\EStatementOptionsTableViewController.cs" />
+    <Compile Include="Profile\EStatementOptionsTableViewController.designer.cs">
+      <DependentUpon>EStatementOptionsTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\StartupViewController.cs" />
+    <Compile Include="Main\StartupViewController.designer.cs">
+      <DependentUpon>StartupViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts\SubAccounts\SubAccountsContactViewController.cs" />
+    <Compile Include="Accounts\SubAccounts\SubAccountsContactViewController.designer.cs">
+      <DependentUpon>SubAccountsContactViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts\SubAccounts\SubAccountsPageViewController.cs" />
+    <Compile Include="Accounts\SubAccounts\SubAccountsPageViewController.designer.cs">
+      <DependentUpon>SubAccountsPageViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts\SubAccounts\SubAccountsViewController.cs" />
+    <Compile Include="Accounts\SubAccounts\SubAccountsViewController.designer.cs">
+      <DependentUpon>SubAccountsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts\SubAccounts\SubAccountsPageViewControllerDataSource.cs" />
+    <Compile Include="Accounts\SubAccounts\SubAccountsBaseContentViewController.cs" />
+    <Compile Include="Accounts\SubAccounts\SubAccountsAgreementViewController.cs" />
+    <Compile Include="Accounts\SubAccounts\SubAccountsAgreementViewController.designer.cs">
+      <DependentUpon>SubAccountsAgreementViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts\SubAccounts\SubAccountsFundingViewController.cs" />
+    <Compile Include="Accounts\SubAccounts\SubAccountsFundingViewController.designer.cs">
+      <DependentUpon>SubAccountsFundingViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts\SubAccounts\SubAccountsConfirmationViewController.cs" />
+    <Compile Include="Accounts\SubAccounts\SubAccountsConfirmationViewController.designer.cs">
+      <DependentUpon>SubAccountsConfirmationViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts\SubAccounts\SubAccountsFinishViewController.cs" />
+    <Compile Include="Accounts\SubAccounts\SubAccountsFinishViewController.designer.cs">
+      <DependentUpon>SubAccountsFinishViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cards\OrderRaysCardViewController.cs" />
+    <Compile Include="Cards\OrderRaysCardViewController.designer.cs">
+      <DependentUpon>OrderRaysCardViewController.cs</DependentUpon>
+    </Compile>
+	<Compile Include="Messaging\MessageCenterTableViewController.cs" />
+    <Compile Include="Messaging\MessageCenterTableViewController.designer.cs">
+      <DependentUpon>Messaging\MessageCenterTableViewController.cs</DependentUpon>
+	</Compile>
+    <Compile Include="Messaging\MessageComposeViewController.cs" />
+    <Compile Include="Messaging\MessageComposeViewController.designer.cs">
+		<DependentUpon>Messaging\MessageComposeViewController.cs</DependentUpon>
+	</Compile>
+    <Compile Include="Profile\ContactInfoViewController.cs" />
+    <Compile Include="Profile\ContactInfoViewController.designer.cs">
+		<DependentUpon>ContactInfoViewController.cs</DependentUpon>
+	</Compile>
+    <Compile Include="Accounts\SubAccounts\SubAccountsCardViewController.cs" />
+    <Compile Include="Accounts\SubAccounts\SubAccountsCardViewController.designer.cs">
+      <DependentUpon>SubAccountsCardViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoanCenter\LoanCenterViewController.cs" />
+    <Compile Include="LoanCenter\LoanCenterViewController.designer.cs">
+      <DependentUpon>LoanCenterViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoanCenter\LoanCenterMenuTableViewController.cs" />
+    <Compile Include="LoanCenter\LoanCenterMenuTableViewController.designer.cs">
+      <DependentUpon>LoanCenterMenuTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transfers\TransferFavoritesTableViewSource.cs" />
+    <Compile Include="Transfers\TransferFavoritesTableViewController.cs" />
+    <Compile Include="Transfers\TransferFavoritesTableViewController.designer.cs">
+      <DependentUpon>TransferFavoritesTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Accounts\PayoffTableViewSource.cs" />
+    <Compile Include="Accounts\PayoffViewController.cs" />
+    <Compile Include="Accounts\PayoffViewController.designer.cs">
+      <DependentUpon>PayoffViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profile\AccountSettingsTableViewController.cs" />
+    <Compile Include="Profile\AccountSettingsTableViewController.designer.cs">
+      <DependentUpon>AccountSettingsTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profile\AccountSettingsTableViewSource.cs" />
+    <Compile Include="Profile\AccountSettingsTableViewCell.cs" />
+    <Compile Include="Profile\AccountSettingsTableViewCell.designer.cs">
+      <DependentUpon>AccountSettingsTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profile\AccountSpecificSettingsTableViewController.cs" />
+    <Compile Include="Profile\AccountSpecificSettingsTableViewController.designer.cs">
+      <DependentUpon>AccountSpecificSettingsTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profile\AccountSpecificSettingsTableViewSource.cs" />
+    <Compile Include="Common\PopUpViewer.cs" />
+    <Compile Include="Main\PromotionViewController.cs" />
+    <Compile Include="Main\PromotionViewController.designer.cs">
+      <DependentUpon>PromotionViewController.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="MainStoryboard_iPhone.storyboard" />
+    <InterfaceDefinition Include="Profile\AlertsTableViewCell.xib" />
+    <InterfaceDefinition Include="Main\StartupViewController.xib" />
+    <InterfaceDefinition Include="LaunchScreen.storyboard" />
+    <InterfaceDefinition Include="Profile\AccountSettingsTableViewCell.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\iTunesArtwork.png" />
+    <BundleResource Include="Resources\checksample.jpg" />
+    <BundleResource Include="Resources\camera2.png" />
+    <BundleResource Include="Resources\camera2%402x.png" />
+    <BundleResource Include="Resources\no-check.jpg" />
+    <BundleResource Include="Resources\toolbar-company_icon.png" />
+    <BundleResource Include="Resources\toolbar-company_icon%402x.png" />
+    <BundleResource Include="Resources\transaction-leftarrow.png" />
+    <BundleResource Include="Resources\transaction-leftarrow%402x.png" />
+    <BundleResource Include="Resources\transaction-rightarrow.png" />
+    <BundleResource Include="Resources\transaction-rightarrow%402x.png" />
+    <BundleResource Include="Resources\twitter.png" />
+    <BundleResource Include="Resources\three_lines.png" />
+    <BundleResource Include="Resources\three_lines%402x.png" />
+    <BundleResource Include="Resources\HamburgerBlack.png" />
+    <BundleResource Include="Resources\HamburgerWhite.png" />
+    <BundleResource Include="Resources\companylogo.png" />
+    <BundleResource Include="Resources\ic_action_cloud.png" />
+    <BundleResource Include="Resources\ic_action_event.png" />
+    <BundleResource Include="Resources\ic_action_import_export.png" />
+    <BundleResource Include="Resources\ic_action_share.png" />
+    <BundleResource Include="Resources\ic_action_view_as_list.png" />
+    <BundleResource Include="Resources\disclosure-close.png" />
+    <BundleResource Include="Resources\disclosure-close%402x.png" />
+    <BundleResource Include="Resources\General.png" />
+    <BundleResource Include="Resources\add.png" />
+    <BundleResource Include="Resources\transaction-check.png" />
+    <BundleResource Include="Resources\facebook.png" />
+    <BundleResource Include="Resources\twitter_flat_icon.png" />
+    <BundleResource Include="Resources\ic_action_home3.png" />
+    <BundleResource Include="Resources\ic_action_home3%402x.png" />
+    <BundleResource Include="Resources\ic_action_home.png" />
+    <BundleResource Include="Resources\ic_action_home%402x.png" />
+    <BundleResource Include="Resources\icoaccepted.png" />
+    <BundleResource Include="Resources\icocancelled.png" />
+    <BundleResource Include="Resources\icoerror.png" />
+    <BundleResource Include="Resources\icosent.png" />
+    <BundleResource Include="Resources\icowaiting.png" />
+    <BundleResource Include="Resources\suncoastnavbar%402x.png" />
+    <BundleResource Include="Resources\downArrow.png" />
+    <BundleResource Include="Resources\downArrow%402x.png" />
+    <BundleResource Include="Resources\downArrow%403x.png" />
+    <BundleResource Include="Resources\creditcards.png" />
+    <BundleResource Include="Resources\payees.png" />
+    <BundleResource Include="Resources\travel.png" />
+    <BundleResource Include="Resources\globe.png" />
+    <BundleResource Include="Resources\messagecenter.png" />
+    <BundleResource Include="Resources\messagecenter\send%402x.png" />
+    <BundleResource Include="Resources\messagecenter\compose.png" />
+    <BundleResource Include="Resources\messagecenter\compose%402x.png" />
+    <BundleResource Include="Resources\messagecenter\compose%403x.png" />
+    <BundleResource Include="Resources\messagecenter\reply.png" />
+    <BundleResource Include="Resources\messagecenter\trash%402x.png" />
+    <BundleResource Include="Resources\messagecenter\trash%403x.png" />
+    <BundleResource Include="Resources\messagecenter\send%403x.png" />
+    <BundleResource Include="Resources\messagecenter\send.png" />
+    <BundleResource Include="Resources\messagecenter\trash.png" />
+    <BundleResource Include="Resources\messagecenter\reply%402x.png" />
+    <BundleResource Include="Resources\messagecenter\reply%403x.png" />
+    <BundleResource Include="Resources\messagecenter\bluedot.png" />
+    <BundleResource Include="Resources\messagecenter\alert.png" />
+    <BundleResource Include="Resources\messagecenter\composemessage.png" />
+    <BundleResource Include="Resources\messagecenter\inbox.png" />
+    <BundleResource Include="Resources\messagecenter\notification.png" />
+    <BundleResource Include="Resources\messagecenter\sent.png" />
+    <BundleResource Include="Resources\messagecenter\settings.png" />
+    <BundleResource Include="Resources\ic_action_cancel.png" />
+    <BundleResource Include="Resources\ic_action_new.png" />
+    <BundleResource Include="Resources\ic_action_search.png" />
+    <BundleResource Include="Resources\ic_event.png" />
+    <BundleResource Include="Resources\ic_menu.png" />
+    <BundleResource Include="Resources\ic_menu_refresh.png" />
+    <BundleResource Include="Resources\ic_action_billpay.png" />
+    <BundleResource Include="Resources\ic_action_cards.png" />
+    <BundleResource Include="Resources\ic_action_loancenter.png" />
+    <BundleResource Include="Resources\ic_action_place.png" />
+    <BundleResource Include="Resources\ic_action_sunmoney.png" />
+    <BundleResource Include="Resources\ic_action_messagecenter.png" />
+    <BundleResource Include="Resources\ic_action_about.png" />
+    <BundleResource Include="Resources\ic_action_profile.png" />
+    <BundleResource Include="Resources\ic_action_accounts.png" />
+    <BundleResource Include="Resources\ic_action_signout.png" />
+    <BundleResource Include="Resources\ic_action_deposits.png" />
+    <BundleResource Include="Resources\ic_billpay_history.png" />
+    <BundleResource Include="Resources\ic_billpay_payees.png" />
+    <BundleResource Include="Resources\ic_billpay_schedule.png" />
+    <BundleResource Include="Resources\ic_billpay_pending.png" />
+    <BundleResource Include="Resources\ic_cards_travel.png" />
+    <BundleResource Include="Resources\ic_action_billpay_blue.png" />
+    <BundleResource Include="Resources\ic_action_import_export_blue.png" />
+    <BundleResource Include="Resources\ic_action_loancenter_blue.png" />
+    <BundleResource Include="Resources\ic_action_messagecenter_blue.png" />
+    <BundleResource Include="Resources\ic_action_place_blue.png" />
+    <BundleResource Include="Resources\ic_action_sunmoney_blue.png" />
+    <BundleResource Include="Resources\ic_action_deposits_blue.png" />
+    <BundleResource Include="Resources\ic_action_signout_blue.png" />
+    <BundleResource Include="Resources\ic_action_accounts_blue.png" />
+    <BundleResource Include="Resources\ic_action_profile_blue.png" />
+    <BundleResource Include="Resources\ic_action_about_blue.png" />
+    <BundleResource Include="Resources\ic_action_cards_blue.png" />
+    <BundleResource Include="Resources\ic_action_deposits2_blue.png" />
+    <BundleResource Include="Resources\ic_action_transfer_blue.png" />
+    <BundleResource Include="Resources\toolbar_signout.png" />
+    <BundleResource Include="Resources\toolbar_signout%402x.png" />
+    <BundleResource Include="Resources\toolbar_signout%403x.png" />
+    <BundleResource Include="Resources\toolbar_info.png" />
+    <BundleResource Include="Resources\toolbar_info%402x.png" />
+    <BundleResource Include="Resources\toolbar_info%403x.png" />
+    <BundleResource Include="Resources\ic_action_clock.png" />
+    <BundleResource Include="Resources\server_keys_message_hosted.json" />
+    <BundleResource Include="Resources\ic_action_contact_phone.png" />
+    <BundleResource Include="Resources\ic_action_contact_email.png" />
+    <BundleResource Include="Resources\title-homescreen-ipad.png" />
+    <BundleResource Include="Resources\title-homescreen-iphone.png" />
+    <BundleResource Include="Resources\title-homescreen-iphone%402x.png" />
+    <BundleResource Include="Resources\ic_action_delete.png" />
+    <BundleResource Include="Resources\capturecheck%403x.png" />
+    <BundleResource Include="Resources\capturecheck%402x.png" />
+    <BundleResource Include="Resources\capturecheck.png" />
+    <BundleResource Include="Resources\messagecenter\attachment%402x.png" />
+    <BundleResource Include="Resources\messagecenter\attachment.png" />
+    <BundleResource Include="Resources\messagecenter\attachment%403x.png" />
+    <BundleResource Include="Resources\ic_action_documentcenter.png" />
+    <BundleResource Include="Resources\download.png" />
+    <BundleResource Include="Resources\upload.png" />
+    <BundleResource Include="Resources\ic_action_documentcenter_blue.png" />
+    <BundleResource Include="Resources\ic_action_documentcenter_gray.png" />
+    <BundleResource Include="Resources\messagecenter\ic_action_share.png" />
+    <BundleResource Include="Resources\messagecenter\ic_action_share%402x.png" />
+    <BundleResource Include="Resources\messagecenter\ic_action_share%403x.png" />
+    <BundleResource Include="Resources\messagecenter\ic_action_print.png" />
+    <BundleResource Include="Resources\messagecenter\ic_action_print%402x.png" />
+    <BundleResource Include="Resources\messagecenter\ic_action_print%403x.png" />
+    <BundleResource Include="Resources\nodocuments.png" />
+    <BundleResource Include="Resources\Roboto-Bold.ttf" />
+    <BundleResource Include="Resources\Roboto-Light.ttf" />
+    <BundleResource Include="Resources\Roboto-Medium.ttf" />
+    <BundleResource Include="Resources\Roboto-Regular.ttf" />
+    <BundleResource Include="Resources\subaccountstep1.png" />
+    <BundleResource Include="Resources\subaccountstep2.png" />
+    <BundleResource Include="Resources\subaccountstep3.png" />
+    <BundleResource Include="Resources\subaccountstep4.png" />
+    <BundleResource Include="Resources\subaccountstep5.png" />
+    <BundleResource Include="Resources\disclosureindicator.png" />
+    <BundleResource Include="Resources\ic_cards_rays.png" />
+    <BundleResource Include="Resources\subaccountstep6.png" />
+    <BundleResource Include="Resources\subaccountswelcome.png" />
+    <BundleResource Include="Resources\bluecheck.png" />
+    <BundleResource Include="Resources\subaccountfundedstep1.png" />
+    <BundleResource Include="Resources\subaccountfundedstep2.png" />
+    <BundleResource Include="Resources\subaccountfundedstep3.png" />
+    <BundleResource Include="Resources\subaccountfundedstep4.png" />
+    <BundleResource Include="Resources\subaccountfundedstep5.png" />
+    <BundleResource Include="Resources\subaccountcheckingbanner.png" />
+    <BundleResource Include="Resources\subaccountcheckingfundedbanner.png" />
+    <BundleResource Include="Resources\subaccountslideout.png" />
+    <BundleResource Include="Resources\Icon-Small-40.png" />
+    <BundleResource Include="Resources\ic_loancenter_car.png" />
+    <BundleResource Include="Resources\ic_loancenter_home.png" />
+    <BundleResource Include="Resources\ic_loancenter_apply.png" />
+    <BundleResource Include="Resources\launchimage.png" />
+    <BundleResource Include="Resources\biometrics_faceid.png" />
+    <BundleResource Include="Resources\biometrics_touchid.png" />
+    <BundleResource Include="Resources\expand_up.png" />
+    <BundleResource Include="Resources\expand_down.png" />
+    <BundleResource Include="Resources\fbLogo.png" />
+    <BundleResource Include="Resources\Icon_Small_40.png" />
+  </ItemGroup>
+  <Import Project="..\SunMobile.Data\SunMobile.Data.projitems" Label="Shared" Condition="Exists('..\SunMobile.Data\SunMobile.Data.projitems')" />
+  <Import Project="..\SunMobile.Shared\SunMobile.Shared.projitems" Label="Shared" Condition="Exists('..\SunMobile.Shared\SunMobile.Shared.projitems')" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Assemblies\" />
+    <Folder Include="ExternalServices\" />
+    <Folder Include="Messaging\" />
+    <Folder Include="Cards\" />
+    <Folder Include="Resources\messagecenter\" />
+    <Folder Include="Main\SlideOutNavigation\" />
+    <Folder Include="Profile\" />
+    <Folder Include="Documents\" />
+    <Folder Include="Onboarding\" />
+    <Folder Include="Accounts\SubAccounts\" />
+    <Folder Include="LoanCenter\" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(Configuration)' != 'AppStore'">
+    <ITunesArtwork Include="Resources\iTunesArtwork%402x.png" />
+    <ITunesArtwork Include="Resources\iTunesArtwork" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Contents.json">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default-568h%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default-Portrait.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default-Landscape.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default-Portrait%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default-Landscape%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default-1334h%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default-2208h%403x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default-960h%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default-1136h%402x.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default-2048hh%402x~ipad.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default-1024h%40ipad.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default-Landscape-1242h%403x~ipad.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default-Landscape-1536h%402x~ipad.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default-Landscape-768h%40ipad.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\Icon.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\Icon%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\Icon-60%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\Icon-72.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\Icon-72%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\Icon-76.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\Icon-76%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\Icon-Small.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\Icon-Small%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\Icon-Small-50.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\Icon-Small-50%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\Icon-Small-40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\Icon-Small-40%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\AppIcon167x167.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\AppIcon40x40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\AppIcon60x60.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\AppIcon60x60%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\AppIcon87x87.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\AppIcon20x20.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\AppIcon180x180.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcon.appiconset\AppIcon1024x1024.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\icon_notification.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\InAuth\InAuth.iOS.NonProtected\InAuth.iOS.NonProtected.csproj" Condition="'$(Configuration)' == 'Debug'">
+      <Project>{0925F051-357E-4473-95B5-52D5EB74BFA7}</Project>
+      <Name>InAuth.iOS.NonProtected</Name>
+    </ProjectReference>
+	<ProjectReference Include="..\InAuth\InAuth.iOS.NonProtected\InAuth.iOS.NonProtected.csproj" Condition="'$(Configuration)' == 'Ad-Hoc'">
+      <Project>{0925F051-357E-4473-95B5-52D5EB74BFA7}</Project>
+      <Name>InAuth.iOS.NonProtected</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\InAuth\InAuth.iOS.Protected\InAuth.iOS.Protected.csproj" Condition="'$(Configuration)' == 'AppStore'">
+      <Project>{CD425D34-DDFB-4CFA-93DD-B875BADF3C8F}</Project>
+      <Name>InAuth.iOS.Protected</Name>
+    </ProjectReference>
+	<ProjectReference Include="..\InAuth\InAuth.iOS.Protected\InAuth.iOS.Protected.csproj" Condition="'$(Configuration)' == 'Release'">
+      <Project>{CD425D34-DDFB-4CFA-93DD-B875BADF3C8F}</Project>
+      <Name>InAuth.iOS.Protected</Name>
+    </ProjectReference>
+	<ProjectReference Include="..\SunMobile.Forms\SunMobile.Forms.csproj">
+	  <Project>{C506BE95-0162-43AA-B23C-B03B68ACE506}</Project>
+	  <Name>SunMobile.Forms</Name>
+	</ProjectReference>
+  </ItemGroup>
+  <Import Project="..\packages\NETStandard.Library.2.0.1\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.1\build\netstandard2.0\NETStandard.Library.targets')" />
+  <Import Project="..\packages\Xamarin.Forms.2.5.0.280555\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.5.0.280555\build\netstandard1.0\Xamarin.Forms.targets')" />
+</Project>

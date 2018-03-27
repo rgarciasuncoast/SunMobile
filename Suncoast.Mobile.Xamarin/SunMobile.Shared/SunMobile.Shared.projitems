@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{81EFA132-E53B-4721-8E12-87C353FD020A}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>SunMobile.Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Data\AccountListTypes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\AnyMemberInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\TransferData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Logging\Logging.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Methods\AlertMethods.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Methods\AuthenticationMethods.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Methods\BillPayMethods.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Methods\DepositMethods.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Methods\LocationMethods.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Methods\OnBaseMethods.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Methods\TransferMethods.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\Dates\DateHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\General\GeneralUtilities.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\Images\Images.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\String\StringUtilities.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\Web\WebClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\GroupedTextViewTableSource.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ImageViewExt.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ListViewItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\TableSection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\TextViewTableSource.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ViewUtilities.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\Web\ModernHttpClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\Settings\IsolatedStorage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\Biometrics\BiometricUtilities.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\Permissions\Permissions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\AccountVerificationInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Methods\ExternalServicesMethods.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Methods\CardMethods.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\States\USStates.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\States\Countries.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\Alert.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\MessageTypes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Methods\MessagingMethods.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\MessageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\AlertSetting.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\Navigation\NavigationService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\InAuth\InAuthService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\ActivityResults.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\FileInformation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\GetDisputeInfoResponse.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Methods\DocumentMethods.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\Sharing\Sharing.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\Serialization\Json.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Methods\OnboardingMethods.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\DocumentViewerTypes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\Culture\CultureProvider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\Culture\CultureTextProvider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\Settings\RetainedSettings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\Settings\SessionSettings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Methods\AccountMethods.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\ISubAccountsView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\SubAccountsInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\LoanCenterTypes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\Biometrics\BiometryType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\Settings\AppSettings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\SyncFusion\SyncFusionHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Utilities\Biometrics\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Utilities\Permissions\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Utilities\States\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Utilities\Navigation\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Utilities\InAuth\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Utilities\Sharing\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Utilities\Serialization\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Utilities\Culture\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Forms\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Utilities\SyncFusion\" />
+  </ItemGroup>
+</Project>

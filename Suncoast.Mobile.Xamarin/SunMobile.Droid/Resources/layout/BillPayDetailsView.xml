@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:orientation="vertical"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_nobar">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none"
+        android:minWidth="25px"
+        android:minHeight="25px">
+        <TableLayout
+            android:id="@+id/tableLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:stretchColumns="2">
+            <TableRow
+                android:background="@drawable/listitembg_nodiv_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:minHeight="50dp"
+                android:layout_span="2">
+                <TextView
+                    android:id="@+id/lblPayee"
+                    android:text="Payee"
+                    android:textColor="@color/TextViewTextColor"
+                    android:textSize="@dimen/TextSizeLarge"
+                    android:layout_column="0"
+                    android:layout_span="1"
+                    android:layout_width="130dp"
+                    android:layout_marginLeft="10dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/txtPayee"
+                    android:textSize="@dimen/TextSizeLarge"
+                    android:scrollHorizontally="true"
+                    android:scrollbars="none"
+                    android:textColor="@color/LabelTextColor"
+                    android:paddingRight="40dp"
+                    android:layout_span="2"
+                    android:layout_column="1"
+                    android:layout_marginRight="10dp" />
+            </TableRow>
+            <View
+                android:layout_span="3"
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_weight="1"
+                android:background="@drawable/default_separatorcolor"
+                android:padding="2dip" />
+            <TableRow
+                android:background="@drawable/listitembg_nodiv_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:minHeight="50dp">
+                <TextView
+                    android:id="@+id/lblAccount"
+                    android:text="Account"
+                    android:textColor="@color/TextViewTextColor"
+                    android:textSize="@dimen/TextSizeLarge"
+                    android:layout_column="0"
+                    android:layout_span="1"
+                    android:layout_marginLeft="10dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/txtAccount"
+                    android:textSize="@dimen/TextSizeLarge"
+                    android:scrollHorizontally="true"
+                    android:scrollbars="none"
+                    android:textColor="@color/LabelTextColor"
+                    android:layout_column="1"
+                    android:layout_span="2"
+                    android:layout_marginRight="10dp" />
+            </TableRow>
+            <View
+                android:layout_span="3"
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_weight="1"
+                android:background="@drawable/default_separatorcolor"
+                android:padding="2dip" />
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:minHeight="50dp">
+                <TextView
+                    android:id="@+id/lblAmount"
+                    android:text="Amount"
+                    android:textColor="@color/TextViewTextColor"
+                    android:textSize="@dimen/TextSizeLarge"
+                    android:layout_column="0"
+                    android:layout_span="1"
+                    android:layout_marginLeft="10dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/txtAmount"
+                    android:textSize="@dimen/TextSizeLarge"
+                    android:scrollHorizontally="true"
+                    android:scrollbars="none"
+                    android:textColor="@color/LabelTextColor"
+                    android:layout_column="1"
+                    android:layout_span="2"
+                    android:layout_marginRight="10dp" />
+            </TableRow>
+            <View
+                android:layout_span="3"
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_weight="1"
+                android:background="@drawable/default_separatorcolor"
+                android:padding="2dip" />
+            <TableRow
+                android:background="@drawable/listitembg_nodiv_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:minHeight="50dp"
+                android:layout_span="2">
+                <TextView
+                    android:id="@+id/lblFrequency"
+                    android:text="Frequency"
+                    android:textColor="@color/TextViewTextColor"
+                    android:textSize="@dimen/TextSizeLarge"
+                    android:layout_column="0"
+                    android:layout_span="1"
+                    android:layout_marginLeft="10dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/txtFrequency"
+                    android:textSize="@dimen/TextSizeLarge"
+                    android:scrollHorizontally="true"
+                    android:scrollbars="none"
+                    android:textColor="@color/LabelTextColor"
+                    android:paddingRight="40dp"
+                    android:layout_span="2"
+                    android:layout_column="1"
+                    android:layout_marginRight="10dp" />
+            </TableRow>
+            <View
+                android:layout_span="3"
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_weight="1"
+                android:background="@drawable/default_separatorcolor"
+                android:padding="2dip" />
+            <TableRow
+                android:background="@drawable/listitembg_nodiv_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:minHeight="50dp"
+                android:layout_span="2">
+                <TextView
+                    android:id="@+id/lblDeliverBy"
+                    android:text="Deliver By"
+                    android:textColor="@color/TextViewTextColor"
+                    android:textSize="@dimen/TextSizeLarge"
+                    android:layout_column="0"
+                    android:layout_span="1"
+                    android:layout_width="100dp"
+                    android:layout_marginLeft="10dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/txtDeliverBy"
+                    android:textSize="@dimen/TextSizeLarge"
+                    android:scrollHorizontally="true"
+                    android:scrollbars="none"
+                    android:textColor="@color/LabelTextColor"
+                    android:paddingRight="40dp"
+                    android:layout_span="2"
+                    android:layout_column="1"
+                    android:layout_marginRight="10dp" />
+            </TableRow>
+            <View
+                android:layout_span="3"
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_weight="1"
+                android:background="@drawable/default_separatorcolor"
+                android:padding="2dip" />
+            <TableRow
+                android:background="@drawable/listitembg_nodiv_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:minHeight="50dp"
+                android:layout_span="2">
+                <TextView
+                    android:id="@+id/lblFromAccount"
+                    android:text="From Account"
+                    android:textColor="@color/TextViewTextColor"
+                    android:textSize="@dimen/TextSizeLarge"
+                    android:layout_column="0"
+                    android:layout_span="1"
+                    android:layout_marginLeft="10dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/txtFromAccount"
+                    android:textSize="@dimen/TextSizeLarge"
+                    android:scrollHorizontally="true"
+                    android:scrollbars="none"
+                    android:textColor="@color/LabelTextColor"
+                    android:paddingRight="40dp"
+                    android:layout_span="2"
+                    android:layout_column="1"
+                    android:layout_marginRight="10dp" />
+            </TableRow>
+            <View
+                android:layout_span="3"
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_weight="1"
+                android:background="@drawable/default_separatorcolor"
+                android:padding="2dip" />
+            <TableRow
+                android:background="@drawable/listitembg_nodiv_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:minHeight="50dp"
+                android:layout_span="2">
+                <TextView
+                    android:id="@+id/lblReferenceID"
+                    android:text="Reference ID"
+                    android:textColor="@color/TextViewTextColor"
+                    android:textSize="@dimen/TextSizeLarge"
+                    android:layout_column="0"
+                    android:layout_span="1"
+                    android:layout_marginLeft="10dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/txtReferenceID"
+                    android:textSize="@dimen/TextSizeLarge"
+                    android:scrollHorizontally="true"
+                    android:scrollbars="none"
+                    android:textColor="@color/LabelTextColor"
+                    android:paddingRight="40dp"
+                    android:layout_span="2"
+                    android:layout_column="1"
+                    android:layout_marginRight="10dp" />
+            </TableRow>
+            <View
+                android:layout_span="3"
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_weight="1"
+                android:background="@drawable/default_separatorcolor"
+                android:padding="2dip" />
+            <TableRow
+                android:background="@drawable/listitembg_nodiv_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:minHeight="50dp"
+                android:layout_span="2">
+                <TextView
+                    android:id="@+id/lblStatus"
+                    android:text="Status"
+                    android:textColor="@color/TextViewTextColor"
+                    android:textSize="@dimen/TextSizeLarge"
+                    android:layout_column="0"
+                    android:layout_span="1"
+                    android:layout_marginLeft="10dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/txtStatus"
+                    android:textSize="@dimen/TextSizeLarge"
+                    android:scrollHorizontally="true"
+                    android:scrollbars="none"
+                    android:textColor="@color/LabelTextColor"
+                    android:paddingRight="40dp"
+                    android:layout_span="2"
+                    android:layout_marginRight="10dp" />
+            </TableRow>
+            <View
+                android:layout_span="3"
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_weight="1"
+                android:background="@drawable/default_separatorcolor"
+                android:padding="2dip" />
+            <TableRow
+                android:layout_width="fill_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:background="@drawable/listitembg"
+                android:id="@+id/rowButtons">
+                <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_span="4"
+                    android:gravity="center"
+                    android:clipChildren="false"
+                    android:layout_gravity="center">
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+                        <Button
+                            android:id="@+id/btnCancelPayment"
+                            style="@style/BlueGradientButtonStyle"
+                            android:paddingRight="10dp"
+                            android:text="Cancel Payment"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:layout_marginRight="10dp" />
+                        <Button
+                            android:id="@+id/btnUpdatePayment"
+                            style="@style/BlueGradientButtonStyle"
+                            android:paddingLeft="10dp"
+                            android:text="Update Payment"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:layout_marginLeft="10dp" />
+                    </TableRow>
+                </TableLayout>
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>

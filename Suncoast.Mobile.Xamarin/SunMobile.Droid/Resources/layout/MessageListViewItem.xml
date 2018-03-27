@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="68dp"
+        android:background="@color/white">
+        <TableRow
+            android:layout_width="60dp"
+            android:layout_height="68dp">
+            <TableLayout
+                android:layout_weight="90">
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+                    <ImageView
+                        android:id="@+id/imgUnread"
+                        android:paddingTop="7dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/bluedot"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginLeft="6dp" />
+                    <TextView
+                        android:id="@+id/lblMessageSubject"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:textColor="@color/TextViewTextColor"
+                        android:text="Suncoast Credit Union Alert"
+                        android:textStyle="bold"
+                        android:paddingTop="4dp"
+                        android:paddingLeft="4dp" />
+                    <TextView
+                        android:id="@+id/lblTimeStamp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:textColor="@color/TextViewTextColorGray"
+                        android:text="Friday"
+                        android:layout_gravity="right"
+                        android:paddingTop="4dp"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="8dp" />
+                    <ImageView
+                        android:paddingTop="0dp"
+                        android:layout_gravity="center_vertical"
+                        android:cropToPadding="false"
+                        android:paddingRight="2dip" />
+                </TableRow>
+                <TableRow>
+                    <ImageView
+                        android:paddingTop="0dp"
+                        android:layout_gravity="center_vertical"
+                        android:cropToPadding="false"
+                        android:paddingRight="2dip"
+                        android:layout_width="16dp" />
+                    <TextView
+                        android:id="@+id/lblMessageBody"
+                        android:textColor="@color/TextViewTextColorGray"
+                        android:lineSpacingMultiplier="0.95"
+                        android:textSize="@dimen/TextSizeSmall"
+                        android:text="These are the first two lines of the message that will appear in the list of messages"
+                        android:layout_marginLeft="4dp"
+                        android:maxLines="2"
+                        android:minLines="2"
+                        android:scrollHorizontally="true"
+                        android:ellipsize="end"
+                        android:layout_span="2"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:paddingTop="4dp"
+                        android:paddingRight="8dp" />
+                    <ImageView
+                        android:id="@+id/imgMore"
+                        android:paddingTop="0dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="top"
+                        android:cropToPadding="false"
+                        android:src="@drawable/listitemselect"
+                        android:paddingRight="2dip" />
+                </TableRow>
+            </TableLayout>
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

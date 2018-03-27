@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutMain"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/TitleBar"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:minHeight="@dimen/appdim_MinimumTitleHeight"
+        android:layout_height="wrap_content"
+        android:background="@color/ActionBarBackgroundColor">
+        <ImageButton
+            android:id="@+id/btnCloseWindow"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_back"
+            android:background="@drawable/transparent"
+            android:maxWidth="30px"
+            android:layout_centerVertical="true" />
+        <TextView
+            android:id="@+id/txtTitle"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:textColor="@color/TextViewTextColorWhite"
+            android:text="Upload Photos"
+            android:minHeight="30dp"
+            android:textSize="@dimen/TextSizeLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/txtContinueDocumentsUpload"
+            android:gravity="right|center_vertical"
+            android:textColor="@color/TextViewTextColorWhite"
+            android:text="Continue"
+            android:minHeight="30dp"
+            android:textSize="@dimen/TextSizeLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".90"
+        android:orientation="vertical"
+        android:background="@drawable/background_nobar">
+        <ListView
+            android:id="@android:id/list"
+            style="@style/ListViewStyle"
+            android:divider="@drawable/default_separatorcolor"
+            android:dividerHeight="1dip" />
+    </LinearLayout>
+    <TableLayout
+        android:id="@+id/buttonTable"
+        android:stretchColumns="2"
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:background="@drawable/background_nobar">
+        <TableRow
+            android:id="@+id/buttonRow"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/txtInformation"
+                android:gravity="center"
+                android:textColor="@color/TextViewTextColorGray"
+                android:text="The maximum file size is 3 megabytes."
+                android:textSize="@dimen/TextSizeMedium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="10dp"
+                android:layout_span="5" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/buttonRow"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imgDummy"
+                android:layout_gravity="center_vertical"
+                android:cropToPadding="false"
+                android:width="20dp"
+                android:layout_column="0" />
+            <Button
+                android:id="@+id/btnAddFiles"
+                style="@style/BlueGradientButtonStyle"
+                android:width="140dp"
+                android:text="Add Photos"
+                android:layout_gravity="center"
+                android:layout_column="1" />
+            <Button
+                android:id="@+id/btnGoogleDrive"
+                style="@style/BlueGradientButtonStyle"
+                android:width="140dp"
+                android:text="Google Drive"
+                android:layout_gravity="center"
+                android:layout_column="3" />
+            <ImageView
+                android:id="@+id/imgDummy2"
+                android:layout_gravity="center_vertical"
+                android:cropToPadding="false"
+                android:width="20dp"
+                android:layout_column="4" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

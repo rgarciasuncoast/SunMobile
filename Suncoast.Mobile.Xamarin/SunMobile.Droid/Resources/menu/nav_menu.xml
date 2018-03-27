@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_accounts"
+            android:icon="@drawable/ic_action_accounts"
+            android:title="Accounts" />
+        <item
+            android:id="@+id/nav_cards"
+            android:icon="@drawable/ic_action_cards"
+            android:title="Cards" />
+        <item
+            android:id="@+id/nav_transfer"
+            android:icon="@drawable/ic_action_import_export"
+            android:title="Transfer Funds" />
+		<item
+            android:id="@+id/nav_deposits"
+            android:icon="@drawable/ic_action_deposits"
+            android:title="Deposit Funds" />
+		<item
+            android:id="@+id/nav_billpay"
+            android:icon="@drawable/ic_action_billpay"
+            android:title="Bill Pay" />
+		<item
+            android:id="@+id/nav_loancenter"
+            android:icon="@drawable/ic_action_loancenter"
+            android:title="Loan Center" />
+		<item
+            android:id="@+id/nav_sunmoney"
+            android:icon="@drawable/ic_action_sunmoney"
+            android:title="SunMoney" />
+		<item
+            android:id="@+id/nav_locations"
+            android:icon="@drawable/ic_action_place"
+            android:title="Find ATM/Branch" />
+		<item
+            android:id="@+id/nav_messagecenter"
+            android:icon="@drawable/ic_action_messagecenter"
+            android:title="Message Center" />
+		<item
+            android:id="@+id/nav_documentcenter"
+            android:icon="@drawable/ic_action_documentcenter_gray"
+            android:title="Documents" />
+		<item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_action_profile"
+            android:title="My Profile" />
+		<item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_action_about"
+            android:title="Contact Us" />
+		<item
+			android:id="@+id/nav_signout"
+            android:icon="@drawable/ic_action_signout"
+            android:title="Sign Out" />
+    </group>
+
+</menu>

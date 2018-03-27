@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/MainLayout"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_weight="1"
+        android:background="@drawable/default_separatorcolor"
+        android:padding="2dip" />
+    <ScrollView
+        android:id="@+id/LoginScrollView"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/white">
+        <TableLayout
+            android:id="@+id/LoginTable"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:shrinkColumns="13"
+            android:stretchColumns="04"
+            android:background="@color/white">
+            <TableRow
+                android:id="@+id/MemberRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_span="5">
+                <EditText
+                    android:text=""
+                    android:id="@+id/txtMemberId"
+                    android:textSize="@dimen/TextSizeLarge"
+                    android:hint="Member Number"
+                    android:lines="1"
+                    android:scrollHorizontally="true"
+                    android:scrollbars="none"
+                    android:inputType="textNoSuggestions"
+                    android:layout_width="fill_parent"
+                    android:layout_span="3"
+                    android:layout_column="1"
+                    android:maxLength="10"
+                    android:layout_marginTop="10dp" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/PinRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_span="5">
+                <EditText
+                    android:text=""
+                    android:id="@+id/txtPin"
+                    android:textSize="@dimen/TextSizeLarge"
+                    android:hint="Password"
+                    android:lines="1"
+                    android:scrollHorizontally="true"
+                    android:scrollbars="none"
+                    android:inputType="textPassword"
+                    android:layout_width="fill_parent"
+                    android:layout_span="3"
+                    android:layout_column="1"
+                    android:maxLength="16" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/RowRemember"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_span="5">
+                <TextView
+                    android:text="Remember Member No:"
+                    android:textSize="@dimen/TextSizeSmall"
+                    android:layout_width="fill_parent"
+                    android:lines="1"
+                    android:layout_column="1"
+                    android:layout_span="2"
+                    android:id="@+id/lblRememberMemberId" />
+                <Switch
+                    android:text=""
+                    android:id="@+id/btnToggleUN"
+                    android:layout_span="1"
+                    android:layout_column="3" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/RowFingerprint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_span="5">
+                <TextView
+                    android:text="Fingerprint Authentication:"
+                    android:textSize="@dimen/TextSizeSmall"
+                    android:layout_width="fill_parent"
+                    android:lines="1"
+                    android:layout_column="1"
+                    android:layout_span="2"
+                    android:id="@+id/lblEnableTouchId" />
+                <Switch
+                    android:text=""
+                    android:id="@+id/switchTouchId"
+                    android:layout_span="1"
+                    android:layout_column="3" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/SubmitRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_span="5"
+                android:layout_marginTop="10dp">
+                <Button
+                    android:id="@+id/btnSubmit"
+                    style="@style/BlueGradientButtonStyle"
+                    android:text="Login"
+                    android:layout_span="1"
+                    android:layout_column="2" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/RowFingerprintLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_span="5"
+                android:layout_marginTop="10dp">
+                <ImageView
+                    android:id="@+id/imageUseBiometrics"
+                    android:layout_span="1"
+                    android:layout_column="2"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:src="@drawable/biometrics_fingerprint" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/TestRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingTop="10dp"
+                android:layout_span="5">
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>

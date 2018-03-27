@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/background_nobar">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:id="@+id/lblTransactionDate"
+                        android:text="Transaction Date:"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:textColor="@color/TextViewTextColor"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"
+                        android:width="160dp" />
+                    <TextView
+                        android:id="@+id/txtTransactionDate"
+                        android:text="01/01/1900"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:textColor="@color/TextViewTextColor"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight=".9" />
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip" />
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:id="@+id/lblDescription"
+                        android:text="Description:"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:textColor="@color/TextViewTextColor"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"
+                        android:layout_span="2"
+                        android:layout_width="wrap_content" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:id="@+id/txtDescription"
+                        android:text="Withdrawal Debit Card GROUPON INC #1919191 IL Card 1234"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:textColor="@color/TextViewTextColor"
+                        android:layout_marginLeft="20dp"
+                        android:layout_span="2"
+                        android_layout_width="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight=".9" />
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip" />
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:id="@+id/lblAmount"
+                        android:text="Amount:"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:textColor="@color/TextViewTextColor"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"
+                        android:width="80dp" />
+                    <TextView
+                        android:id="@+id/txtAmount"
+                        android:text="($16.00)"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:textColor="@color/TextViewTextColor"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight=".9" />
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip" />
+            </TableLayout>
+            <RelativeLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:minHeight="@dimen/appdim_MinimumTitleHeight"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/btnViewCheck"
+                    style="@style/BlueGradientButtonStyle"
+                    android:text="View Check"
+                    android:layout_alignParentLeft="true"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:minWidth="120dp"
+                    android:layout_weight=".5"
+                    android:minHeight="40dip"
+                    android:maxWidth="120dp"
+                    android:maxHeight="40dp"
+                    android:layout_marginTop="8dp" />
+                <Button
+                    android:id="@+id/btnDispute"
+                    style="@style/BlueGradientButtonStyle"
+                    android:text="Dispute"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="20dp"
+                    android:minWidth="120dp"
+                    android:layout_weight=".5"
+                    android:minHeight="40dip"
+                    android:maxWidth="120dp"
+                    android:maxHeight="40dp"
+                    android:layout_marginTop="8dp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

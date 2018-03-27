@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white">
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <TextView
+                android:id="@+id/lblHeaderText"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/TextSizeLarge"
+                android:textColor="@color/TextViewTextColor"
+                android:text="This is a very long header to see if it wraps correctly."
+                android:layout_span="3"
+                android:layout_weight="1"
+                android:paddingLeft="4dp" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/lblItem1Text"
+                android:paddingLeft="40dip"
+                android:paddingRight="0dip"
+                android:textColor="@color/TextViewTextColor"
+                android:lineSpacingMultiplier="0.90"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:textSize="@dimen/TextSizeLarge"
+                android:gravity="left"
+                android:text="Text1" />
+            <TextView
+                android:id="@+id/lblValue1Text"
+                android:paddingRight="8dip"
+                android:textColor="@color/TextViewTextColor"
+                android:lineSpacingMultiplier="0.90"
+                android:layout_width="120dp"
+                android:layout_weight="0"
+                android:textSize="@dimen/TextSizeLarge"
+                android:gravity="right"
+                android:text="$99,999,999.99" />
+            <ImageView
+                android:id="@+id/imgMore"
+                android:paddingTop="0dp"
+                android:layout_gravity="center_vertical"
+                android:cropToPadding="false"
+                android:src="@drawable/listitemselect"
+                android:paddingRight="2dip" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/lblItem2Text"
+                android:paddingLeft="40dip"
+                android:paddingRight="0dip"
+                android:paddingBottom="4dip"
+                android:textColor="@color/TextViewTextColor"
+                android:lineSpacingMultiplier="0.90"
+                android:layout_weight=".5"
+                android:textSize="@dimen/TextSizeLarge"
+                android:gravity="left"
+                android:text="Text2" />
+            <TextView
+                android:id="@+id/lblValue2Text"
+                android:paddingRight="8dip"
+                android:textColor="@color/TextViewTextColor"
+                android:lineSpacingMultiplier="0.90"
+                android:layout_width="120dp"
+                android:layout_weight="0"
+                android:textSize="@dimen/TextSizeLarge"
+                android:gravity="right"
+                android:text="10/10/2011" />
+            <ImageView
+                android:id="@+id/imgDummy"
+                android:paddingTop="0dp"
+                android:layout_gravity="center_vertical"
+                android:cropToPadding="false"
+                android:paddingRight="2dip" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

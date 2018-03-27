@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white">
+        <TableRow
+            android:layout_width="60dp"
+            android:layout_height="40dp">
+            <ImageView
+                android:id="@+id/imgHeader"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:paddingTop="4dp"
+                android:layout_gravity="top"
+                android:cropToPadding="false"
+                android:src="@drawable/account_savings"
+                android:paddingRight="2dip" />
+            <TableLayout
+                android:layout_weight="90">
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+                    <TextView
+                        android:id="@+id/lblHeaderText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:textColor="@color/TextViewTextColor"
+                        android:text="SPECIAL SAVINGS"
+                        android:layout_span="3"
+                        android:layout_weight="1"
+                        android:paddingLeft="8dp" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+                    <TextView
+                        android:id="@+id/lblHeader2Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="20"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:textColor="@color/TextViewTextColor"
+                        android:text="0000000-0000"
+                        android:layout_span="2"
+                        android:paddingLeft="8dp" />
+                    <TextView
+                        android:id="@+id/lblItem5Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:textColor="@color/TextViewTextColor"
+                        android:text="BRIAN SMITH"
+                        android:layout_span="1"
+                        android:paddingLeft="4dp" />
+                    <ImageView
+                        android:id="@+id/imgDummy"
+                        android:paddingTop="0dp"
+                        android:layout_gravity="center_vertical"
+                        android:cropToPadding="false"
+                        android:paddingRight="2dip" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:id="@+id/lblSpacer1Text"
+                        android:textColor="@color/TextViewTextColor"
+                        android:lineSpacingMultiplier="0.90"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:layout_weight="1" />
+                    <TextView
+                        android:id="@+id/lblItem1Text"
+                        android:textColor="@color/TextViewTextColor"
+                        android:lineSpacingMultiplier="0.90"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:text="Balance:"
+                        android:layout_marginRight="20dp"
+                        android:layout_width="160dp" />
+                    <TextView
+                        android:id="@+id/lblValue1Text"
+                        android:paddingRight="8dip"
+                        android:textColor="@color/TextViewTextColor"
+                        android:lineSpacingMultiplier="0.90"
+                        android:layout_width="110dp"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:gravity="right"
+                        android:text="$99,999,999.99" />
+                    <ImageView
+                        android:id="@+id/imgMore"
+                        android:paddingTop="0dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:cropToPadding="false"
+                        android:src="@drawable/listitemselect"
+                        android:paddingRight="2dip" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:id="@+id/lblSpacer2Text"
+                        android:textColor="@color/TextViewTextColor"
+                        android:lineSpacingMultiplier="0.90"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:layout_weight="1" />
+                    <TextView
+                        android:id="@+id/lblItem2Text"
+                        android:textColor="@color/TextViewTextColor"
+                        android:lineSpacingMultiplier="0.90"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:text="Available Balance:"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="160dp" />
+                    <TextView
+                        android:id="@+id/lblValue2Text"
+                        android:paddingRight="8dip"
+                        android:textColor="@color/TextViewTextColor"
+                        android:lineSpacingMultiplier="0.90"
+                        android:layout_width="110dp"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:gravity="right"
+                        android:text="10/10/2011" />
+                    <ImageView
+                        android:id="@+id/imgDummy"
+                        android:paddingTop="0dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:cropToPadding="false"
+                        android:paddingRight="2dip" />
+                </TableRow>
+            </TableLayout>
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

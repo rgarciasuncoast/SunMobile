@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/frameborder"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:id="@+id/RootView">
+    <LinearLayout
+        android:id="@+id/ListLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        android:layout_above="@+id/llPopupViewer">
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:background="@android:color/transparent"
+            android:scrollbars="none">
+            <TableLayout
+                android:id="@+id/tableMainMenu"
+                android:clipChildren="false"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector">
+                <TableRow
+                    android:id="@+id/rowApplyForALoan"
+                    android:clipChildren="false"
+                    android:gravity="center_vertical"
+                    android:minHeight="64dp">
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="30dp"
+                        android:paddingTop="5dp"
+                        android:paddingLeft="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:cropToPadding="false"
+                        android:src="@drawable/ic_loancenter_apply"
+                        android:paddingRight="2dip"
+                        android:scaleType="fitCenter" />
+                    <TextView
+                        android:text="Apply For A Loan"
+                        android:paddingRight="8dip"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/TextViewTextColor"
+                        android:lineSpacingMultiplier="0.90"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="5.0"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:gravity="left"
+                        android:layout_marginLeft="20dp"
+                        android:id="@+id/lblApplyForALoan" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:paddingTop="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:cropToPadding="false"
+                        android:src="@drawable/listitemselect"
+                        android:paddingRight="2dip" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <View
+                        android:layout_span="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/default_separatorcolor"
+                        android:padding="2dip" />
+                </TableRow>
+                <TableRow
+                    android:id="@+id/rowBuyACar"
+                    android:clipChildren="false"
+                    android:gravity="center_vertical"
+                    android:minHeight="64dp">
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:paddingTop="4dp"
+                        android:paddingLeft="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:cropToPadding="false"
+                        android:src="@drawable/ic_loancenter_car"
+                        android:paddingRight="2dip" />
+                    <TextView
+                        android:paddingRight="8dip"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/TextViewTextColor"
+                        android:lineSpacingMultiplier="0.90"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="5.0"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:gravity="left"
+                        android:layout_marginLeft="20dp"
+                        android:id="@+id/lblBuyACar"
+                        android:text="Find a Car" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:paddingTop="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:cropToPadding="false"
+                        android:src="@drawable/listitemselect"
+                        android:paddingRight="2dip" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <View
+                        android:layout_span="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/default_separatorcolor"
+                        android:padding="2dip" />
+                </TableRow>
+                <TableRow
+                    android:id="@+id/rowBuyAHome"
+                    android:clipChildren="false"
+                    android:gravity="center_vertical"
+                    android:minHeight="64dp">
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:paddingTop="3dp"
+                        android:paddingLeft="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:cropToPadding="false"
+                        android:src="@drawable/ic_loancenter_home"
+                        android:paddingRight="2dip" />
+                    <TextView
+                        android:text="Buy A Home"
+                        android:paddingRight="8dip"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/TextViewTextColor"
+                        android:lineSpacingMultiplier="0.90"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="5.0"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:gravity="left"
+                        android:layout_marginLeft="20dp"
+                        android:id="@+id/lblBuyAHome" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:paddingTop="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:cropToPadding="false"
+                        android:src="@drawable/listitemselect"
+                        android:paddingRight="2dip" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <View
+                        android:layout_span="3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/default_separatorcolor"
+                        android:padding="2dip" />
+                </TableRow>
+            </TableLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

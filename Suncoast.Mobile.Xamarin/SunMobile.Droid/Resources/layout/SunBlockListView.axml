@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutMain"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/TitleBar"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:minHeight="@dimen/appdim_MinimumTitleHeight"
+        android:layout_height="wrap_content"
+        android:background="@color/ActionBarBackgroundColor">
+        <ImageButton
+            android:id="@+id/btnCloseWindow"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/close"
+            android:background="@drawable/transparent"
+            android:maxWidth="30px"
+            android:layout_centerVertical="true" />
+        <TextView
+            android:id="@+id/txtTitle"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:textColor="@color/TextViewTextColorWhite"
+            android:text="Select an Account"
+            android:minHeight="30dp"
+            android:typeface="sans"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:background="@drawable/background_nobar">
+        <ListView
+            android:id="@android:id/list"
+            style="@style/ListViewStyle" />
+    </LinearLayout>
+</LinearLayout>

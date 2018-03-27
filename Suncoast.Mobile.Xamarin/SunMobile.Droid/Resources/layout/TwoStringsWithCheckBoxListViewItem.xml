@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/listselector_medium">
+        <TableRow>
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight=".9">
+                <TableRow>
+                    <TextView
+                        android:id="@+id/lblItem1Text"
+                        android:textColor="@color/TextViewTextColor"
+                        android:text="Sample String"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".9"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="4dp"
+                        android:gravity="bottom" />
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:id="@+id/lblItem2Text"
+                        android:textColor="@color/TextViewTextColor"
+                        android:text="Sample String"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".9"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginBottom="4dp"
+                        android:gravity="top" />
+                </TableRow>
+            </TableLayout>
+            <TableLayout
+                android:layout_width="40dp"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical">
+                <TableRow>
+                    <CheckBox
+                        android:id="@+id/checkbox"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:gravity="center_vertical|right"
+                        android:checked="true" />
+                </TableRow>
+            </TableLayout>
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

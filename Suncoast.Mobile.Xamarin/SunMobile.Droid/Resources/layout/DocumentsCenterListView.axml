@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutMain"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".90"
+        android:orientation="vertical"
+        android:background="@drawable/background_nobar">
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/documentsRefresher"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ListView
+                android:id="@android:id/list"
+                style="@style/ListViewStyle"
+                android:divider="@drawable/default_separatorcolor"
+                android:dividerHeight="1dip" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </LinearLayout>
+    <TableLayout
+        android:id="@+id/mainTable"
+        android:stretchColumns="0"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="@drawable/background_nobar">
+        <TableRow
+            android:id="@+id/buttonRow"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <SunMobile.Droid.Common.SegmentedGroup
+                android:id="@+id/segmentDocumentType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                segmentedgroup:sc_border_width="2dp"
+                segmentedgroup:sc_corner_radius="5dp"
+                segmentedgroup:sc_tint_color="#20a6f8"
+                segmentedgroup:sc_checked_text_color="#f0f2f3">
+                <RadioButton
+                    android:id="@+id/btnUploads"
+                    android:layout_height="wrap_content"
+                    android:text="Sent"
+                    style="@style/RadioButton"
+                    android:checked="true"
+                    android:layout_width="150dp" />
+                <RadioButton
+                    android:id="@+id/btnDownloads"
+                    android:layout_height="wrap_content"
+                    android:text="Received"
+                    style="@style/RadioButton"
+                    android:layout_width="180dp" />
+            </SunMobile.Droid.Common.SegmentedGroup>
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

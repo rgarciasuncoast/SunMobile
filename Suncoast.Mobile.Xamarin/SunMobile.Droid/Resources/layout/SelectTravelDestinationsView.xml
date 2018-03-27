@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutMain"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/TitleBar"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:minHeight="@dimen/appdim_MinimumTitleHeight"
+        android:layout_height="wrap_content"
+        android:background="@color/ActionBarBackgroundColor">
+        <ImageButton
+            android:id="@+id/btnCloseWindow"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_back"
+            android:background="@drawable/transparent"
+            android:maxWidth="30px"
+            android:layout_centerVertical="true" />
+        <TextView
+            android:id="@+id/txtTitle"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:textColor="@color/TextViewTextColorWhite"
+            android:text="Select Destinations"
+            android:minHeight="30dp"
+            android:textSize="@dimen/TextSizeLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/txtDone"
+            android:gravity="right|center_vertical"
+            android:textColor="@color/TextViewTextColorWhite"
+            android:text="Done"
+            android:minHeight="30dp"
+            android:textSize="@dimen/TextSizeLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".90"
+        android:orientation="vertical"
+        android:background="@drawable/background_nobar">
+        <Spinner
+            android:layout_width="145dp"
+            android:layout_height="40dp"
+            android:id="@+id/spinnerListType"
+            style="@style/Widget.AppCompat.Spinner.Underlined"
+            android:spinnerMode="dropdown"
+            android:layout_gravity="center_horizontal" />
+        <ListView
+            android:id="@+id/listViewStates"
+            style="@style/ListViewStyle"
+            android:layout_weight=".90"
+            android:divider="@drawable/default_separatorcolor"
+            android:dividerHeight="1dip" />
+        <ListView
+            android:id="@+id/listViewCountries"
+            style="@style/ListViewStyle"
+            android:layout_weight=".90"
+            android:divider="@drawable/default_separatorcolor"
+            android:dividerHeight="1dip" />
+        <TextView
+            android:text="Please be aware that there are restrictions in certain countries for debit and credit card use."
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/lblRestrictions"
+            android:gravity="center" />
+        <Button
+            android:text="Additional Travel Notification and Restriction Information"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            style="@style/BlueGradientButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:id="@+id/btnAdditionalInformation" />
+    </LinearLayout>
+</LinearLayout>

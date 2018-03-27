@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:id="@+id/mainLayout">
+    <RelativeLayout
+        android:id="@+id/actionBar"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="36dp"
+        android:background="@color/ActionBarBackgroundColor">
+        <ImageView
+            android:id="@+id/btnSend"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/messages_send"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="10dp" />
+    </RelativeLayout>
+    <TableLayout
+        android:id="@+id/mainTable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow
+            android:layout_width="match_parent"
+            android:minHeight="30dp"
+            android:background="#ffffffff">
+            <TextView
+                android:id="@+id/lblSubject"
+                android:text="Subject"
+                android:textSize="@dimen/TextSizeMedium"
+                android:textColor="@color/TextViewTextColor"
+                android:textStyle="bold"
+                android:paddingLeft="20dip"
+                android:layout_height="wrap_content"
+                android:layout_width="70dp"
+                android:layout_gravity="center_vertical" />
+            <Spinner
+                android:id="@+id/spnrSubject"
+                android:layout_height="wrap_content"
+                android:layout_weight=".95"
+                android:singleLine="false"
+                android:textSize="13sp"
+                android:gravity="left"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp" />
+        </TableRow>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_weight="1"
+            android:background="@drawable/default_separatorcolor_light"
+            android:padding="2dip" />
+    </TableLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/background_nobar"
+        android:scrollbars="none">
+        <TableLayout
+            android:id="@+id/mainTable"
+            android:stretchColumns="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TableRow
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <EditText
+                    android:inputType="textMultiLine"
+                    android:id="@+id/txtMessageBody"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="1"
+                    android:hint="Compose message"
+                    android:layout_marginLeft="20dp" />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>

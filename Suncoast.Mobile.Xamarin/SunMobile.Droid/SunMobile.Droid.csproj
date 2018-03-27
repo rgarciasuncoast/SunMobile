@@ -1,0 +1,1161 @@
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Xamarin.Forms.2.5.0.280555\build\netstandard1.0\Xamarin.Forms.props" Condition="Exists('..\packages\Xamarin.Forms.2.5.0.280555\build\netstandard1.0\Xamarin.Forms.props')" />
+  <Import Project="..\packages\Xamarin.Build.Download.0.4.7\build\Xamarin.Build.Download.props" Condition="Exists('..\packages\Xamarin.Build.Download.0.4.7\build\Xamarin.Build.Download.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E999AF23-8374-4F24-982C-3561A77709BF}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SunMobile.Droid</RootNamespace>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
+    <AssemblyName>SunMobile.Droid</AssemblyName>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <AndroidSupportedAbis>armeabi;x86</AndroidSupportedAbis>
+    <AndroidTlsProvider></AndroidTlsProvider>
+    <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;__MOBILE__;__ANDROID__;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
+    <AndroidKeyStore></AndroidKeyStore>
+    <AndroidSigningKeyStore>/Projects/Mobile/SuncoastKeystore.jks</AndroidSigningKeyStore>
+    <AndroidSigningStorePass>WF(%)))#!</AndroidSigningStorePass>
+    <AndroidSigningKeyAlias>suncoast</AndroidSigningKeyAlias>
+    <AndroidSigningKeyPass>WF(%)))#!</AndroidSigningKeyPass>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants>__MOBILE__;__ANDROID__;__APPSTORE__</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
+    <AndroidKeyStore>True</AndroidKeyStore>
+    <AndroidSigningKeyStore>/Projects/Mobile/SuncoastKeystore.jks</AndroidSigningKeyStore>
+    <AndroidSigningStorePass>WF(%)))#!</AndroidSigningStorePass>
+    <AndroidSigningKeyAlias>suncoast</AndroidSigningKeyAlias>
+    <AndroidSigningKeyPass>WF(%)))#!</AndroidSigningKeyPass>
+    <DebugType></DebugType>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <AndroidSupportedAbis>armeabi;x86;x86_64</AndroidSupportedAbis>
+  </PropertyGroup>
+  <PropertyGroup>
+    <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="Xamarin.Mobile">
+      <HintPath>Assemblies\Xamarin.Mobile.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="ModernHttpClient">
+      <HintPath>..\packages\modernhttpclient.2.4.2\lib\MonoAndroid\ModernHttpClient.dll</HintPath>
+    </Reference>
+    <Reference Include="OkHttp">
+      <HintPath>..\packages\modernhttpclient.2.4.2\lib\MonoAndroid\OkHttp.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.CurrentActivity">
+      <HintPath>..\packages\Plugin.CurrentActivity.1.0.1\lib\MonoAndroid10\Plugin.CurrentActivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="Plugin.Permissions.Abstractions">
+      <HintPath>..\packages\Plugin.Permissions.1.2.1\lib\MonoAndroid10\Plugin.Permissions.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Permissions">
+      <HintPath>..\packages\Plugin.Permissions.1.2.1\lib\MonoAndroid10\Plugin.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Media.Abstractions">
+      <HintPath>..\packages\Xam.Plugin.Media.2.6.2\lib\MonoAndroid10\Plugin.Media.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Media">
+      <HintPath>..\packages\Xam.Plugin.Media.2.6.2\lib\MonoAndroid10\Plugin.Media.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="NineOldAndroids">
+      <HintPath>..\packages\Xamarin.NineOldAndroids.0.0.1\lib\MonoAndroid\NineOldAndroids.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Fingerprint.Abstractions">
+      <HintPath>..\packages\Plugin.Fingerprint.1.4.5\lib\MonoAndroid\Plugin.Fingerprint.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Fingerprint.Android.Samsung">
+      <HintPath>..\packages\Plugin.Fingerprint.1.4.5\lib\MonoAndroid\Plugin.Fingerprint.Android.Samsung.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Fingerprint">
+      <HintPath>..\packages\Plugin.Fingerprint.1.4.5\lib\MonoAndroid\Plugin.Fingerprint.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.DeviceInfo.Abstractions">
+      <HintPath>..\packages\Xam.Plugin.DeviceInfo.3.0.2\lib\MonoAndroid10\Plugin.DeviceInfo.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.DeviceInfo">
+      <HintPath>..\packages\Xam.Plugin.DeviceInfo.3.0.2\lib\MonoAndroid10\Plugin.DeviceInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Settings.Abstractions">
+      <HintPath>..\packages\Xam.Plugins.Settings.3.1.1\lib\MonoAndroid10\Plugin.Settings.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Settings">
+      <HintPath>..\packages\Xam.Plugins.Settings.3.1.1\lib\MonoAndroid10\Plugin.Settings.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.Basement">
+      <HintPath>..\packages\Xamarin.GooglePlayServices.Basement.60.1142.0\lib\MonoAndroid80\Xamarin.GooglePlayServices.Basement.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.Tasks">
+      <HintPath>..\packages\Xamarin.GooglePlayServices.Tasks.60.1142.0\lib\MonoAndroid80\Xamarin.GooglePlayServices.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.Base">
+      <HintPath>..\packages\Xamarin.GooglePlayServices.Base.60.1142.0\lib\MonoAndroid80\Xamarin.GooglePlayServices.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.Drive">
+      <HintPath>..\packages\Xamarin.GooglePlayServices.Drive.60.1142.0\lib\MonoAndroid80\Xamarin.GooglePlayServices.Drive.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.Maps">
+      <HintPath>..\packages\Xamarin.GooglePlayServices.Maps.60.1142.0\lib\MonoAndroid80\Xamarin.GooglePlayServices.Maps.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Arch.Core.Common">
+      <HintPath>..\packages\Xamarin.Android.Arch.Core.Common.1.0.0\lib\MonoAndroid80\Xamarin.Android.Arch.Core.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfCalendar.Android">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfCalendar.Android.16.1.0.24\lib\MonoAndroid10\Syncfusion.SfCalendar.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Compression.Portable">
+      <HintPath>..\packages\Syncfusion.Xamarin.Compression.15.4.0.20\lib\MonoAndroid10\Syncfusion.Compression.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Pdf.Portable">
+      <HintPath>..\packages\Syncfusion.Xamarin.Pdf.15.4.0.20\lib\MonoAndroid10\Syncfusion.Pdf.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfPdfViewer.Android">
+      <HintPath>..\packages\Syncfusion.Xamarin.SfPdfViewer.Android.15.4.0.20\lib\MonoAndroid10\Syncfusion.SfPdfViewer.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Android.Bindings">
+      <HintPath>..\packages\Microsoft.AppCenter.1.5.0\lib\MonoAndroid403\Microsoft.AppCenter.Android.Bindings.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter">
+      <HintPath>..\packages\Microsoft.AppCenter.1.5.0\lib\MonoAndroid403\Microsoft.AppCenter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Analytics.Android.Bindings">
+      <HintPath>..\packages\Microsoft.AppCenter.Analytics.1.5.0\lib\MonoAndroid403\Microsoft.AppCenter.Analytics.Android.Bindings.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Analytics">
+      <HintPath>..\packages\Microsoft.AppCenter.Analytics.1.5.0\lib\MonoAndroid403\Microsoft.AppCenter.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Crashes.Android.Bindings">
+      <HintPath>..\packages\Microsoft.AppCenter.Crashes.1.5.0\lib\MonoAndroid403\Microsoft.AppCenter.Crashes.Android.Bindings.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AppCenter.Crashes">
+      <HintPath>..\packages\Microsoft.AppCenter.Crashes.1.5.0\lib\MonoAndroid403\Microsoft.AppCenter.Crashes.dll</HintPath>
+    </Reference>
+    <Reference Include="AndroidSwipeLayout">
+      <HintPath>..\Components\AndroidSwipeLayout-1.2.0.0\lib\android\AndroidSwipeLayout.dll</HintPath>
+    </Reference>
+    <Reference Include="GCM.Client">
+      <HintPath>..\Components\GCMClient-1.0\lib\android\GCM.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Arch.Lifecycle.Common">
+      <HintPath>..\packages\Xamarin.Android.Arch.Lifecycle.Common.26.1.0\lib\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Arch.Lifecycle.Runtime">
+      <HintPath>..\packages\Xamarin.Android.Arch.Lifecycle.Runtime.26.1.0\lib\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Annotations">
+      <HintPath>..\packages\Xamarin.Android.Support.Annotations.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Compat">
+      <HintPath>..\packages\Xamarin.Android.Support.Compat.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.Compat.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Core.UI">
+      <HintPath>..\packages\Xamarin.Android.Support.Core.UI.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.Core.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Core.Utils">
+      <HintPath>..\packages\Xamarin.Android.Support.Core.Utils.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.Core.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Fragment">
+      <HintPath>..\packages\Xamarin.Android.Support.Fragment.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.Fragment.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Media.Compat">
+      <HintPath>..\packages\Xamarin.Android.Support.Media.Compat.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.Media.Compat.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Transition">
+      <HintPath>..\packages\Xamarin.Android.Support.Transition.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.Transition.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\packages\Xamarin.Android.Support.v4.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.CardView">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.CardView.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.v7.CardView.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.Palette">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.Palette.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.v7.Palette.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.RecyclerView">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.RecyclerView.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.v7.RecyclerView.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Vector.Drawable">
+      <HintPath>..\packages\Xamarin.Android.Support.Vector.Drawable.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.Vector.Drawable.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Animated.Vector.Drawable">
+      <HintPath>..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.Animated.Vector.Drawable.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.AppCompat">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.AppCompat.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Design">
+      <HintPath>..\packages\Xamarin.Android.Support.Design.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.MediaRouter">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.MediaRouter.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.v7.MediaRouter.dll</HintPath>
+    </Reference>
+    <Reference Include="FormsViewGroup">
+      <HintPath>..\packages\Xamarin.Forms.2.5.0.280555\lib\MonoAndroid10\FormsViewGroup.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>..\packages\Xamarin.Forms.2.5.0.280555\lib\MonoAndroid10\Xamarin.Forms.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform.Android">
+      <HintPath>..\packages\Xamarin.Forms.2.5.0.280555\lib\MonoAndroid10\Xamarin.Forms.Platform.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform">
+      <HintPath>..\packages\Xamarin.Forms.2.5.0.280555\lib\MonoAndroid10\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml">
+      <HintPath>..\packages\Xamarin.Forms.2.5.0.280555\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Common\BaseListActivity.cs" />
+    <Compile Include="Common\GenericListAdapter.cs" />
+    <Compile Include="Common\GroupedListItemAdapter.cs" />
+    <Compile Include="Common\BaseActivity.cs" />
+    <Compile Include="Accounts\SelectAccountActivity.cs" />
+    <Compile Include="Deposits\DepositEnrollmentActivity.cs" />
+    <Compile Include="Deposits\DepositsScanCheckActivity.cs" />
+    <Compile Include="Deposits\CameraPreviewView.cs" />
+    <Compile Include="Deposits\CameraOverlayView.cs" />
+    <Compile Include="Common\BaseFragment.cs" />
+    <Compile Include="Common\BaseListFragment.cs" />
+    <Compile Include="Accounts\AccountsFragment.cs" />
+    <Compile Include="Accounts\TransactionsFragment.cs" />
+    <Compile Include="Transfers\TransfersFragment.cs" />
+    <Compile Include="Deposits\DepositsFragment.cs" />
+    <Compile Include="BillPay\BillPayFragment.cs" />
+    <Compile Include="Locations\LocationsFragment.cs" />
+    <Compile Include="Common\BaseAuthenticationFragment.cs" />
+    <Compile Include="Authentication\AdaptiveAuthenticationFragment.cs" />
+    <Compile Include="BillPay\BillPayDetailsFragment.cs" />
+    <Compile Include="BillPay\BillPaySchedulePaymentFragment.cs" />
+    <Compile Include="BillPay\SelectPayeeActivity.cs" />
+    <Compile Include="Common\SelectDateActivity.cs" />
+    <Compile Include="Common\ToastDialogFragment.cs" />
+    <Compile Include="Common\BaseMapFragment.cs" />
+    <Compile Include="Accounts\AccountListAdapter.cs" />
+    <Compile Include="Accounts\AccountListItemAdapter.cs" />
+    <Compile Include="AppStyles.cs" />
+    <Compile Include="Common\BaseWebViewFragment.cs" />
+    <Compile Include="Main\MainActivity.cs" />
+    <Compile Include="Main\MainMenuFragment.cs" />
+    <Compile Include="Common\SegmentedGroup.cs" />
+    <Compile Include="BillPay\BillPayMenuFragment.cs" />
+    <Compile Include="Locations\LocationsDetailViewFragment.cs" />
+    <Compile Include="Main\SplashActivity.cs" />
+    <Compile Include="Accounts\CheckImageFragment.cs" />
+    <Compile Include="MainApplication.cs" />
+    <Compile Include="ExternalServices\SunMoneyFragment.cs" />
+    <Compile Include="Cards\CardsMenuFragment.cs" />
+    <Compile Include="BillPay\UpdatePayeeActivity.cs" />
+    <Compile Include="Cards\TravelNotificationsFragment.cs" />
+    <Compile Include="Cards\SelectCardsActivity.cs" />
+    <Compile Include="Cards\SelectTravelDestinationsActivity.cs" />
+    <Compile Include="Common\StringWithCheckBoxListAdapter.cs" />
+    <Compile Include="Common\WebViewActivity.cs" />
+    <Compile Include="Cards\CardListAdapter.cs" />
+    <Compile Include="Messaging\MessagesFragment.cs" />
+    <Compile Include="Messaging\MessageFragment.cs" />
+    <Compile Include="Messaging\MessagesListAdapter.cs" />
+    <Compile Include="Messaging\MessageComposeFragment.cs" />
+    <Compile Include="Messaging\GoogleCloudMessagingService.cs" />
+    <Compile Include="Profile\ProfileFragment.cs" />
+    <Compile Include="BillPay\ManagePayeesFragment.cs" />
+    <Compile Include="Profile\UpdatePasswordFragment.cs" />
+    <Compile Include="Profile\PasswordReminderFragment.cs" />
+    <Compile Include="Authentication\AccountVerificationFragment.cs" />
+    <Compile Include="Common\ClearableEditText.cs" />
+    <Compile Include="About\ContactUsFragment.cs" />
+    <Compile Include="Authentication\AccountVerificationActivity.cs" />
+    <Compile Include="Accounts\TransactionsListViewAdapter.cs" />
+    <Compile Include="Accounts\UploadDisputeDocumentsActivity.cs" />
+    <Compile Include="Accounts\UpdateDisputeDocumentsListAdapter.cs" />
+    <Compile Include="Accounts\TransactionDetailFragment.cs" />
+    <Compile Include="Accounts\TransactionsSelectionActivity.cs" />
+    <Compile Include="Accounts\TransactionsSelectionListViewAdapter.cs" />
+    <Compile Include="Documents\DocumentCenterFragment.cs" />
+    <Compile Include="Documents\DocumentsListAdapter.cs" />
+    <Compile Include="Documents\SelectGoogleDriveDocumentActivity.cs" />
+    <Compile Include="Documents\DocumentViewerContentFragment.cs" />
+    <Compile Include="Documents\DocumentViewerViewPageAdapter.cs" />
+    <Compile Include="Documents\DocumentViewerViewPagerFragment.cs" />
+    <Compile Include="Documents\DocumentUploadFragment.cs" />
+    <Compile Include="Documents\EDocumentListAdapter.cs" />
+    <Compile Include="Documents\DocumentsMenuFragment.cs" />
+    <Compile Include="Documents\EStatementsFragment.cs" />
+    <Compile Include="Main\FeedbackFragment.cs" />
+    <Compile Include="Accounts\TransactionDisputeFragment.cs" />
+    <Compile Include="Onboarding\OnboardingViewPagerFragment.cs" />
+    <Compile Include="Onboarding\OnboardingViewPagerAdapter.cs" />
+    <Compile Include="Onboarding\OnboardingViewContentFragment.cs" />
+    <Compile Include="Documents\TaxDocumentsListAdapter.cs" />
+    <Compile Include="Profile\AlertSettingListAdapter.cs" />
+    <Compile Include="Profile\AlertSettingsDetailFragment.cs" />
+    <Compile Include="Profile\AlertSettingsFragment.cs" />
+    <Compile Include="Profile\ManageAlertsFragment.cs" />
+    <Compile Include="Profile\ManageAlertsListAdapter.cs" />
+    <Compile Include="Profile\EStatementAlertOptionsFragment.cs" />
+    <Compile Include="Profile\EStatementOptionsFragment.cs" />
+    <Compile Include="Onboarding\OnboardingViewPager.cs" />
+    <Compile Include="Deposits\DepositsCamera2Fragment.cs" />
+    <Compile Include="Deposits\AutoFitTextureView.cs" />
+    <Compile Include="Transfers\TransferAnyMemberActivity.cs" />
+    <Compile Include="Deposits\DepositsTakePictureActivity.cs" />
+    <Compile Include="Accounts\SubAccounts\SubAccountsBaseContentFragment.cs" />
+    <Compile Include="Accounts\SubAccounts\SubAccountsContactFragment.cs" />
+    <Compile Include="Accounts\SubAccounts\SubAccountsAgreementFragment.cs" />
+    <Compile Include="Accounts\SubAccounts\SubAccountsFundingFragment.cs" />
+    <Compile Include="Cards\OrderRaysCardFragment.cs" />
+    <Compile Include="Cards\OrderRaysCardPagerAdapter.cs" />
+    <Compile Include="Cards\OrderRaysCardImageFragment.cs" />
+    <Compile Include="Messaging\MessageCenterFragment.cs" />
+    <Compile Include="Profile\ContactInfoFragment.cs" />
+    <Compile Include="Accounts\SubAccounts\SubAccountsConfirmationFragment.cs" />
+    <Compile Include="Accounts\SubAccounts\SubAccountsFinishFragment.cs" />
+    <Compile Include="Accounts\SubAccounts\SubAccountsCardFragment.cs" />
+    <Compile Include="Accounts\SubAccounts\SubAccountsSlideoutDialog.cs" />
+    <Compile Include="LoanCenter\LoanCenterFragment.cs" />
+    <Compile Include="LoanCenter\LoanCenterMenuFragment.cs" />
+    <Compile Include="BillPay\BillPayListAdapter.cs" />
+    <Compile Include="Transfers\TransferFavoritesActivity.cs" />
+    <Compile Include="Transfers\TransferFavoritesListAdapter.cs" />
+    <Compile Include="Common\DraggableListView.cs" />
+    <Compile Include="Common\IDraggableListAdapter.cs" />
+    <Compile Include="Accounts\PayoffQuoteFragment.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="Assemblies\Xamarin.Mobile.dll" />
+    <None Include="Assemblies\Xamarin.Mobile.pdb" />
+    <None Include="Assemblies\Xamarin.Mobile.xml" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\main.xml" />
+    <AndroidResource Include="Resources\values\Strings.xml" />
+    <AndroidResource Include="Resources\drawable\icon.png" />
+    <AndroidResource Include="Resources\values\AppDimensions.xml" />
+    <AndroidResource Include="Resources\layout\TitleBar.xml" />
+    <AndroidResource Include="Resources\drawable\titlebar.png" />
+    <AndroidResource Include="Resources\drawable\close.png" />
+    <AndroidResource Include="Resources\drawable\companylogo.png" />
+    <AndroidResource Include="Resources\drawable\splashscreen.png" />
+    <AndroidResource Include="Resources\drawable\accounts_selected.png" />
+    <AndroidResource Include="Resources\drawable\accounts_unselected.png" />
+    <AndroidResource Include="Resources\values\AppColors.xml">
+    </AndroidResource>
+    <AndroidResource Include="Resources\values\Styles.xml" />
+    <AndroidResource Include="Resources\drawable\divider.png" />
+    <AndroidResource Include="Resources\drawable\titlebarlayerlist.xml" />
+    <AndroidResource Include="Resources\drawable\titlebarrectangle.xml" />
+    <AndroidResource Include="Resources\drawable\titlebarrectangle2.xml" />
+    <AndroidResource Include="Resources\drawable\lefttogglebuttonselector.xml" />
+    <AndroidResource Include="Resources\drawable\lefttogglebuttonselect.xml" />
+    <AndroidResource Include="Resources\drawable\lefttogglebuttonshape.xml" />
+    <AndroidResource Include="Resources\drawable\righttogglebuttonselect.xml" />
+    <AndroidResource Include="Resources\drawable\righttogglebuttonselector.xml" />
+    <AndroidResource Include="Resources\drawable\righttogglebuttonshape.xml" />
+    <AndroidResource Include="Resources\drawable\singletogglebuttonselector.xml" />
+    <AndroidResource Include="Resources\drawable\buttonselector.xml" />
+    <AndroidResource Include="Resources\drawable\buttonshape.xml" />
+    <AndroidResource Include="Resources\drawable\buttonselect.xml" />
+    <AndroidResource Include="Resources\drawable\roundedrectangle.xml" />
+    <AndroidResource Include="Resources\drawable\bluegradientbutton.xml" />
+    <AndroidResource Include="Resources\layout\GroupListHeader.xml" />
+    <AndroidResource Include="Resources\drawable\listitembg_medium.png" />
+    <AndroidResource Include="Resources\drawable\listitembg_nodiv_extrasmall.png" />
+    <AndroidResource Include="Resources\drawable\listitembg_nodiv_medium.png" />
+    <AndroidResource Include="Resources\drawable\listitembg_nodiv_small.png" />
+    <AndroidResource Include="Resources\layout\ListViewItem.xml" />
+    <AndroidResource Include="Resources\drawable\listselector_medium.xml" />
+    <AndroidResource Include="Resources\drawable\listitemselect.png" />
+    <AndroidResource Include="Resources\drawable\layerlistbg_medium.xml" />
+    <AndroidResource Include="Resources\drawable\listitembg.png" />
+    <AndroidResource Include="Resources\drawable-port\background_nobar.png" />
+    <AndroidResource Include="Resources\drawable-land\background_nobar.png" />
+    <AndroidResource Include="Resources\drawable-land\background_nologo.png" />
+    <AndroidResource Include="Resources\drawable-port\background_nologo.png" />
+    <AndroidResource Include="Resources\drawable\iconbar.png" />
+    <AndroidResource Include="Resources\drawable\billpay_selected.png" />
+    <AndroidResource Include="Resources\drawable\billpay_unselected.png" />
+    <AndroidResource Include="Resources\drawable\transfers_selected.png" />
+    <AndroidResource Include="Resources\drawable\transfers_unselected.png" />
+    <AndroidResource Include="Resources\drawable\sunmoney_selected.png" />
+    <AndroidResource Include="Resources\drawable\sunmoney_unselected.png" />
+    <AndroidResource Include="Resources\drawable\find.png" />
+    <AndroidResource Include="Resources\drawable\deposits_selected.png" />
+    <AndroidResource Include="Resources\drawable\deposits_unselected.png" />
+    <AndroidResource Include="Resources\layout\RemoteDepositsView.xml" />
+    <AndroidResource Include="Resources\values\BillPayScheduleViewUI.xml" />
+    <AndroidResource Include="Resources\drawable\layerbg_medium.xml" />
+    <AndroidResource Include="Resources\layout\RemoteDepositsEnrollmentView.xml" />
+    <AndroidResource Include="Resources\layout\RemoteDepositsScanCheckView.xml" />
+    <AndroidResource Include="Resources\drawable\checkbackground.png" />
+    <AndroidResource Include="Resources\drawable\footer.png" />
+    <AndroidResource Include="Resources\drawable\whitedivider.png" />
+    <AndroidResource Include="Resources\drawable\transactionleftarrow.png" />
+    <AndroidResource Include="Resources\drawable\transactionrightarrow.png" />
+    <AndroidResource Include="Resources\drawable\transactionrightselector.xml" />
+    <AndroidResource Include="Resources\drawable\transactionleftarrowdisabled.png" />
+    <AndroidResource Include="Resources\drawable\transactionleftarrowover.png" />
+    <AndroidResource Include="Resources\drawable\transactionleftselector.xml" />
+    <AndroidResource Include="Resources\drawable\transactionrightarrowdisabled.png" />
+    <AndroidResource Include="Resources\drawable\transactionrightarrowover.png" />
+    <AndroidResource Include="Resources\layout\CheckImageView.xml" />
+    <AndroidResource Include="Resources\layout\AccountTransferAnyMemberView.xml" />
+    <AndroidResource Include="Resources\layout\ContentLayout.xml" />
+    <AndroidResource Include="Resources\drawable\action_menu.png" />
+    <AndroidResource Include="Resources\drawable\ic_menu_refresh.png" />
+    <AndroidResource Include="Resources\layout\page_home_view.axml" />
+    <AndroidResource Include="Resources\layout\item_menu.axml" />
+    <AndroidResource Include="Resources\drawable\list_activated_holo.9.png" />
+    <AndroidResource Include="Resources\layout\refresh.xml" />
+    <AndroidResource Include="Resources\drawable\iconwithouttext.png" />
+    <AndroidResource Include="Resources\drawable\checksample.jpg" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_import_export.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_import_export.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_import_export.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_import_export.png" />
+    <AndroidResource Include="Resources\layout\spinner_dropdown_item.xml" />
+    <AndroidResource Include="Resources\layout\spinner_item.xml" />
+    <AndroidResource Include="Resources\layout\AboutView.xml" />
+    <AndroidResource Include="Resources\layout\WebView.xml"></AndroidResource>
+    <AndroidResource Include="Resources\drawable\twitter.png" />
+    <AndroidResource Include="Resources\layout\SunBlockGenericListViewItem.xml" />
+    <AndroidResource Include="Resources\layout\SunBlockListView.axml" />
+    <AndroidResource Include="Resources\layout\SunBlockListViewItem.xml" />
+    <AndroidResource Include="Resources\layout\BillPayDetailsView.xml" />
+    <AndroidResource Include="Resources\layout\SelectDateView.xml" />
+    <AndroidResource Include="Resources\layout\ToastDialog.xml" />
+    <AndroidResource Include="Resources\drawable\account_savings.png" />
+    <AndroidResource Include="Resources\layout\AccountListView.xml" />
+    <AndroidResource Include="Resources\layout\AccountListItem4Rows.xml" />
+    <AndroidResource Include="Resources\layout\AccountListItem2Rows.xml" />
+    <AndroidResource Include="Resources\drawable\togglebutton.xml" />
+    <AndroidResource Include="Resources\layout\MainMenuContainer.xml" />
+    <AndroidResource Include="Resources\layout\mainmenuview.xml" />
+    <AndroidResource Include="Resources\drawable\frameborder.xml" />
+    <AndroidResource Include="Resources\drawable\transactionheaderbg.png" />
+    <AndroidResource Include="Resources\drawable\selector.xml" />
+    <AndroidResource Include="Resources\drawable\layerbg.xml" />
+    <AndroidResource Include="Resources\values\AppStyles.xml" />
+    <AndroidResource Include="Resources\drawable\transactioncheck.png" />
+    <AndroidResource Include="Resources\drawable\button_text_color.xml" />
+    <AndroidResource Include="Resources\drawable\radio_checked.xml" />
+    <AndroidResource Include="Resources\drawable\radio_unchecked.xml" />
+    <AndroidResource Include="Resources\drawable\ic_action_back.png" />
+    <AndroidResource Include="Resources\layout\AccountSelectListView.xml">
+      <DependentUpon>SegmentedGroup.cs</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\SunBlockAnalyzeView.xml" />
+    <AndroidResource Include="Resources\layout\billpaymenuview.xml" />
+    <AndroidResource Include="Resources\layout\BillPayPayeeListView.xml">
+      <DependentUpon>SegmentedGroup.cs</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\BillPayPayeeListViewItem.xml" />
+    <AndroidResource Include="Resources\drawable\buttontextcolor.xml" />
+    <AndroidResource Include="Resources\layout\LocationsView.xml" />
+    <AndroidResource Include="Resources\menu\BottomToolbarActions.xml" />
+    <AndroidResource Include="Resources\drawable\toolbar_signout.png" />
+    <AndroidResource Include="Resources\layout\LocationsDetailView.xml" />
+    <AndroidResource Include="Resources\drawable\IconSmall50.png" />
+    <AndroidResource Include="Resources\drawable\twitter_flat_icon.png" />
+    <AndroidResource Include="Resources\drawable\facebook.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_flash_automatic.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_flash_on.png" />
+    <AndroidResource Include="Resources\drawable\shutterblue.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_flash_off.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_autofocus_on.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_autofocus_off.png" />
+    <AndroidResource Include="Resources\layout\splashscreen.xml" />
+    <AndroidResource Include="Resources\drawable\ic_action_home_black.png" />
+    <AndroidResource Include="Resources\menu\MainActivityActionsSignOut.xml" />
+    <AndroidResource Include="Resources\menu\MainActivityActionsHome.xml" />
+    <AndroidResource Include="Resources\menu\MainActivityActionsHomeSignOut.xml" />
+    <AndroidResource Include="Resources\drawable\ic_action_home_white.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_home.png" />
+    <AndroidResource Include="Resources\layout\BillPayListView.xml" />
+    <AndroidResource Include="Resources\layout\AccountTransactionListView.xml" />
+    <AndroidResource Include="Resources\layout\AccountTransactionListViewItem.xml" />
+    <AndroidResource Include="Resources\drawable\icoaccepted.png" />
+    <AndroidResource Include="Resources\drawable\icocancelled.png" />
+    <AndroidResource Include="Resources\drawable\icoerror.png" />
+    <AndroidResource Include="Resources\drawable\icosent.png" />
+    <AndroidResource Include="Resources\drawable\icowaiting.png" />
+    <AndroidResource Include="Resources\layout\card_cell.xml" />
+    <AndroidResource Include="Resources\layout\card_item_simple.xml" />
+    <AndroidResource Include="Resources\layout\card_row.xml" />
+    <AndroidResource Include="Resources\layout\card_view.xml" />
+    <AndroidResource Include="Resources\drawable\card_grid_bg.xml" />
+    <AndroidResource Include="Resources\drawable\card_item_bg.xml" />
+    <AndroidResource Include="Resources\drawable\circle_small.png" />
+    <AndroidResource Include="Resources\layout\MainMenuContainer_Tablet.xml" />
+    <AndroidResource Include="Resources\values-sw600dp\Values.xml" />
+    <AndroidResource Include="Resources\values\Values.xml" />
+    <AndroidResource Include="Resources\layout\BillPayScheduleView.xml" />
+    <AndroidResource Include="Resources\layout\AccountTransferView.xml" />
+    <AndroidResource Include="Resources\layout\TransfersVerificationView.xml" />
+    <AndroidResource Include="Resources\layout\CardsMenuView.xml" />
+    <AndroidResource Include="Resources\drawable\creditcards.png" />
+    <AndroidResource Include="Resources\layout\BillPayAddPayee.xml" />
+    <AndroidResource Include="Resources\layout\BillPayManagePayees.xml" />
+    <AndroidResource Include="Resources\layout\SelectCardsView.axml" />
+    <AndroidResource Include="Resources\layout\SelectTravelDestinationsView.xml" />
+    <AndroidResource Include="Resources\layout\StringWithCheckBoxListViewItem.xml" />
+    <AndroidResource Include="Resources\layout\BillPayListViewItem.xml" />
+    <AndroidResource Include="Resources\layout\TwoStringsWithCheckBoxListViewItem.xml" />
+    <AndroidResource Include="Resources\layout\WebActivityView.xml" />
+    <AndroidResource Include="Resources\layout\TravelNotificationsView.xml" />
+    <AndroidResource Include="Resources\layout\MessageCenterView.xml" />
+    <AndroidResource Include="Resources\layout\AlertSettingsListViewItem.xml" />
+    <AndroidResource Include="Resources\layout\AppDimensions.xml" />
+    <AndroidResource Include="Resources\layout\ManageAlertSettingsView.xml" />
+    <AndroidResource Include="Resources\layout\MessageListView.xml" />
+    <AndroidResource Include="Resources\layout\MessageDetailView.xml" />
+    <AndroidResource Include="Resources\layout\MessageComposeView.xml" />
+    <AndroidResource Include="Resources\layout\AlertSettingsListView.xml" />
+    <AndroidResource Include="Resources\layout\AlertSettingsDetailView.xml" />
+    <AndroidResource Include="Resources\drawable\messages_composemessages.png" />
+    <AndroidResource Include="Resources\drawable\messages_inbox.png" />
+    <AndroidResource Include="Resources\drawable\messages_notification.png" />
+    <AndroidResource Include="Resources\drawable\messages_sent.png" />
+    <AndroidResource Include="Resources\drawable\messages_settings.png" />
+    <AndroidResource Include="Resources\drawable\messages_compose.png" />
+    <AndroidResource Include="Resources\drawable\messages_reply.png" />
+    <AndroidResource Include="Resources\drawable\messages_trash.png" />
+    <AndroidResource Include="Resources\drawable\bluedot.png" />
+    <AndroidResource Include="Resources\layout\MessageListViewItem.xml" />
+    <AndroidResource Include="Resources\drawable\messages_send.png" />
+    <AndroidResource Include="Resources\drawable\icon_notification_silhouette.png" />
+    <AndroidResource Include="Resources\drawable\icon_notification.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\icon_notification.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\icon_notification.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\icon_notification.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\icon_notification_silhouette.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\icon_notification_silhouette.png" />
+    <AndroidResource Include="Resources\menu\nav_menu.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_event.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_menu.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_menu_refresh.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_menu.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_menu.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_menu.png" />
+    <AndroidResource Include="Resources\layout\toolbar.xml" />
+    <AndroidResource Include="Resources\layout\nav_header.xml" />
+    <AndroidResource Include="Resources\values-v21\styles.xml" />
+    <AndroidResource Include="Resources\values\Colors.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_accounts.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_cards.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_billpay.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_place.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_messagecenter.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_about.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_signout.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_sunmoney.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_loancenter.png" />
+    <AndroidResource Include="Resources\values\dimens.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_profile.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_deposits.png" />
+    <AndroidResource Include="Resources\layout\drawer_main.xml" />
+    <AndroidResource Include="Resources\layout\drawer_list_item.xml" />
+    <AndroidResource Include="Resources\drawable\ic_cards_travel.png" />
+    <AndroidResource Include="Resources\drawable\ic_billpay_history.png" />
+    <AndroidResource Include="Resources\drawable\ic_billpay_payees.png" />
+    <AndroidResource Include="Resources\drawable\ic_billpay_pending.png" />
+    <AndroidResource Include="Resources\drawable\ic_billpay_schedule.png" />
+    <AndroidResource Include="Resources\layout\webviewfragment.xml" />
+    <AndroidResource Include="Resources\drawable-land\splashscreen.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_signout_gray.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_about_gray.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_messagecenter_gray.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_cards_gray.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_sunmoney_gray.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_loancenter_gray.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_accounts_gray.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_billpay_gray.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_place_gray.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_profile_gray.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_deposits_gray.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_import_export_gray.png" />
+    <AndroidResource Include="Resources\layout\ProfileView.axml" />
+    <AndroidResource Include="Resources\layout\UpdatePasswordView.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_signout_blue.png" />
+    <AndroidResource Include="Resources\menu\MainActivityActionsInfoSignOut.xml" />
+    <AndroidResource Include="Resources\menu\MainActivityActionsInfo.xml" />
+    <AndroidResource Include="Resources\layout\PasswordReminderView.xml" />
+    <AndroidResource Include="Resources\drawable\ic_action_clock.png" />
+    <AndroidResource Include="Resources\drawable\toolbar_info.png" />
+    <AndroidResource Include="Resources\layout\AccountVerificationView.axml" />
+    <AndroidResource Include="Resources\layout\ContactUsView.xml" />
+    <AndroidResource Include="Resources\drawable\ic_action_place_blue.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_contact_phone.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_contact_email.png" />
+    <AndroidResource Include="Resources\layout\AccountVerificationActivityView.axml" />
+    <AndroidResource Include="Resources\layout\TransactionDisputeView.axml" />
+    <AndroidResource Include="Resources\layout\UploadDocumentsView.xml" />
+    <AndroidResource Include="Resources\layout\UploadFilesListViewItem.xml" />
+    <AndroidResource Include="Resources\drawable\ic_action_delete.png" />
+    <AndroidResource Include="Resources\layout\AccountTransactionDetailView.xml" />
+    <AndroidResource Include="Resources\layout\AccountTransactionsSelectionListViewItem.axml" />
+    <AndroidResource Include="Resources\layout\AccountTransactionsSelectListView.axml" />
+    <AndroidResource Include="Resources\drawable\capturecheck.png" />
+    <AndroidResource Include="Resources\layout\DocumentsCenterListView.axml" />
+    <AndroidResource Include="Resources\layout\DocumentsCenterListViewItemWithDescription.axml" />
+    <AndroidResource Include="Resources\drawable\upload.png" />
+    <AndroidResource Include="Resources\layout\DocumentsCenterListViewItem.axml" />
+    <AndroidResource Include="Resources\layout\ListViewSectionHeader.xml" />
+    <AndroidResource Include="Resources\drawable\download.png" />
+    <AndroidResource Include="Resources\layout\UploadDocumentsGoogleDriveView.axml" />
+    <AndroidResource Include="Resources\layout\DocumentViewerContentView.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_documentcenter_gray.png" />
+    <AndroidResource Include="Resources\drawable\ic_actionbar_print.png" />
+    <AndroidResource Include="Resources\drawable\ic_actionbar_share.png" />
+    <AndroidResource Include="Resources\layout\DocumentViewerViewPager.xml" />
+    <AndroidResource Include="Resources\xml\file_provider_paths.xml" />
+    <AndroidResource Include="Resources\drawable\bluegradientbuttonsmall.xml" />
+    <AndroidResource Include="Resources\layout\Spinner_item.axml" />
+	<AndroidResource Include="Resources\layout\DocumentsListViewItem.axml" />
+    <AndroidResource Include="Resources\layout\DocumentsListView.axml" />
+    <AndroidResource Include="Resources\drawable\nodocuments.png" />
+    <AndroidResource Include="Resources\layout\DocumentsMenuView.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_documentcenter_blue.png" />
+    <AndroidResource Include="Resources\layout\EDocumentsAlertPreferencesView.axml" />
+    <AndroidResource Include="Resources\layout\EDocumentsSettingsView.axml" />
+    <AndroidResource Include="Resources\layout\FeedbackView.xml" />
+    <AndroidResource Include="Resources\layout\AlertDialogWithCheckbox.xml" />
+    <AndroidResource Include="Resources\layout\OnboardingViewPager.xml" />
+    <AndroidResource Include="Resources\layout\OnboardingContentView.xml" />
+    <AndroidResource Include="Resources\drawable\ic_action_documentcenter_blue.png" />
+    <AndroidResource Include="Resources\layout\RemoteDepositsTakePictureView.xml" />
+    <AndroidResource Include="Resources\layout\OrderRaysCardView.xml" />
+    <AndroidResource Include="Resources\layout\OrderRaysCardImageView.xml" />
+    <AndroidResource Include="Resources\drawable\ic_cards_rays.png" />
+    <AndroidResource Include="Resources\layout\ContactInfoView.xml" />
+    <AndroidResource Include="Resources\drawable\ic_action_profile_blue.png" />
+    <AndroidResource Include="Resources\drawable\leftarrowwhite.png" />
+    <AndroidResource Include="Resources\drawable\rightarrowwhite.png" />
+    <AndroidResource Include="Resources\drawable\subaccountstep1.png" />
+    <AndroidResource Include="Resources\drawable\subaccountstep2.png" />
+    <AndroidResource Include="Resources\drawable\subaccountstep3.png" />
+    <AndroidResource Include="Resources\drawable\subaccountstep4.png" />
+    <AndroidResource Include="Resources\drawable\subaccountstep5.png" />
+    <AndroidResource Include="Resources\drawable\subaccountstep6.png" />
+    <AndroidResource Include="Resources\drawable\subaccountswelcome.png" />
+    <AndroidResource Include="Resources\layout\SubAccountsContactView.xml" />
+    <AndroidResource Include="Resources\drawable\subaccountcheckingbanner.png" />
+    <AndroidResource Include="Resources\drawable\subaccountcheckingfundedbanner.png" />
+    <AndroidResource Include="Resources\drawable\subaccountfundedstep1.png" />
+    <AndroidResource Include="Resources\drawable\subaccountfundedstep2.png" />
+    <AndroidResource Include="Resources\drawable\subaccountfundedstep3.png" />
+    <AndroidResource Include="Resources\drawable\subaccountfundedstep4.png" />
+    <AndroidResource Include="Resources\drawable\subaccountfundedstep5.png" />
+    <AndroidResource Include="Resources\drawable\subaccountslideout.png" />
+    <AndroidResource Include="Resources\layout\SubAccountsSlideoutDialog.xml" />
+    <AndroidResource Include="Resources\layout\SubAccountsAgreementView.axml" />
+    <AndroidResource Include="Resources\layout\SubAccountsCardView.axml" />
+    <AndroidResource Include="Resources\layout\SubAccountsFundingView.axml" />
+    <AndroidResource Include="Resources\layout\SubAccountsConfirmationView.axml" />
+    <AndroidResource Include="Resources\layout\SubAccountsFinishView.axml" />
+    <AndroidResource Include="Resources\layout\StringListViewItem.xml" />
+    <AndroidResource Include="Resources\layout\LoanCenterMenuView.axml" />
+    <AndroidResource Include="Resources\drawable\ic_loancenter_car.png" />
+    <AndroidResource Include="Resources\drawable\ic_loancenter_home.png" />
+    <AndroidResource Include="Resources\drawable\ic_loancenter_apply.png" />
+    <AndroidResource Include="Resources\layout\SelectCalendarDayView.xml" />
+    <AndroidResource Include="Resources\layout\AccountTransferFavoritesListView.axml" />
+    <AndroidResource Include="Resources\layout\AccountTransferFavoritesListViewItem.axml" />
+    <AndroidResource Include="Resources\drawable\expand_up.png" />
+    <AndroidResource Include="Resources\drawable\expand_down.png" />
+    <AndroidResource Include="Resources\drawable\listdrag.png" />
+    <AndroidResource Include="Resources\drawable\listdelete.png" />
+    <AndroidResource Include="Resources\drawable\biometrics_fingerprint.png" />
+    <AndroidResource Include="Resources\menu\MainActivityActionsAdd.xml" />
+    <AndroidResource Include="Resources\drawable\toolbar_add.png" />
+    <AndroidResource Include="Resources\menu\MainActivityActionsInfoAdd.xml" />
+    <AndroidResource Include="Resources\layout\PayoffQuoteView.axml" />
+    <AndroidResource Include="Resources\layout\EmbbedLayout.xml" />
+    <AndroidResource Include="Resources\drawable\fbLogo.png" />
+    <AndroidResource Include="Resources\drawable\Icon_Small_40.png" />
+  </ItemGroup>
+  <Import Project="..\SunMobile.Data\SunMobile.Data.projitems" Label="Shared" Condition="Exists('..\SunMobile.Data\SunMobile.Data.projitems')" />
+  <Import Project="..\SunMobile.Shared\SunMobile.Shared.projitems" Label="Shared" Condition="Exists('..\SunMobile.Shared\SunMobile.Shared.projitems')" />
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Accounts\" />
+    <Folder Include="BillPay\" />
+    <Folder Include="Deposits\" />
+    <Folder Include="Main\" />
+    <Folder Include="Transfers\" />
+    <Folder Include="Common\" />
+    <Folder Include="Resources\drawable-land\" />
+    <Folder Include="Resources\drawable-port\" />
+    <Folder Include="Assemblies\" />
+    <Folder Include="About\" />
+    <Folder Include="Locations\" />
+    <Folder Include="Resources\drawable-mdpi\" />
+    <Folder Include="Resources\drawable-hdpi\" />
+    <Folder Include="Resources\drawable-xhdpi\" />
+    <Folder Include="Resources\drawable-xxhdpi\" />
+    <Folder Include="Assets\fonts\" />
+    <Folder Include="Authentication\" />
+    <Folder Include="Resources\menu\" />
+    <Folder Include="Resources\values-sw600dp\" />
+    <Folder Include="ExternalServices\" />
+    <Folder Include="Cards\" />
+    <Folder Include="Resources\values-v21\" />
+    <Folder Include="Profile\" />
+    <Folder Include="Resources\xml\" />
+    <Folder Include="Onboarding\" />
+    <Folder Include="Accounts\SubAccounts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\fonts\Roboto-Thin.ttf" />
+    <AndroidAsset Include="Assets\fonts\Roboto-Regular.ttf" />
+    <AndroidAsset Include="Assets\pdfjs\build\pdf.js" />
+    <AndroidAsset Include="Assets\pdfjs\build\pdf.worker.js" />
+    <AndroidAsset Include="Assets\pdfjs\web\compatibility.js" />
+    <AndroidAsset Include="Assets\pdfjs\web\debugger.js" />
+    <AndroidAsset Include="Assets\pdfjs\web\l10n.js" />
+    <AndroidAsset Include="Assets\pdfjs\web\viewer.css" />
+    <AndroidAsset Include="Assets\pdfjs\web\viewer.html" />
+    <AndroidAsset Include="Assets\pdfjs\web\viewer.js" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\78-EUC-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\78-EUC-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\78-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\78-RKSJ-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\78-RKSJ-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\78-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\78ms-RKSJ-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\78ms-RKSJ-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\83pv-RKSJ-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\90ms-RKSJ-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\90ms-RKSJ-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\90msp-RKSJ-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\90msp-RKSJ-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\90pv-RKSJ-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\90pv-RKSJ-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\Add-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\Add-RKSJ-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\Add-RKSJ-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\Add-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\Adobe-CNS1-0.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\Adobe-CNS1-1.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\Adobe-CNS1-2.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\Adobe-CNS1-3.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\Adobe-CNS1-4.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\Adobe-CNS1-5.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\Adobe-CNS1-6.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\Adobe-CNS1-UCS2.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\Adobe-GB1-0.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\Adobe-GB1-1.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\Adobe-GB1-2.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\Adobe-GB1-3.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\Adobe-GB1-4.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\Adobe-GB1-5.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\Adobe-GB1-UCS2.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\Adobe-Japan1-0.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\Adobe-Japan1-1.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\Adobe-Japan1-2.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\Adobe-Japan1-3.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\Adobe-Japan1-4.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\Adobe-Japan1-5.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\Adobe-Japan1-6.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\Adobe-Japan1-UCS2.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\Adobe-Korea1-0.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\Adobe-Korea1-1.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\Adobe-Korea1-2.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\Adobe-Korea1-UCS2.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\B5-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\B5-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\B5pc-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\B5pc-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\CNS-EUC-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\CNS-EUC-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\CNS1-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\CNS1-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\CNS2-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\CNS2-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\ETHK-B5-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\ETHK-B5-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\ETen-B5-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\ETen-B5-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\ETenms-B5-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\ETenms-B5-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\EUC-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\EUC-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\Ext-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\Ext-RKSJ-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\Ext-RKSJ-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\Ext-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\GB-EUC-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\GB-EUC-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\GB-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\GB-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\GBK-EUC-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\GBK-EUC-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\GBK2K-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\GBK2K-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\GBKp-EUC-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\GBKp-EUC-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\GBT-EUC-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\GBT-EUC-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\GBT-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\GBT-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\GBTpc-EUC-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\GBTpc-EUC-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\GBpc-EUC-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\GBpc-EUC-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\HKdla-B5-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\HKdla-B5-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\HKdlb-B5-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\HKdlb-B5-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\HKgccs-B5-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\HKgccs-B5-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\HKm314-B5-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\HKm314-B5-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\HKm471-B5-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\HKm471-B5-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\HKscs-B5-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\HKscs-B5-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\Hankaku.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\Hiragana.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\KSC-EUC-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\KSC-EUC-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\KSC-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\KSC-Johab-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\KSC-Johab-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\KSC-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\KSCms-UHC-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\KSCms-UHC-HW-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\KSCms-UHC-HW-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\KSCms-UHC-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\KSCpc-EUC-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\KSCpc-EUC-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\Katakana.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\LICENSE" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\NWP-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\NWP-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\RKSJ-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\RKSJ-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\Roman.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniCNS-UCS2-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniCNS-UCS2-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniCNS-UTF16-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniCNS-UTF16-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniCNS-UTF32-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniCNS-UTF32-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniCNS-UTF8-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniCNS-UTF8-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniGB-UCS2-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniGB-UCS2-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniGB-UTF16-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniGB-UTF16-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniGB-UTF32-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniGB-UTF32-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniGB-UTF8-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniGB-UTF8-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniJIS-UCS2-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniJIS-UCS2-HW-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniJIS-UCS2-HW-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniJIS-UCS2-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniJIS-UTF16-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniJIS-UTF16-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniJIS-UTF32-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniJIS-UTF32-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniJIS-UTF8-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniJIS-UTF8-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniJIS2004-UTF16-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniJIS2004-UTF16-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniJIS2004-UTF32-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniJIS2004-UTF32-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniJIS2004-UTF8-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniJIS2004-UTF8-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniJISPro-UCS2-HW-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniJISPro-UCS2-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniJISPro-UTF8-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniJISX0213-UTF32-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniJISX0213-UTF32-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniJISX02132004-UTF32-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniJISX02132004-UTF32-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniKS-UCS2-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniKS-UCS2-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniKS-UTF16-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniKS-UTF16-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniKS-UTF32-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniKS-UTF32-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniKS-UTF8-H.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\UniKS-UTF8-V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\V.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\cmaps\WP-Symbol.bcmap" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\annotation-check.svg" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\annotation-comment.svg" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\annotation-help.svg" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\annotation-insert.svg" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\annotation-key.svg" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\annotation-newparagraph.svg" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\annotation-noicon.svg" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\annotation-note.svg" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\annotation-paragraph.svg" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\findbarButton-next-rtl.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\findbarButton-next-rtl%402x.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\findbarButton-next.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\findbarButton-next%402x.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\findbarButton-previous-rtl.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\findbarButton-previous-rtl%402x.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\findbarButton-previous.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\findbarButton-previous%402x.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\grab.cur" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\grabbing.cur" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\loading-icon.gif" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\loading-small.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\loading-small%402x.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-documentProperties.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-documentProperties%402x.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-firstPage.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-firstPage%402x.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-handTool.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-handTool%402x.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-lastPage.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-lastPage%402x.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-rotateCcw.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-rotateCcw%402x.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-rotateCw.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\secondaryToolbarButton-rotateCw%402x.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\shadow.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\texture.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-bookmark.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-bookmark%402x.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-download.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-download%402x.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-menuArrows.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-menuArrows%402x.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-openFile.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-openFile%402x.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-pageDown-rtl.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-pageDown-rtl%402x.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-pageDown.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-pageDown%402x.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-pageUp-rtl.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-pageUp-rtl%402x.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-pageUp.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-pageUp%402x.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-presentationMode.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-presentationMode%402x.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-print.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-print%402x.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-search.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-search%402x.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-secondaryToolbarToggle-rtl.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-secondaryToolbarToggle-rtl%402x.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-secondaryToolbarToggle.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-secondaryToolbarToggle%402x.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-sidebarToggle-rtl.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-sidebarToggle-rtl%402x.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-sidebarToggle.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-sidebarToggle%402x.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-viewAttachments.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-viewAttachments%402x.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-viewOutline-rtl.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-viewOutline-rtl%402x.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-viewOutline.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-viewOutline%402x.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-viewThumbnail.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-viewThumbnail%402x.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-zoomIn.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-zoomIn%402x.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-zoomOut.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\toolbarButton-zoomOut%402x.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\treeitem-collapsed-rtl.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\treeitem-collapsed-rtl%402x.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\treeitem-collapsed.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\treeitem-collapsed%402x.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\treeitem-expanded.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\images\treeitem-expanded%402x.png" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\locale.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\ach\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\af\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\ak\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\an\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\ar\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\as\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\ast\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\az\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\be\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\bg\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\bn-BD\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\bn-IN\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\br\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\bs\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\ca\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\cs\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\csb\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\cy\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\da\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\de\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\el\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\en-GB\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\en-US\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\en-ZA\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\eo\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\es-AR\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\es-CL\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\es-ES\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\es-MX\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\et\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\eu\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\fa\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\ff\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\fi\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\fr\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\fy-NL\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\ga-IE\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\gd\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\gl\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\gu-IN\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\he\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\hi-IN\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\hr\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\hu\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\hy-AM\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\id\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\is\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\it\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\ja\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\ka\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\kk\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\km\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\kn\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\ko\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\ku\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\lg\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\lij\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\lt\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\lv\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\mai\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\mk\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\ml\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\mn\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\mr\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\ms\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\my\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\nb-NO\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\nl\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\nn-NO\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\nso\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\oc\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\or\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\pa-IN\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\pl\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\pt-BR\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\pt-PT\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\rm\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\ro\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\ru\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\rw\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\sah\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\si\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\sk\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\sl\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\son\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\sq\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\sr\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\sv-SE\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\sw\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\ta\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\ta-LK\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\te\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\th\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\tl\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\tn\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\tr\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\uk\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\ur\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\vi\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\wo\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\xh\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\zh-CN\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\zh-TW\viewer.properties" />
+    <AndroidAsset Include="Assets\pdfjs\web\locale\zu\viewer.properties" />
+    <AndroidAsset Include="Assets\server_keys_message_hosted.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\InAuth\InAuth.Droid\InAuth.Droid.csproj">
+      <Project>{3A2F41A0-9CDE-4666-8673-8D9D48403FF2}</Project>
+      <Name>InAuth.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SunMobile.Forms\SunMobile.Forms.csproj">
+      <Project>{C506BE95-0162-43AA-B23C-B03B68ACE506}</Project>
+      <Name>SunMobile.Forms</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="..\packages\Xamarin.Build.Download.0.4.7\build\Xamarin.Build.Download.targets" Condition="Exists('..\packages\Xamarin.Build.Download.0.4.7\build\Xamarin.Build.Download.targets')" />
+  <Import Project="..\packages\NETStandard.Library.2.0.1\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.1\build\netstandard2.0\NETStandard.Library.targets')" />
+  <Import Project="..\packages\Xamarin.GooglePlayServices.Basement.60.1142.0\build\MonoAndroid80\Xamarin.GooglePlayServices.Basement.targets" Condition="Exists('..\packages\Xamarin.GooglePlayServices.Basement.60.1142.0\build\MonoAndroid80\Xamarin.GooglePlayServices.Basement.targets')" />
+  <Import Project="..\packages\Xamarin.GooglePlayServices.Tasks.60.1142.0\build\MonoAndroid80\Xamarin.GooglePlayServices.Tasks.targets" Condition="Exists('..\packages\Xamarin.GooglePlayServices.Tasks.60.1142.0\build\MonoAndroid80\Xamarin.GooglePlayServices.Tasks.targets')" />
+  <Import Project="..\packages\Xamarin.GooglePlayServices.Base.60.1142.0\build\MonoAndroid80\Xamarin.GooglePlayServices.Base.targets" Condition="Exists('..\packages\Xamarin.GooglePlayServices.Base.60.1142.0\build\MonoAndroid80\Xamarin.GooglePlayServices.Base.targets')" />
+  <Import Project="..\packages\Xamarin.GooglePlayServices.Drive.60.1142.0\build\MonoAndroid80\Xamarin.GooglePlayServices.Drive.targets" Condition="Exists('..\packages\Xamarin.GooglePlayServices.Drive.60.1142.0\build\MonoAndroid80\Xamarin.GooglePlayServices.Drive.targets')" />
+  <Import Project="..\packages\Xamarin.GooglePlayServices.Maps.60.1142.0\build\MonoAndroid80\Xamarin.GooglePlayServices.Maps.targets" Condition="Exists('..\packages\Xamarin.GooglePlayServices.Maps.60.1142.0\build\MonoAndroid80\Xamarin.GooglePlayServices.Maps.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Arch.Core.Common.1.0.0\build\MonoAndroid80\Xamarin.Android.Arch.Core.Common.targets" Condition="Exists('..\packages\Xamarin.Android.Arch.Core.Common.1.0.0\build\MonoAndroid80\Xamarin.Android.Arch.Core.Common.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Arch.Lifecycle.Common.26.1.0\build\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Common.targets" Condition="Exists('..\packages\Xamarin.Android.Arch.Lifecycle.Common.26.1.0\build\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Common.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Arch.Lifecycle.Runtime.26.1.0\build\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Runtime.targets" Condition="Exists('..\packages\Xamarin.Android.Arch.Lifecycle.Runtime.26.1.0\build\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Runtime.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Annotations.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Annotations.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Annotations.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Annotations.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Compat.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Compat.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Compat.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Compat.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Core.UI.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Core.UI.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Core.UI.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Core.UI.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Core.Utils.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Core.Utils.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Core.Utils.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Core.Utils.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Fragment.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Fragment.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Fragment.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Fragment.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Media.Compat.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Media.Compat.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Media.Compat.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Media.Compat.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Transition.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Transition.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Transition.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Transition.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.v4.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.v4.targets" Condition="Exists('..\packages\Xamarin.Android.Support.v4.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.v4.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.v7.CardView.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.v7.CardView.targets" Condition="Exists('..\packages\Xamarin.Android.Support.v7.CardView.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.v7.CardView.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.v7.Palette.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.v7.Palette.targets" Condition="Exists('..\packages\Xamarin.Android.Support.v7.Palette.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.v7.Palette.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.v7.RecyclerView.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.v7.RecyclerView.targets" Condition="Exists('..\packages\Xamarin.Android.Support.v7.RecyclerView.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.v7.RecyclerView.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Vector.Drawable.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Vector.Drawable.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Vector.Drawable.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Animated.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Animated.Vector.Drawable.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.v7.AppCompat.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.v7.AppCompat.targets" Condition="Exists('..\packages\Xamarin.Android.Support.v7.AppCompat.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.v7.AppCompat.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Design.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Design.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Design.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Design.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.v7.MediaRouter.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.v7.MediaRouter.targets" Condition="Exists('..\packages\Xamarin.Android.Support.v7.MediaRouter.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.v7.MediaRouter.targets')" />
+  <Import Project="..\packages\Xamarin.Forms.2.5.0.280555\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.5.0.280555\build\netstandard1.0\Xamarin.Forms.targets')" />
+</Project>

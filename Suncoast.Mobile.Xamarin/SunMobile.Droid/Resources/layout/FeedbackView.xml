@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/MainLayout"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <TextView
+        android:text="Join our Feedback Team!"
+        android:textSize="@dimen/TextSizeLarge"
+        android:textColor="@color/TextViewTextColor"
+        android:textStyle="bold"
+        android:layout_height="40dp"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="20dp" />
+    <TextView
+        android:text="Share your insights and be part of the team that helps us improve your online banking experience."
+        android:textSize="@dimen/TextSizeMedium"
+        android:textColor="@color/TextViewTextColor"
+        android:layout_height="60dp"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+    <Button
+        android:id="@+id/btnSignMeUp"
+        style="@style/BlueGradientButtonStyle"
+        android:text="Sign me up!"
+        android:background="#78c143" />
+    <Button
+        android:id="@+id/btnRemindMeLater"
+        style="@style/BlueGradientButtonStyle"
+        android:text="Remind me later."
+        android:layout_marginTop="10dp"
+        android:background="#1fafcc" />
+    <Button
+        android:id="@+id/btnNoThanks"
+        style="@style/BlueGradientButtonStyle"
+        android:text="No, thanks."
+        android:layout_marginTop="10dp"
+        android:background="#999999" />
+</LinearLayout>

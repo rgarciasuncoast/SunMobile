@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:orientation="vertical"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_nobar">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none">
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TableRow
+                        android:background="@drawable/listitembg_nodiv_small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:minHeight="50dp">
+                        <TextView
+                            android:id="@+id/txtLocationName"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="Hillborough Community College This is a real long line of text"
+                            android:textSize="@dimen/TextSizeLarge"
+                            android:textColor="@color/LabelTextColor"
+                            android:gravity="center"
+                            android:lines="2"
+                            android:layout_width="300dp"
+                            android:layout_height="match_parent" />
+                    </TableRow>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/default_separatorcolor"
+                        android:padding="2dip" />
+                </TableLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TableRow
+                        android:background="@drawable/listitembg_nodiv_small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:minHeight="50dp">
+                        <TextView
+                            android:text="Address"
+                            android:textSize="@dimen/TextSizeLarge"
+                            android:textColor="@color/LabelTextColor"
+                            android:paddingLeft="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textStyle="bold"
+                            android:gravity="center_vertical" />
+                        <TextView
+                            android:id="@+id/txtAddress"
+                            android:text="123 Main Street\nClearwater, Florida 33761"
+                            android:textSize="@dimen/TextSizeLarge"
+                            android:textColor="@color/LabelTextColor"
+                            android:lines="2"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical" />
+                    </TableRow>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/default_separatorcolor"
+                        android:padding="2dip" />
+                </TableLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TableRow
+                        android:background="@drawable/listitembg_nodiv_small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:minHeight="50dp">
+                        <Button
+                            style="@style/BlueGradientButtonStyle"
+                            android:text="Get Directions"
+                            android:gravity="center"
+                            android:id="@+id/btnGetDirections" />
+                    </TableRow>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/default_separatorcolor"
+                        android:padding="2dip" />
+                </TableLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TableRow
+                        android:background="@drawable/listitembg_nodiv_small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:minHeight="50dp">
+                        <Button xmlns:tools="http://schemas.android.com/tools"
+                            style="@style/BlueGradientButtonStyle"
+                            android:text="Call (800) 555-5555 x1234"
+                            android:gravity="center"
+                            android:id="@+id/btnPhoneNumber"
+                            android:layout_gravity="center"
+                            android:maxWidth="200dp"
+                            android:minWidth="200dp" />
+                        <TextView
+                            android:id="@+id/txtPhoneNumber"
+                            android:text="Call (800) 555-5555 x1234"
+                            android:textSize="@dimen/TextSizeLarge"
+                            android:textColor="@color/LabelTextColor"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:layout_gravity="center" />
+                    </TableRow>
+                    <View
+                        android:id="@+id/lastSeparator"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/default_separatorcolor"
+                        android:padding="2dip" />
+                </TableLayout>
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>

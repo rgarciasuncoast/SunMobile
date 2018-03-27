@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TableLayout
+        android:id="@+id/RowTable"
+        android:clipChildren="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_gravity="center_vertical"
+        android:stretchColumns="0">
+        <TableRow
+            android:id="@+id/rowAlertAccount"
+            android:layout_width="fill_parent"
+            android:minHeight="@dimen/cell_Height"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/lblAccountName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/TextSizeMedium"
+                android:textColor="@color/TextViewTextColor"
+                android:paddingLeft="20dp"
+                android:text="Regular Savings 0000" />
+            <TextView
+                android:id="@+id/lblAccountAlertsEnabled"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/TextSizeMedium"
+                android:layout_height="wrap_content"
+                android:textColor="@color/TextViewTextColor"
+                android:paddingRight="20dp"
+                android:text="On" />
+            <Switch
+                android:id="@+id/switchEnabled"
+                android:layout_gravity="center_vertical"
+                android:paddingRight="20dp" />
+            <ImageView
+                android:id="@+id/imgMore"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/listitemselect"
+                android:paddingRight="2dip" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

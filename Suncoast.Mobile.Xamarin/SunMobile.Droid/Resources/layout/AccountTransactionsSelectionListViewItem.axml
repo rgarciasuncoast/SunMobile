@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TableLayout
+        android:id="@+id/RowTable"
+        android:clipChildren="false"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/listselector_medium">
+        <TableRow
+            android:id="@+id/trowItemTitle"
+            android:clipToPadding="true"
+            android:clipChildren="false"
+            android:layout_gravity="left|center_vertical"
+            android:gravity="left|center_vertical">
+            <TextView
+                android:id="@+id/lblItemTitle"
+                android:layout_width="fill_parent"
+                android:textSize="@dimen/TextSizeLarge"
+                android:layout_height="wrap_content"
+                android:textColor="@color/TextViewTextColor"
+                android:paddingLeft="1dp"
+                android:text="12/12/1234"
+                android:layout_marginLeft="6dp"
+                android:layout_column="1" />
+            <TextView />
+        </TableRow>
+        <TableRow
+            android:id="@+id/trowItemBody"
+            android:clipChildren="false"
+            android:gravity="center_vertical">
+            <CheckBox
+                android:text=""
+                android:id="@+id/chkBox" />
+            <ImageView
+                android:id="@+id/imgItemIcon"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:paddingTop="5dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:cropToPadding="false"
+                android:src="@drawable/listitemselect"
+                android:paddingRight="2dip" />
+            <TextView
+                android:id="@+id/lblItem1Text"
+                android:paddingLeft="26dip"
+                android:paddingRight="4dip"
+                android:textColor="@color/TextViewTextColor"
+                android:text="Withdrawal Transfer To Share 0000"
+                android:maxLines="4"
+                android:minLines="2"
+                android:lineSpacingMultiplier="0.90"
+                android:layout_width="wrap_content"
+                android:layout_weight="5.0"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/TextSizeMedium"
+                android:gravity="left" />
+            <ImageView
+                android:id="@+id/imgCheck"
+                android:src="@drawable/transactioncheck" />
+            <TextView
+                android:id="@+id/lblItem2Text"
+                android:paddingRight="8dip"
+                android:textColor="@color/TextViewTextColor"
+                android:text="$999.99"
+                android:maxLines="4"
+                android:minLines="2"
+                android:lineSpacingMultiplier="0.90"
+                android:layout_width="110dip"
+                android:layout_weight="0"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/TextSizeMedium"
+                android:gravity="right" />
+            <ImageView
+                android:id="@+id/imgMore"
+                android:layout_width="20dp"
+                android:paddingTop="5dp"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:cropToPadding="false"
+                android:src="@drawable/listitemselect"
+                android:paddingRight="2dip"
+                android:minWidth="20dp" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

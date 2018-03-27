@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <RelativeLayout
+        android:id="@+id/TitleBar"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:minHeight="@dimen/appdim_MinimumTitleHeight"
+        android:layout_height="wrap_content"
+        android:background="@color/ActionBarBackgroundColor">
+        <ImageButton
+            android:id="@+id/btnCloseWindow"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_back"
+            android:background="@drawable/transparent"
+            android:maxWidth="30px"
+            android:layout_centerVertical="true" />
+        <TextView
+            android:id="@+id/txtTitle"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:textColor="@color/TextViewTextColorWhite"
+            android:text="Transaction Dispute"
+            android:minHeight="30dp"
+            android:textSize="@dimen/TextSizeLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/txtContinueDispute"
+            android:gravity="right|center_vertical"
+            android:textColor="@color/TextViewTextColorWhite"
+            android:text="Continue"
+            android:minHeight="30dp"
+            android:textSize="@dimen/TextSizeLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp" />
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/scrollView1"
+        android:background="@drawable/background_nobar"
+        android:layout_weight=".8">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout1"
+            android:gravity="center_horizontal">
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tableLayout1">
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:minHeight="@dimen/cell_Height"
+                    android:background="@color/TableHeaderBackgroundColor">
+                    <TextView
+                        android:id="@+id/lblSection1Title"
+                        android:text="Cardholder Information"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:textColor="@color/TableHeaderTextColor"
+                        android:paddingLeft="20dip"
+                        android:layout_height="wrap_content"
+                        android:layout_span="2"
+                        android:layout_gravity="center_vertical" />
+                </TableRow>
+                <TableRow
+                    android:id="@+id/cardHoldersNameRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:minHeight="@dimen/cell_Height"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:id="@+id/lblCardholderLabel"
+                        android:text="Cardholder Name"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:textColor="@color/TextViewTextColor"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"
+                        android:width="120dp" />
+                    <TextView
+                        android:id="@+id/lblCardholdersName"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight=".9"
+                        android:enabled="false" />
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip" />
+                <TableRow
+                    android:id="@+id/daytimePhoneRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/cell_Height"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:text="Daytime Phone"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:textColor="@color/TextViewTextColor"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"
+                        android:id="@+id/lblPhoneLabel" />
+                    <EditText
+                        android:id="@+id/txtDaytimePhone"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:inputType="number"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight=".9"
+                        android:maxLength="10"
+                        android:numeric="integer" />
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip" />
+                <TableRow
+                    android:id="@+id/addressRow1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:minHeight="@dimen/cell_Height"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:text="Address Line 1"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:textColor="@color/TextViewTextColor"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"
+                        android:id="@+id/lblAddress1Label" />
+                    <EditText
+                        android:id="@+id/txtAddressLine1"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight=".9"
+                        android:maxLength="40" />
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip" />
+                <TableRow
+                    android:minHeight="@dimen/cell_Height"
+                    android:id="@+id/addressRow2"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:text="Address Line 2"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:textColor="@color/TextViewTextColor"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"
+                        android:id="@+id/lblAddress2Label" />
+                    <EditText
+                        android:id="@+id/txtAddressLine2"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:hint="Optional"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight=".9"
+                        android:maxLength="40" />
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip" />
+                <TableRow
+                    android:minHeight="@dimen/cell_Height"
+                    android:id="@+id/cityRow"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:text="City"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:textColor="@color/TextViewTextColor"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"
+                        android:id="@+id/lblCityLabel" />
+                    <EditText
+                        android:id="@+id/txtCity"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight=".9"
+                        android:maxLength="33" />
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip" />
+                <TableRow
+                    android:minHeight="@dimen/cell_Height"
+                    android:id="@+id/stateRow"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:text="State"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:textColor="@color/TextViewTextColor"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"
+                        android:id="@+id/lblStateLabel" />
+                    <Spinner
+                        android:id="@+id/spinnerState"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight=".9" />
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip" />
+                <TableRow
+                    android:minHeight="@dimen/cell_Height"
+                    android:id="@+id/zipCodeRow"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:text="Zip Code"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:textColor="@color/TextViewTextColor"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"
+                        android:id="@+id/lblZipCodeLabel" />
+                    <EditText
+                        android:id="@+id/txtZipCode"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:inputType="number"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight=".9"
+                        android:maxLength="9" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:minHeight="@dimen/cell_Height"
+                    android:background="@color/TableHeaderBackgroundColor">
+                    <TextView
+                        android:text="Transaction Information"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:textColor="@color/TableHeaderTextColor"
+                        android:paddingLeft="20dip"
+                        android:layout_height="wrap_content"
+                        android:layout_span="2"
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/lblSection2Title" />
+                </TableRow>
+                <TableRow
+                    android:id="@+id/transactionDateRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:minHeight="@dimen/cell_Height">
+                    <TextView
+                        android:text="Transaction Date"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:textColor="@color/TextViewTextColor"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"
+                        android:id="@+id/lblDateLabel" />
+                    <TextView
+                        android:id="@+id/txtTransactionDate"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:inputType="phone"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight=".9"
+                        android:maxLength="10"
+                        android:enabled="false" />
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip" />
+                <TableRow
+                    android:id="@+id/transactionDescriptionRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:minHeight="@dimen/cell_Height"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:id="@+id/lblDescriptionLabel"
+                        android:text="Description"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:textColor="@color/TextViewTextColor"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp" />
+                    <TextView
+                        android:id="@+id/txtTransactionDescription"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight=".9"
+                        android:enabled="false" />
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip" />
+                <TableRow
+                    android:id="@+id/transactionAmountRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:minHeight="@dimen/cell_Height"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:id="@+id/lblAmountLabel"
+                        android:text="Amount"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:textColor="@color/TextViewTextColor"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"
+                        android:width="100dp" />
+                    <TextView
+                        android:id="@+id/txtTransactionAmount"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight=".9"
+                        android:enabled="false" />
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip" />
+                <TableRow
+                    android:id="@+id/reasonRow"
+                    android:gravity="left"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:id="@+id/lblReasonLabel"
+                        android:text="Dispute Reason"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:textColor="@color/TextViewTextColor"
+                        android:textStyle="bold"
+                        android:layout_span="2"
+                        android:layout_marginLeft="20dp" />
+                </TableRow>
+                <TableRow
+                    android:id="@+id/reasonSpinnerRow"
+                    android:gravity="left"
+                    android:paddingBottom="10dp">
+                    <Spinner
+                        android:id="@+id/spinnerReason"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_span="2"
+                        android:layout_marginRight="20dp" />
+                </TableRow>
+            </TableLayout>
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tableReasonQuestions" />
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tableAdditionalTransactionsHeader">
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:minHeight="@dimen/cell_Height"
+                    android:background="@color/TableHeaderBackgroundColor">
+                    <TextView
+                        android:id="@+id/lblSection4Title"
+                        android:text="Additional Transactions"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:textColor="@color/TableHeaderTextColor"
+                        android:paddingLeft="20dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight=".9" />
+                    <Button
+                        android:id="@+id/btnAddTransactions"
+                        style="@style/BlueGradientButtonStyle"
+                        android:text="Add Transactions"
+                        android:layout_width="200dp"
+                        android:layout_gravity="center_vertical|right"
+                        android:layout_marginRight="20dp"
+                        android:width="175dp" />
+                </TableRow>
+            </TableLayout>
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tableAdditionalTransactions" />
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tableDocumentsHeader">
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:minHeight="@dimen/cell_Height"
+                    android:background="@color/TableHeaderBackgroundColor">
+                    <TextView
+                        android:id="@+id/lblSection3Title"
+                        android:text="Supporting Documents"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:textColor="@color/TableHeaderTextColor"
+                        android:paddingLeft="20dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical" />
+                    <Button
+                        android:id="@+id/btnUploadDocuments"
+                        style="@style/BlueGradientButtonStyle"
+                        android:text="Upload Documents"
+                        android:layout_width="200dp"
+                        android:layout_gravity="center_vertical|right"
+                        android:layout_marginRight="20dp"
+                        android:width="175dp" />
+                </TableRow>
+            </TableLayout>
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tableDocuments" />
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tableAgreement">
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:minHeight="@dimen/cell_Height">
+                    <TextView
+                        android:id="@+id/txtAgreement"
+                        android:text=""
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:textColor="@color/TextViewTextColor"
+                        android:layout_width="wrap_content"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

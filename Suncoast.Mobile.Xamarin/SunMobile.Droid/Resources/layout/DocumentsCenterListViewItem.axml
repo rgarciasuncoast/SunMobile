@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white">
+        <TableRow
+            android:layout_width="60dp"
+            android:layout_height="40dp">
+            <TableLayout
+                android:layout_weight="90"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:paddingLeft="0dp">
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+                    <TextView
+                        android:id="@+id/lblHeaderText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:textColor="@color/TextViewTextColor"
+                        android:text="01/01/9999"
+                        android:layout_span="2"
+                        android:layout_weight="1"
+                        android:paddingLeft="8dp" />
+                    <TextView
+                        android:id="@+id/lblStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:textColor="@color/TextViewTextColor"
+                        android:text="Upload Requested"
+                        android:layout_span="1"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="20dip" />
+                    <ImageView
+                        android:id="@+id/imgUploadButton"
+                        android:paddingTop="0dp"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:cropToPadding="false"
+                        android:paddingRight="2dip"
+                        android:src="@drawable/upload" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+                    <TextView
+                        android:id="@+id/lblHeader2Text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="20"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:textColor="@color/TextViewTextColor"
+                        android:text="Uploaded Verification Documents"
+                        android:layout_span="3"
+                        android:paddingLeft="8dp"
+                        android:textStyle="normal" />
+                </TableRow>
+            </TableLayout>
+            <ImageView
+                android:id="@+id/imgMore"
+                android:paddingTop="0dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:cropToPadding="false"
+                android:src="@drawable/listitemselect"
+                android:paddingRight="2dip" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

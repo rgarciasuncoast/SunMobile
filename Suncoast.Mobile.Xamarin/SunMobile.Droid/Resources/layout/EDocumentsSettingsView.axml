@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:id="@+id/edocumentsSettingsLayout"
+    android:background="#ffffffff">
+    <TableLayout
+        android:id="@+id/edocumentSettingsTable"
+        android:stretchColumns="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TableRow
+            android:id="@+id/rowAccountEStatementsToggle"
+            android:layout_width="fill_parent"
+            android:minHeight="@dimen/cell_Height">
+            <TextView
+                android:text="Account eStatement Enrollment"
+                android:textSize="@dimen/TextSizeMedium"
+                android:textColor="@color/TextViewTextColor"
+                android:textStyle="normal"
+                android:paddingLeft="20dip"
+                android:layout_gravity="center_vertical"
+                android:layout_weight=".9" />
+            <Switch
+                android:id="@+id/switchAccountEStatements"
+                android:layout_gravity="center_vertical"
+                android:paddingRight="20dip"
+                android:checked="true" />
+        </TableRow>
+    <!--        <TableRow
+            android:id="@+id/rowCreditCardEStatements"
+            android:layout_width="fill_parent"
+            android:minHeight="@dimen/cell_Height">
+            <TextView
+                android:text="Credit Card EStatements"
+                android:textSize="@dimen/TextSizeMedium"
+                android:textColor="@color/TextViewTextColor"
+                android:textStyle="bold"
+                android:paddingLeft="20dip"
+                android:layout_gravity="center_vertical"
+                android:layout_weight=".9" />
+            <Switch
+                android:id="@+id/switchCreditCardEStatements"
+                android:layout_gravity="center_vertical"
+                android:paddingRight="20dip"
+                android:checked="true" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/rowSpanishStatements"
+            android:layout_width="fill_parent"
+            android:minHeight="@dimen/cell_Height">
+            <TextView
+                android:text="Spanish Statements"
+                android:textSize="@dimen/TextSizeMedium"
+                android:textColor="@color/TextViewTextColor"
+                android:textStyle="bold"
+                android:paddingLeft="20dip"
+                android:layout_gravity="center_vertical"
+                android:layout_weight=".9" />
+            <Switch
+                android:id="@+id/switchSpanishStatements"
+                android:layout_gravity="center_vertical"
+                android:paddingRight="20dip"
+                android:checked="true" />
+        </TableRow>
+		-->
+        <View
+            android:id="@+id/seperatorENotices"
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_weight="1"
+            android:background="@drawable/default_separatorcolor"
+            android:padding="2dip" />
+        <TableRow
+            android:id="@+id/rowReceiveENoticesOnline"
+            android:layout_width="fill_parent"
+            android:minHeight="@dimen/cell_Height">
+            <TextView
+                android:text="eNotice Enrollment"
+                android:textSize="@dimen/TextSizeMedium"
+                android:textColor="@color/TextViewTextColor"
+                android:textStyle="normal"
+                android:paddingLeft="20dip"
+                android:layout_gravity="center_vertical"
+                android:layout_weight=".9" />
+            <Switch
+                android:id="@+id/switchReceiveENoticesOnline"
+                android:layout_gravity="center_vertical"
+                android:paddingRight="20dip"
+                android:checked="true" />
+        </TableRow>
+        <View
+            android:id="@+id/seperatorENoticesAndEStatements"
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_weight="1"
+            android:background="@drawable/default_separatorcolor"
+            android:padding="2dip" />
+        <TableRow
+            android:id="@+id/rowReceiveENoticesAndEStatementsOnline"
+            android:layout_width="fill_parent"
+            android:minHeight="@dimen/cell_Height">
+            <TextView
+                android:text="eStatement and eNotice Enrollment"
+                android:textSize="@dimen/TextSizeMedium"
+                android:textColor="@color/TextViewTextColor"
+                android:textStyle="normal"
+                android:paddingLeft="20dip"
+                android:layout_gravity="center_vertical"
+                android:layout_weight=".9" />
+            <Switch
+                android:id="@+id/switchReceiveENoticesAndEStatementsOnline"
+                android:layout_gravity="center_vertical"
+                android:paddingRight="20dip"
+                android:checked="true" />
+        </TableRow>
+    <!--
+        <TableRow
+            android:id="@+id/rowMortgageEStatements"
+            android:layout_width="fill_parent"
+            android:minHeight="@dimen/cell_Height">
+            <TextView
+                android:text="Mortgage EStatements"
+                android:textSize="@dimen/TextSizeMedium"
+                android:textColor="@color/TextViewTextColor"
+                android:textStyle="bold"
+                android:paddingLeft="20dip"
+                android:layout_gravity="center_vertical"
+                android:layout_weight=".9" />
+            <Switch
+                android:id="@+id/switchMortgageEStatements"
+                android:layout_gravity="center_vertical"
+                android:paddingRight="20dip"
+                android:checked="true" />
+        </TableRow>-->
+    </TableLayout>
+    <TableLayout
+        android:id="@+id/disclosureTable"
+        android:stretchColumns="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_weight="1"
+            android:background="@drawable/default_separatorcolor"
+            android:padding="2dip" />
+        <TableRow
+            android:id="@+id/rowStatementDisclosure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/TextSizeMedium"
+            android:textColor="@color/TextViewTextColor"
+            android:gravity="center"
+            android:minHeight="@dimen/cell_Height">
+            <TextView
+                android:text="View Statement Disclosure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/TextSizeMedium"
+                android:textColor="@drawable/lightblue"
+                android:gravity="center"
+                android:layout_span="2" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

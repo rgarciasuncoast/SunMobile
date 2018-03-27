@@ -1,0 +1,11 @@
+﻿<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+ 
+    <item android:id="@+id/btnActionHome"
+          android:icon="@drawable/ic_action_home"
+          app:showAsAction="always"
+          android:title="Home"  />
+    
+    
+</menu>

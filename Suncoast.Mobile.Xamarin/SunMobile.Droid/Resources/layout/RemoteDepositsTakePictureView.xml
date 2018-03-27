@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff000000">
+    <SunMobile.Droid.Deposits.AutoFitTextureView
+        android:id="@+id/textureView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true" />
+    <SunMobile.Droid.Deposits.CameraOverlayView
+        android:id="@+id/overlayView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    <ImageView
+        android:id="@+id/imagePreview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:layout_centerInParent="true" />
+    <TextView
+        android:id="@+id/txtHelpText"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:textColor="@color/TextViewTextColorWhite"
+        android:text="FRONT OF CHECK"
+        android:minHeight="30dp"
+        android:rotation="90"
+        android:textSize="30dp"
+        android:shadowDx="8"
+        android:shadowDy="8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shadowColor="#000000"
+        android:shadowRadius="4" />
+    <ImageView xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/imageFlash"
+        android:layout_height="wrap_content"
+        android:rotation="90"
+        android:src="@drawable/ic_action_flash_off"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:paddingRight="10dp" />
+    <ImageView
+        android:id="@+id/imageShutter"
+        android:src="@drawable/shutterblue"
+        android:maxWidth="20dip"
+        android:layout_gravity="center"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:rotation="90"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:paddingRight="0dp" />
+    <Button
+        android:id="@+id/btnRetake"
+        style="@style/BlueGradientButtonStyle"
+        android:text="Retake"
+        android:rotation="90"
+        android:width="80dp"
+        android:layout_width="150dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="-40dp" />
+    <Button
+        android:id="@+id/btnUse"
+        style="@style/BlueGradientButtonStyle"
+        android:layout_width="150dp"
+        android:text="Use"
+        android:rotation="90"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:width="80dp"
+        android:layout_marginLeft="-40dp"
+        android:layout_marginBottom="60dp" />
+</RelativeLayout>

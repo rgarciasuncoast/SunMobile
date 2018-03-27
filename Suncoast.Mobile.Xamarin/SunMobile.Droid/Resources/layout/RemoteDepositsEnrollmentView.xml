@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:orientation="vertical"
+    android:layout_height="fill_parent"
+    android:fitsSystemWindows="true">
+    <RelativeLayout
+        android:id="@+id/TitleBar"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:minHeight="@dimen/appdim_MinimumTitleHeight"
+        android:layout_height="wrap_content"
+        android:background="@color/ActionBarBackgroundColor">
+        <ImageButton
+            android:id="@+id/btnCloseWindow"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_back"
+            android:background="@drawable/transparent"
+            android:maxWidth="30px"
+            android:layout_centerVertical="true" />
+        <TextView
+            android:id="@+id/txtTitle"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:textColor="@color/TextViewTextColorWhite"
+            android:text="Remote Deposits Enrollment"
+            android:minHeight="30dp"
+            android:textSize="@dimen/TextSizeLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:background="@drawable/background_nobar"
+        android:scrollbars="none">
+        <TableLayout
+            android:stretchColumns="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TableRow
+                android:id="@+id/RowEmail"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+                android:clipToPadding="true"
+                android:minHeight="50dp"
+                android:gravity="center_vertical">
+                <EditText
+                    android:id="@+id/txtEmail"
+                    android:layout_marginLeft="20dp"
+                    android:hint="Email"
+                    android:maxLength="255"
+                    android:textSize="@dimen/TextSizeLarge"
+                    android:layout_marginRight="20dp"
+                    android:inputType="textEmailAddress"
+                    android:lines="1"
+                    android:scrollHorizontally="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="20.0"
+                    android:paddingTop="15dip"
+                    android:width="140dp"
+                    android:layout_span="2" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/RowCellPhone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+                android:clipToPadding="true"
+                android:minHeight="50dp">
+                <EditText
+                    android:id="@+id/txtCellPhone"
+                    android:layout_marginLeft="20dp"
+                    android:hint="Cell Phone"
+                    android:maxLength="10"
+                    android:textSize="@dimen/TextSizeLarge"
+                    android:layout_marginRight="20dp"
+                    android:inputType="phone"
+                    android:lines="1"
+                    android:scrollHorizontally="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="20.0"
+                    android:width="140dip"
+                    android:layout_span="2" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/RowMessage"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+                android:clipToPadding="true"
+                android:minHeight="1dp">
+                <TextView
+                    android:text="By turning this option on, you agree to receive text alerts to this phone number"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/lblAgreedToSms"
+                    android:textColor="@color/TextViewTextColor"
+                    android:layout_gravity="center_vertical"
+                    android:lines="2"
+                    android:width="140dp"
+                    android:textSize="@dimen/TextSizeSmall"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp" />
+                <CheckBox
+                    android:id="@+id/checkBoxCellPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+            </TableRow>
+            <View
+                android:layout_span="2"
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_weight="1"
+                android:background="@drawable/default_separatorcolor"
+                android:padding="2dip" />
+            <TableRow
+                android:id="@+id/RowAgreement"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+                android:clipToPadding="true"
+                android:minHeight="@dimen/appdim_BillPayScheduleItemHeight">
+                <TextView
+                    android:id="@+id/txtAgreement"
+                    android:text="Agreement Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dip"
+                    android:paddingTop="5dip"
+                    android:paddingBottom="5dip"
+                    android:textSize="@dimen/TextSizeSmall"
+                    android:textColor="@color/TextViewTextColor"
+                    android:scrollbars="vertical"
+                    android:scrollbarAlwaysDrawVerticalTrack="true"
+                    android:layout_span="2"
+                    android:gravity="top"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/RowEmail"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+                android:clipToPadding="true"
+                android:minHeight="40dp">
+                <Button
+                    android:id="@+id/btnEmail"
+                    style="@style/BlueGradientButtonStyle"
+                    android:text="Email Agreement"
+                    android:layout_gravity="center"
+                    android:layout_span="2"
+                    android:width="260px" />
+            </TableRow>
+            <View
+                android:layout_span="2"
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_weight="1"
+                android:background="@drawable/default_separatorcolor"
+                android:padding="2dip" />
+            <TableRow
+                android:id="@+id/RowAgree"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+                android:clipToPadding="true"
+                android:minHeight="40dp"
+                android:gravity="center_vertical">
+                <CheckBox
+                    android:id="@+id/checkBoxAgree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/TextViewTextColor"
+                    android:text="Agree"
+                    android:layout_span="2"
+                    android:textSize="@dimen/TextSizeMedium"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp" />
+            </TableRow>
+            <View
+                android:layout_span="2"
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_weight="1"
+                android:background="@drawable/default_separatorcolor"
+                android:padding="2dip" />
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="30dip"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:id="@+id/BillPaySubmitRow">
+                <Button
+                    android:id="@+id/btnNext"
+                    style="@style/BlueGradientButtonStyle"
+                    android:text="Next"
+                    android:layout_gravity="center"
+                    android:layout_span="2"
+                    android:width="260px" />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>

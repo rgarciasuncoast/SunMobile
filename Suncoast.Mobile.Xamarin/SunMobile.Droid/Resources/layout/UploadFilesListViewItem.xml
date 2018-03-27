@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TableLayout
+        android:id="@+id/RowTable"
+        android:clipChildren="false"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/listselector_medium">
+        <TableRow
+            android:id="@+id/trowItemBody"
+            android:clipChildren="false"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/lblFileName"
+                android:textColor="@color/TextViewTextColor"
+                android:text="Filename"
+                android:layout_height="40dp"
+                android:textSize="@dimen/TextSizeLarge"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:layout_weight=".9" />
+            <TextView
+                android:id="@+id/lblStatus"
+                android:textColor="@color/TextViewTextColor"
+                android:text="Status"
+                android:layout_height="40dp"
+                android:paddingRight="20dp"
+                android:textSize="@dimen/TextSizeLarge"
+                android:gravity="center_vertical" />
+            <ImageButton
+                android:id="@+id/btnRemove"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_action_delete"
+                android:layout_marginRight="20dp"
+                android:layout_centerVertical="true" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/trowItemMessage"
+            android:visibility="visible">
+            <TextView
+                android:text="File failed security scan, please upload new file."
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/errorMessage"
+                android:textColor="#ffff0000"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="@dimen/TextSizeLarge"
+                android:gravity="center_vertical"
+                android:visibility="visible"
+                android:layout_width="match_parent" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

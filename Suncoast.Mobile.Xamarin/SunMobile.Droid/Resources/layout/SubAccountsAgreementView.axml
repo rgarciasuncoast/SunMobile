@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:id="@+id/subAccountsAgreementLayout"
+    android:background="#ffffffff">
+    <RelativeLayout
+        android:id="@+id/actionBar"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="42dp"
+        android:background="@color/ActionBarBackgroundColor">
+        <TextView
+            android:id="@+id/lblHeaderText"
+            android:layout_width="250dp"
+            android:textSize="@dimen/TextSizeLarge"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Contact Information"
+            android:layout_marginLeft="8dp"
+            android:layout_gravity="center_vertical"
+            android:layout_centerVertical="true" />
+        <ImageView
+            android:id="@+id/btnPrevious"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/leftarrowwhite"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/btnNext" />
+        <ImageView
+            android:id="@+id/btnNext"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/rightarrowwhite"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="10dp" />
+    </RelativeLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageProgress"
+        android:src="@drawable/subaccountstep1"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginBottom="6dp" />
+    <TableLayout
+        android:id="@+id/subAccountsAgreementSettingsTable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_span="2"
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_weight="1"
+            android:background="@drawable/default_separatorcolor"
+            android:padding="2dip" />
+    </TableLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight=".6">
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/listViewMain"
+            style="@style/ListViewStyle"
+            android:dividerHeight="1dip"
+            android:divider="@drawable/default_separatorcolor" />
+    </LinearLayout>
+    <TableLayout
+        android:id="@+id/subAccountsAgreementSettingsTable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_span="2"
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_weight="1"
+            android:background="@drawable/default_separatorcolor"
+            android:padding="2dip" />
+        <TableRow
+            android:id="@+id/rowEStatements"
+            android:layout_width="fill_parent"
+            android:minHeight="@dimen/cell_Height">
+            <TextView
+                android:id="@+id/lblEnrollInEstatements"
+                android:text="Enroll in eStatements"
+                android:textSize="@dimen/TextSizeMedium"
+                android:textColor="@color/TextViewTextColor"
+                android:textStyle="normal"
+                android:paddingLeft="20dip"
+                android:layout_gravity="center_vertical"
+                android:layout_weight=".9" />
+            <Switch
+                android:id="@+id/switchEnrollInEStatements"
+                android:layout_gravity="center_vertical"
+                android:paddingRight="20dip"
+                android:checked="true" />
+        </TableRow>
+        <View
+            android:layout_span="2"
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_weight="1"
+            android:background="@drawable/default_separatorcolor"
+            android:padding="2dip" />
+        <TableRow
+            android:id="@+id/subAccountsAgreementToggle"
+            android:layout_width="fill_parent"
+            android:minHeight="@dimen/cell_Height">
+            <TextView
+                android:text="I agree to the terms and conditions of the above agreements."
+                android:textSize="@dimen/TextSizeMedium"
+                android:textColor="@color/TextViewTextColor"
+                android:textStyle="normal"
+                android:paddingLeft="20dip"
+                android:layout_gravity="center_vertical"
+                android:layout_weight=".9"
+                android:id="@+id/lblIAgree" />
+            <Switch
+                android:id="@+id/switchAgree"
+                android:layout_gravity="center_vertical"
+                android:paddingRight="20dip" />
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

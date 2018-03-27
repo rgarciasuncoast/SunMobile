@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <RelativeLayout
+        android:id="@+id/TitleBar"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:minHeight="@dimen/appdim_MinimumTitleHeight"
+        android:layout_height="wrap_content"
+        android:background="@color/ActionBarBackgroundColor">
+        <ImageButton
+            android:id="@+id/btnCloseWindow"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_back"
+            android:background="@drawable/transparent"
+            android:maxWidth="30px"
+            android:layout_centerVertical="true" />
+        <TextView
+            android:id="@+id/txtTitle"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:textColor="@color/TextViewTextColorWhite"
+            android:text="Add Payee"
+            android:minHeight="30dp"
+            android:textSize="@dimen/TextSizeLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/txtAddPayee"
+            android:gravity="right|center_vertical"
+            android:textColor="@color/TextViewTextColorWhite"
+            android:text="Add"
+            android:minHeight="30dp"
+            android:textSize="@dimen/TextSizeLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp" />
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/scrollView1"
+        android:background="@drawable/background_nobar">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout1"
+            android:gravity="center_horizontal">
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tableLayout1">
+                <TableRow
+                    android:id="@+id/payeeNameRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:id="@+id/lblPayeeName"
+                        android:text="Payee Name"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:textColor="@color/TextViewTextColor"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"
+                        android:width="130dp" />
+                    <EditText
+                        android:id="@+id/txtPayeeName"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight=".9" />
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip" />
+                <TableRow
+                    android:id="@+id/payeeNicknameRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:id="@+id/lblPayeeNickname"
+                        android:text="Nickname"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:textColor="@color/TextViewTextColor"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"
+                        android:width="130dp" />
+                    <EditText
+                        android:id="@+id/txtPayeeNickname"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:hint="Optional"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight=".9" />
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip" />
+                <TableRow
+                    android:id="@+id/payeeAddressRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:id="@+id/lblPayeeAddress1"
+                        android:text="Street Address 1"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:textColor="@color/TextViewTextColor"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"
+                        android:width="130dp" />
+                    <EditText
+                        android:id="@+id/txtPayeeAddress1"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight=".9" />
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip" />
+                <TableRow
+                    android:minHeight="25px"
+                    android:id="@+id/payeeAddressRow2"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:id="@+id/lblPayeeAddress2"
+                        android:text="Street Address 2"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:textColor="@color/TextViewTextColor"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"
+                        android:width="130dp" />
+                    <EditText
+                        android:id="@+id/txtPayeeAddress2"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:hint="Optional"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight=".9" />
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip" />
+                <TableRow
+                    android:minHeight="25px"
+                    android:id="@+id/payeeCityRow"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:id="@+id/lblPayeeCity"
+                        android:text="City"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:textColor="@color/TextViewTextColor"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"
+                        android:width="130dp" />
+                    <EditText
+                        android:id="@+id/txtPayeeCity"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight=".9" />
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip" />
+                <TableRow
+                    android:minHeight="25px"
+                    android:id="@+id/payeeStateRow"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:id="@+id/lblPayeeState"
+                        android:text="State"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:textColor="@color/TextViewTextColor"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"
+                        android:width="130dp" />
+                    <Spinner
+                        android:id="@+id/spinnerState"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight=".9" />
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip" />
+                <TableRow
+                    android:minHeight="25px"
+                    android:id="@+id/payeeZipCodeRow"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:id="@+id/lblPayeeZip"
+                        android:text="Zipcode"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:textColor="@color/TextViewTextColor"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"
+                        android:width="130dp" />
+                    <EditText
+                        android:id="@+id/txtPayeeZip"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:inputType="number"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight=".9" />
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip" />
+                <TableRow
+                    android:id="@+id/payeePhoneRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:id="@+id/lblPayeePhone"
+                        android:text="Phone"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:textColor="@color/TextViewTextColor"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"
+                        android:width="130dp" />
+                    <EditText
+                        android:id="@+id/txtPayeePhone"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:inputType="phone"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight=".9"
+                        android:maxLength="10" />
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip" />
+                <TableRow
+                    android:id="@+id/payeeNameOnBillRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:id="@+id/lblNameOnBill"
+                        android:text="Name On Bill"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:textColor="@color/TextViewTextColor"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"
+                        android:width="130dp" />
+                    <EditText
+                        android:id="@+id/txtPayeeNameOnBill"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight=".9" />
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip" />
+                <TableRow
+                    android:id="@+id/payeeAccountNumberRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:id="@+id/lblAccountNumber"
+                        android:text="Account Number"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:textColor="@color/TextViewTextColor"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"
+                        android:width="130dp" />
+                    <EditText
+                        android:id="@+id/txtPayeeAccountNumber"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight=".9" />
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip" />
+                <TableRow
+                    android:id="@+id/payeeDeliveryTimeRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="18dp"
+                    android:paddingBottom="18dp">
+                    <TextView
+                        android:id="@+id/lblDeliveryTime"
+                        android:text="Delivery Time"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:textColor="@color/TextViewTextColor"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"
+                        android:width="130dp" />
+                    <TextView
+                        android:id="@+id/lblPayeeDeliveryTime"
+                        android:text=""
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:textColor="@color/TextViewTextColor"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight=".9" />
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip" />
+                <TableRow
+                    android:minHeight="25px"
+                    android:id="@+id/activeRow"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/lblActive"
+                        android:text="Active"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:textColor="@color/TextViewTextColor"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"
+                        android:width="130dp" />
+                    <SunMobile.Droid.Common.SegmentedGroup
+                        android:id="@+id/segmentActiveInactive"
+                        android:orientation="horizontal"
+                        segmentedgroup:sc_border_width="2dp"
+                        segmentedgroup:sc_corner_radius="5dp"
+                        segmentedgroup:sc_tint_color="#20a6f8"
+                        segmentedgroup:sc_checked_text_color="#f0f2f3"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight=".9">
+                        <RadioButton
+                            android:id="@+id/btnActive"
+                            android:layout_height="wrap_content"
+                            android:text="Active"
+                            style="@style/RadioButton"
+                            android:checked="true"
+                            android:layout_width="90dp" />
+                        <RadioButton
+                            android:id="@+id/btnInactive"
+                            android:layout_height="wrap_content"
+                            android:text="Inactive"
+                            style="@style/RadioButton"
+                            android:layout_width="90dp" />
+                    </SunMobile.Droid.Common.SegmentedGroup>
+                </TableRow>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip" />
+                <TableRow
+                    android:id="@+id/noteRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+                    <TextView
+                        android:text="NOTE: This payee information cannot be edited while payments are currently pending."
+                        android:layout_span="2"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="20dp"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:id="@+id/lblNote"
+                        android:textColor="#ffff0000" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

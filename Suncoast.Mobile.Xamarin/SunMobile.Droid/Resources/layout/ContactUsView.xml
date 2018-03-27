@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+    <ScrollView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView1"
+        android:scrollbars="none"
+        android:background="@color/white">
+        <LinearLayout
+            android:orientation="vertical"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:fitsSystemWindows="true"
+            android:id="@+id/linearLayout1">
+            <TableLayout
+                android:id="@+id/mainTable"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="3">
+                <TableRow
+                    android:clickable="true"
+                    android:layout_span="5"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="2dp">
+                    <TextView
+                        android:text="Speak to a Specialist"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:textColor="@color/TextViewTextColor"
+                        android:textStyle="bold"
+                        android:layout_column="0"
+                        android:layout_span="5"
+                        android:paddingLeft="8dp"
+                        android:id="@+id/lblSpeakToASpecialist" />
+                </TableRow>
+                <TableRow
+                    android:clickable="true"
+                    android:layout_span="5"
+                    android:paddingTop="2dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="2dp">
+                    <TextView
+                        android:id="@+id/txtInfo"
+                        android:text="Members Care Center\nMon - Fri 7am - 8pm Eastern\nSat 8am-1pm Eastern"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:textColor="@color/TextViewTextColor"
+                        android:lines="3"
+                        android:layout_column="0"
+                        android:layout_span="5"
+                        android:paddingLeft="8dp"
+                        android:height="60dp" />
+                </TableRow>
+                <TableRow
+                    android:clickable="true"
+                    android:layout_span="5"
+                    android:paddingTop="2dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="2dp">
+                    <ImageView
+                        android:src="@drawable/ic_action_contact_phone"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_column="0"
+                        android:layout_span="1"
+                        android:layout_marginLeft="4dp" />
+                    <TextView
+                        android:id="@+id/txtPhoneSpecialist"
+                        android:text="(800) 999-5887"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:textColor="@color/radio_button_selected_color"
+                        android:layout_span="4" />
+                </TableRow>
+                <TableRow
+                    android:clickable="true"
+                    android:layout_span="5"
+                    android:paddingTop="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="2dp">
+                    <ImageView
+                        android:src="@drawable/ic_action_contact_email"
+                        android:layout_width="21dp"
+                        android:layout_height="14dp"
+                        android:layout_column="0"
+                        android:layout_span="1"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="2dp" />
+                    <TextView
+                        android:id="@+id/txtSendMessage"
+                        android:text="Send Us a Message"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:textColor="@color/radio_button_selected_color"
+                        android:layout_span="4"
+                        android:paddingLeft="2dp" />
+                </TableRow>
+                <View
+                    android:layout_span="5"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip"
+                    android:layout_marginTop="5dp" />
+                <TableRow
+                    android:clickable="true"
+                    android:layout_span="5"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="2dp">
+                    <TextView
+                        android:text="Report Lost and Stolen Cards"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:textColor="@color/TextViewTextColor"
+                        android:textStyle="bold"
+                        android:layout_column="0"
+                        android:layout_span="5"
+                        android:paddingLeft="8dp"
+                        android:id="@+id/lblReportLostAndStolenCards" />
+                </TableRow>
+                <TableRow
+                    android:clickable="true"
+                    android:layout_span="5"
+                    android:paddingTop="6dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="2dp">
+                    <TextView
+                        android:text="Credit Cards"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:textColor="@color/TextViewTextColor"
+                        android:layout_column="0"
+                        android:layout_span="5"
+                        android:paddingLeft="8dp"
+                        android:id="@+id/lblCreditCards" />
+                </TableRow>
+                <TableRow
+                    android:clickable="true"
+                    android:layout_span="5"
+                    android:paddingTop="2dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="2dp">
+                    <ImageView
+                        android:src="@drawable/ic_action_contact_phone"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_column="0"
+                        android:layout_span="1"
+                        android:layout_marginLeft="4dp" />
+                    <TextView
+                        android:id="@+id/txtPhoneCreditCards"
+                        android:text="(800) 645-7728"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:textColor="@color/radio_button_selected_color"
+                        android:layout_span="4" />
+                </TableRow>
+                <TableRow
+                    android:clickable="true"
+                    android:layout_span="5"
+                    android:paddingTop="6dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="2dp">
+                    <TextView
+                        android:text="Debit/ATM Cards"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:textColor="@color/TextViewTextColor"
+                        android:layout_column="0"
+                        android:layout_span="5"
+                        android:paddingLeft="8dp"
+                        android:id="@+id/lblDebitATMCards" />
+                </TableRow>
+                <TableRow
+                    android:clickable="true"
+                    android:layout_span="5"
+                    android:paddingTop="2dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="2dp">
+                    <ImageView
+                        android:src="@drawable/ic_action_contact_phone"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_column="0"
+                        android:layout_span="1"
+                        android:layout_marginLeft="4dp" />
+                    <TextView
+                        android:id="@+id/txtPhoneDebitCards"
+                        android:text="(800) 999-5887"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:textColor="@color/radio_button_selected_color"
+                        android:layout_span="4" />
+                </TableRow>
+                <TableRow
+                    android:clickable="true"
+                    android:layout_span="5"
+                    android:paddingTop="6dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="2dp">
+                    <TextView
+                        android:text="Debit/ATM Cards after hours"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:textColor="@color/TextViewTextColor"
+                        android:layout_column="0"
+                        android:layout_span="5"
+                        android:paddingLeft="8dp"
+                        android:id="@+id/lblDebitATMCardsAfterHours" />
+                </TableRow>
+                <TableRow
+                    android:clickable="true"
+                    android:layout_span="5"
+                    android:paddingTop="2dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="2dp">
+                    <ImageView
+                        android:src="@drawable/ic_action_contact_phone"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_column="0"
+                        android:layout_span="1"
+                        android:layout_marginLeft="4dp" />
+                    <TextView
+                        android:id="@+id/txtPhoneDebitCardsAfterHours"
+                        android:text="(800) 999-5887"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:textColor="@color/radio_button_selected_color"
+                        android:layout_span="4" />
+                </TableRow>
+                <View
+                    android:layout_span="5"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip"
+                    android:layout_marginTop="5dp" />
+                <TableRow
+                    android:clickable="true"
+                    android:layout_span="5"
+                    android:paddingTop="6dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="2dp">
+                    <TextView
+                        android:text="Email Technical Support"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:textColor="@color/TextViewTextColor"
+                        android:textStyle="bold"
+                        android:layout_column="0"
+                        android:layout_span="5"
+                        android:paddingLeft="8dp"
+                        android:id="@+id/lblDigitalBankingEmail" />
+                </TableRow>
+                <TableRow
+                    android:clickable="true"
+                    android:layout_span="5"
+                    android:paddingTop="2dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="2dp">
+                    <ImageView
+                        android:src="@drawable/ic_action_contact_email"
+                        android:layout_width="21dp"
+                        android:layout_height="14dp"
+                        android:layout_column="0"
+                        android:layout_span="1"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="2dp" />
+                    <TextView
+                        android:id="@+id/txtEmailSupport"
+                        android:text="digitalbanking@suncoastcreditunion.com"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:textColor="@color/radio_button_selected_color"
+                        android:layout_span="4"
+                        android:paddingLeft="2dp" />
+                </TableRow>
+                <View
+                    android:layout_span="5"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip"
+                    android:layout_marginTop="5dp" />
+                <TableRow
+                    android:clickable="true"
+                    android:layout_span="5"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="2dp">
+                    <TextView
+                        android:text="Routing Number"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:textColor="@color/TextViewTextColor"
+                        android:textStyle="bold"
+                        android:layout_column="0"
+                        android:layout_span="5"
+                        android:paddingLeft="8dp"
+                        android:id="@+id/lblRoutingNumber" />
+                </TableRow>
+                <TableRow
+                    android:clickable="true"
+                    android:layout_span="5"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="2dp">
+                    <TextView
+                        android:text="263 182 817"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:textColor="@color/TextViewTextColor"
+                        android:layout_column="0"
+                        android:layout_span="5"
+                        android:paddingLeft="8dp" />
+                </TableRow>
+                <View
+                    android:layout_span="5"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip"
+                    android:layout_marginTop="5dp" />
+                <TableRow
+                    android:id="@+id/LocationRow"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/default_background"
+                    android:layout_span="5"
+                    android:gravity="center_vertical"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp">
+                    <ImageView
+                        android:src="@drawable/ic_action_place_blue"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_column="0"
+                        android:layout_span="1"
+                        android:layout_marginLeft="8dp" />
+                    <TextView
+                        android:text="Find a Branch or ATM"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:textColor="@color/TextViewTextColor"
+                        android:typeface="sans"
+                        android:textStyle="normal"
+                        android:layout_column="2"
+                        android:layout_span="1"
+                        android:paddingLeft="8dp"
+                        android:id="@+id/lblFindABranchOrATM" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/listitemselect"
+                        android:paddingRight="2dp"
+                        android:layout_column="4"
+                        android:layout_span="1" />
+                </TableRow>
+                <View
+                    android:layout_span="5"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip"
+                    android:layout_marginTop="5dp" />
+                <TableRow
+                    android:id="@+id/WebSiteRow"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/default_background"
+                    android:layout_span="5"
+                    android:gravity="center_vertical"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp">
+                    <ImageView
+                        android:src="@drawable/iconsmall50"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:id="@+id/imageView1"
+                        android:layout_column="0"
+                        android:layout_span="1"
+                        android:layout_marginLeft="8dp" />
+                    <TextView
+                        android:text="SuncoastCreditUnion.com"
+                        android:id="@+id/lblWebsite"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:textColor="@color/TextViewTextColor"
+                        android:typeface="sans"
+                        android:textStyle="normal"
+                        android:layout_column="2"
+                        android:layout_span="1"
+                        android:paddingLeft="8dp" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/listitemselect"
+                        android:paddingRight="2dp"
+                        android:layout_column="4"
+                        android:layout_span="1" />
+                </TableRow>
+                <View
+                    android:layout_span="5"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip"
+                    android:layout_marginTop="5dp" />
+                <TableRow
+                    android:id="@+id/FacebookRow"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@drawable/default_background"
+                    android:layout_span="5"
+                    android:gravity="center_vertical"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp">
+                    <ImageView
+                        android:src="@drawable/facebook"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:id="@+id/imageViewFacebook"
+                        android:layout_column="0"
+                        android:layout_span="1"
+                        android:layout_marginLeft="5dp" />
+                    <TextView
+                        android:text="Suncoast Facebook Page"
+                        android:id="@+id/lblFacebook"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:textColor="@color/TextViewTextColor"
+                        android:typeface="sans"
+                        android:textStyle="normal"
+                        android:layout_column="2"
+                        android:layout_span="1"
+                        android:paddingLeft="8dp" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/listitemselect"
+                        android:paddingRight="2dp"
+                        android:layout_column="4"
+                        android:layout_span="1" />
+                </TableRow>
+                <View
+                    android:layout_span="5"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip"
+                    android:layout_marginTop="5dp" />
+                <TableRow
+                    android:id="@+id/TwitterRow"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@drawable/default_background"
+                    android:layout_span="5"
+                    android:gravity="center_vertical"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp">
+                    <ImageView
+                        android:src="@drawable/twitter_flat_icon"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:id="@+id/imageViewTwitter"
+                        android:layout_column="0"
+                        android:layout_span="1"
+                        android:layout_marginLeft="5dp" />
+                    <TextView
+                        android:text="Suncoast Twitter Page"
+                        android:id="@+id/lblTwitter"
+                        android:textSize="@dimen/TextSizeMedium"
+                        android:textColor="@color/TextViewTextColor"
+                        android:typeface="sans"
+                        android:textStyle="normal"
+                        android:layout_column="2"
+                        android:layout_span="1"
+                        android:paddingLeft="8dp" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/listitemselect"
+                        android:paddingRight="2dp"
+                        android:layout_column="4"
+                        android:layout_span="1" />
+                </TableRow>
+                <View
+                    android:layout_span="5"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip"
+                    android:layout_marginTop="5dp" />
+                <TableRow
+                    android:id="@+id/VersionRow"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@drawable/default_background"
+                    android:layout_span="5"
+                    android:gravity="center_vertical"
+                    android:paddingTop="18dp"
+                    android:paddingBottom="18dp">
+                    <TextView
+                        android:id="@+id/lblVersion"
+                        android:textSize="@dimen/TextSizeLarge"
+                        android:textColor="@color/TextViewTextColor"
+                        android:typeface="sans"
+                        android:textStyle="normal"
+                        android:layout_column="2"
+                        android:layout_span="1"
+                        android:paddingLeft="8dp" />
+                </TableRow>
+                <View
+                    android:layout_span="5"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip"
+                    android:layout_marginTop="5dp" />
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

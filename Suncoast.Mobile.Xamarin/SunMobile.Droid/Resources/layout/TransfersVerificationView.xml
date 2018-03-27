@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+    <RelativeLayout
+        android:id="@+id/TitleBar"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:minHeight="@dimen/appdim_MinimumTitleHeight"
+        android:layout_height="wrap_content"
+        android:background="@color/ActionBarBackgroundColor">
+        <ImageButton
+            android:id="@+id/btnCloseWindow"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_back"
+            android:background="@drawable/transparent"
+            android:maxWidth="30px"
+            android:layout_centerVertical="true" />
+        <TextView
+            android:id="@+id/txtTitle"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:textColor="@color/TextViewTextColorWhite"
+            android:text="Account Verification"
+            android:minHeight="30dp"
+            android:textSize="@dimen/TextSizeLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight=".90"
+        android:orientation="vertical"
+        android:background="@drawable/background_nobar"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+        <TableLayout
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tableLayout1">
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:gravity="center_horizontal">
+                <TextView
+                    android:text="To help protect your account, we want to make sure this is you. How should we verify your account?"
+                    android:id="@+id/textView13"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="fill_horizontal"
+                    android:textSize="@dimen/TextSizeLarge"
+                    android:paddingBottom="8dp"
+                    android:paddingTop="10dp" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:gravity="center_horizontal">
+                <Spinner
+                    android:id="@+id/spinnerValidationMethod"
+                    android:layout_width="280dp" />
+            </TableRow>
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:gravity="center_horizontal">
+                <EditText
+                    android:id="@+id/txtAnswer"
+                    android:layout_width="280dp"
+                    android:inputType="number" />
+            </TableRow>
+        </TableLayout>
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tableLayout2">
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:gravity="center"
+                android:minHeight="50dp">
+                <Button
+                    android:text="Send Code"
+                    android:id="@+id/btnSendCode"
+                    style="@style/BlueGradientButtonStyle"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp" />
+            </TableRow>
+            <TableRow
+                android:layout_height="160dp"
+                android:id="@+id/tableRow4"
+                android:gravity="center"
+                android:minHeight="50dp">
+                <Button
+                    android:text="Continue"
+                    android:id="@+id/btnContinue"
+                    style="@style/BlueGradientButtonStyle"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/white"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_height="wrap_content"
+                android:id="@+id/relativeLayout1"
+                android:layout_width="match_parent">
+                <View
+                    android:layout_span="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/default_separatorcolor"
+                    android:padding="2dip" />
+                <ImageView
+                    android:layout_width="320dp"
+                    android:id="@+id/imageWelcome"
+                    android:src="@drawable/subaccountswelcome"
+                    android:paddingTop="2dp"
+                    android:layout_height="130dp"
+                    android:layout_centerInParent="true" />
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lblWelcome"
+                    android:textSize="@dimen/TextSizeMicro"
+                    android:textColor="@color/TextViewTextColor"
+                    android:text="Karen, as a valued member, we wish to extend an invitation to you to open a new checking account to help meet your financial needs."
+                    android:paddingTop="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="4dp"
+                    android:background="#ffffffff"
+                    android:alpha=".7"
+                    android:layout_alignBottom="@+id/imageWelcome"
+                    android:layout_alignLeft="@+id/imageWelcome"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp" />
+            </RelativeLayout>
+            <TextView
+                android:text="Suncoast Smart Checking™"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/TextSizeMedium"
+                android:textColor="@color/TextViewTextColor"
+                android:layout_gravity="center_horizontal"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/TextSizeMedium"
+                android:textColor="@color/TextViewTextColor"
+                android:layout_gravity="center_horizontal"
+                android:text="It is the smart choice for you and your community.  Get all the benefits of free checking plus the added bonus of helping local schools."
+                android:id="@+id/lblTitleBody" />
+            <TextView
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/TextSizeMedium"
+                android:textColor="@color/TextViewTextColor"
+                android:layout_gravity="center_horizontal"
+                android:text="Here is the information we have for you:"
+                android:layout_marginTop="8dp"
+                android:id="@+id/lblInfo" />
+            <TextView
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/TextSizeMedium"
+                android:textColor="@color/TextViewTextColor"
+                android:layout_gravity="center_horizontal"
+                android:text="KAREN L BURNS"
+                android:layout_marginTop="8dp"
+                android:id="@+id/lblName" />
+            <TextView
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/TextSizeMedium"
+                android:textColor="@color/TextViewTextColor"
+                android:layout_gravity="center_horizontal"
+                android:text="1111 TAMPA AVE"
+                android:id="@+id/lblAddress1" />
+            <TextView
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/TextSizeMedium"
+                android:textColor="@color/TextViewTextColor"
+                android:layout_gravity="center_horizontal"
+                android:text="TAMPA, FL 55555"
+                android:id="@+id/lblAddress2" />
+            <TextView
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/TextSizeMedium"
+                android:textColor="@color/TextViewTextColor"
+                android:layout_gravity="center_horizontal"
+                android:text="727-888-8888"
+                android:id="@+id/lblPhone" />
+            <TextView
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/TextSizeMedium"
+                android:textColor="@color/TextViewTextColor"
+                android:layout_gravity="center_horizontal"
+                android:text="karen@gmail.com"
+                android:id="@+id/lblEmailAddress" />
+            <TextView
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/TextSizeMedium"
+                android:textColor="@color/TextViewTextColor"
+                android:layout_gravity="center_horizontal"
+                android:text="Once you have confirmed your information, click 'Information is Correct' or click 'Update Information' to make a change."
+                android:layout_marginTop="8dp"
+                android:id="@+id/lblInfoConfirm" />
+            <LinearLayout
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8dp">
+                <Button
+                    android:id="@+id/btnUpdate"
+                    style="@style/BlueGradientButtonStyle"
+                    android:text="Update Information"
+                    android:background="#26A6E1"
+                    android:layout_marginRight="4dp" />
+                <Button
+                    android:id="@+id/btnSubmit"
+                    style="@style/BlueGradientButtonStyle"
+                    android:text="Information Is Correct"
+                    android:background="#78c143"
+                    android:layout_marginLeft="16dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

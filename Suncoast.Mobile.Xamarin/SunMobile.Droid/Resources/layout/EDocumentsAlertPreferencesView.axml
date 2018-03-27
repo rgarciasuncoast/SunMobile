@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:id="@+id/edocumentsAlertsLayout"
+    android:background="#ffffffff">
+    <TableLayout
+        android:id="@+id/alertPreferencesTable"
+        android:stretchColumns="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TableRow
+            android:id="@+id/rowAlertNotificationAvailable"
+            android:layout_width="fill_parent"
+            android:minHeight="@dimen/cell_Height">
+            <TextView
+                android:id="@+id/lblEDocumentsAlertPrefNotify"
+                android:text="Notify me when my eNotice or eStatement is available"
+                android:textSize="@dimen/TextSizeMedium"
+                android:textColor="@color/TextViewTextColor"
+                android:paddingLeft="20dip"
+                android:layout_weight=".9"
+                android:layout_gravity="center_vertical" />
+            <Switch
+                android:id="@+id/switchAlertNotificationsAvailable"
+                android:layout_gravity="center_vertical"
+                android:paddingRight="20dip"
+                android:checked="true" />
+        </TableRow>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_weight="1"
+            android:background="@drawable/default_separatorcolor"
+            android:padding="2dip" />
+    </TableLayout>
+    <TableLayout
+        android:id="@+id/alertNoficiationTable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TableRow
+            android:id="@+id/rowAlertNotificationAvailable"
+            android:layout_width="match_parent"
+            android:minHeight="@dimen/cell_Height"
+            android:gravity="center">
+            <Spinner
+                android:id="@+id/spinnerAlertType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".9"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" />
+        </TableRow>
+    </TableLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_weight="1"
+            android:background="@drawable/default_separatorcolor"
+            android:padding="2dip" />
+        <TableRow
+            android:id="@+id/rowEmailTextNumber"
+            android:layout_width="match_parent"
+            android:minHeight="@dimen/cell_Height"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/lblEmailTextNumber"
+                android:text="Email Address"
+                android:textSize="@dimen/TextSizeMedium"
+                android:textColor="@color/TextViewTextColor"
+                android:layout_marginLeft="20dp"
+                android:layout_width="150dp" />
+            <EditText
+                android:id="@+id/txtEmailTextNumber"
+                android:textSize="@dimen/TextSizeMedium"
+                android:textColor="@color/TextViewTextColor"
+                android:inputType="phone"
+                android:layout_marginRight="20dp"
+                android:layout_weight=".9" />
+        </TableRow>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_weight="1"
+            android:background="@drawable/default_separatorcolor"
+            android:padding="2dip" />
+    </TableLayout>
+    <TableLayout
+        android:id="@+id/deviceAlertPreferencesTable"
+        android:stretchColumns="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TableRow
+            android:layout_width="match_parent"
+            android:minHeight="@dimen/cell_Height"
+            android:background="@color/iOSTableHeaderBackgroundColor">
+        </TableRow>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_weight="1"
+            android:background="@drawable/default_separatorcolor"
+            android:padding="2dip" />
+        <TableRow
+            android:id="@+id/rowDeviceAlerts"
+            android:layout_width="fill_parent"
+            android:minHeight="@dimen/cell_Height">
+            <TextView
+                android:id="@+id/lblEDocumentsPrefSendAlert"
+                android:text="Send an alert to my device"
+                android:textSize="@dimen/TextSizeMedium"
+                android:textColor="@color/TextViewTextColor"
+                android:paddingLeft="20dip"
+                android:layout_weight=".9"
+                android:layout_gravity="center_vertical" />
+            <Switch
+                android:id="@+id/switchDeviceAlerts"
+                android:layout_gravity="center_vertical"
+                android:paddingRight="20dip"
+                android:checked="true" />
+        </TableRow>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_weight="1"
+            android:background="@drawable/default_separatorcolor"
+            android:padding="2dip" />
+    </TableLayout>
+    <Button
+        android:id="@+id/btnUpdate"
+        style="@style/BlueGradientButtonStyle"
+        android:text="Update"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center" />
+</LinearLayout>

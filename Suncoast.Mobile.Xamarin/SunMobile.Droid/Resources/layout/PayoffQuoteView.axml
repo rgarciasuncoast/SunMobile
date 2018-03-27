@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent">
+    <RelativeLayout
+        android:id="@+id/actionBar"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="36dp"
+        android:background="@color/ActionBarBackgroundColor"
+        android:layout_alignParentBottom="true">
+        <ImageView
+            android:id="@+id/btnShare"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_actionbar_share"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/btnPrint" />
+        <ImageView
+            android:id="@+id/btnPrint"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_actionbar_print"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="10dp" />
+    </RelativeLayout>
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="0"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+        <TableRow
+            android:layout_width="match_parent"
+            android:clipChildren="false"
+            android:clipToPadding="true"
+            android:id="@+id/rowPayoffSelectDate"
+            android:minHeight="50dp">
+            <TextView
+                android:text="Select Payoff Date"
+                android:id="@+id/lblPayoffText"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/TextSizeLarge"
+                android:textColor="@color/TextViewTextColor"
+                android:paddingLeft="8dip"
+                android:layout_gravity="center_vertical" />
+            <TextView
+                android:id="@+id/lblDate"
+                android:text="10/10/2018"
+                android:textColor="@color/TextViewTextColor"
+                android:layout_weight="20"
+                android:textSize="@dimen/TextSizeLarge"
+                android:layout_gravity="right|center_vertical"
+                android:width="150dp"
+                android:gravity="left"
+                android:layout_marginRight="5dp" />
+            <ImageView
+                android:paddingTop="0dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:cropToPadding="false"
+                android:src="@drawable/listitemselect"
+                android:paddingRight="4dp" />
+        </TableRow>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/default_separatorcolor" />
+    </TableLayout>
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/webView"
+        android:layout_weight=".9" />
+</LinearLayout>
